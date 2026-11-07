@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kotoba — Standard Japanese + Kansai-ben from zero</title>
+<meta name="description" content="A free 100-level Japanese course for curious learners: standard Japanese first with Osaka Kansai-ben underneath, plus kana, 56 kanji, 68 situation phrases, a dialect map and the culture that keeps you curious.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23c0412c'/%3E%3Ctext x='16' y='24' font-size='20' text-anchor='middle' fill='%23fff8f2' font-family='serif'%3E%E3%81%82%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=Shippori+Mincho:wght@500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261106">
+<script src="audio/manifest.js?v=20261106" defer></script>
+<script src="script.js?v=20261106-single-1" defer></script>
+<link rel="stylesheet" href="adventure.css?v=20261106">
+<script src="adventure.js?v=20261106" defer></script>
+<link rel="stylesheet" href="modern.css?v=1">
+<script src="audio-player.js?v=2"></script></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__seal" aria-hidden="true">言</span>
+      <span class="brand__name">Kotoba<span class="brand__sub">Standard + Kansai Japanese</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="course.html">Lessons</a>
+      <a href="kana.html">Kana</a>
+      <a href="kanji.html">Kanji</a>
+      <a href="phrases.html">Phrases</a>
+      <a href="dialects.html">Dialect</a>
+      <a href="culture.html">Culture</a>
+      <a class="btn btn--small nav__cta" href="course.html#lesson-1">Start learning</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero journey-hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Your next little adventure · 日本語</p>
+        <h1>A little Japanese.<br><em>A whole new world.</em></h1>
+        <p class="hero__dek">The first hello. Your favourite ramen. A conversation you wish could last longer. Start with one small lesson and discover how much a few words can open up.</p>
+        <div class="hero__actions"><a class="btn" data-resume href="lessons.html#level-1">Take my first step <span aria-hidden="true">↗</span></a><a class="btn btn--ghost" href="#find-your-spark">Find my spark ↓</a></div>
+        <p class="journey-reassurance">Free to explore · No account · Start with five minutes</p>
+        <div class="return-ticket" data-home-progress hidden></div>
+      </div>
+      <div class="postcard-stack">
+        <div class="postcard"><div class="postcard__top"><span>A SMALL ADVENTURE IN JAPAN</span><span>01 / 100</span></div><img src="assets/neighbourhood.svg" width="600" height="440" alt="A colourful illustrated Japanese neighbourhood with a café, a train and a lantern-lit ramen shop."><div class="postcard__bottom"><span lang="ja">ここから、はじまる。</span><small>Your story starts here.</small></div></div>
+        <div class="floating-word"><span lang="ja">わくわく</span><small>wakuwaku · that excited feeling</small></div>
+      </div>
+    </div>
+  </section>
+  <section class="spark-section" id="find-your-spark"><div class="wrap">
+    <div class="spark-heading"><div><p class="eyebrow">Follow your curiosity</p><h2>What brings you to Japanese?</h2></div><p>Pick a moment you want to make your own.</p></div>
+    <div class="spark-grid">
+      <a class="spark-card spark-card--food" href="lessons.html#level-24"><span class="spark-icon" aria-hidden="true">🍜</span><span class="spark-card__label">FOR THE FOOD</span><h3>Order the good stuff.</h3><p>Go beyond pointing at the menu. Make your first order in Japanese.</p><b>Try the restaurant lesson ↗</b></a>
+      <a class="spark-card spark-card--people" href="lessons.html#level-9"><span class="spark-icon" aria-hidden="true">👋</span><span class="spark-card__label">FOR THE CONNECTION</span><h3>Turn strangers into stories.</h3><p>Your name, your hometown, a shared interest. Every friendship starts somewhere.</p><b>Try an introduction ↗</b></a>
+      <a class="spark-card spark-card--travel" href="lessons.html#level-27"><span class="spark-icon" aria-hidden="true">🚃</span><span class="spark-card__label">FOR THE ADVENTURE</span><h3>Take the local route.</h3><p>Find your train, ask your question, and enjoy getting a little less lost.</p><b>Try the train lesson ↗</b></a>
+    </div><p class="spark-note">Just exploring? These lessons are open to everyone. New to Japanese? <a href="lessons.html#level-1">Start with the sounds →</a></p>
+  </div></section>
+  <section class="wrap daily-discovery"><div><span class="eyebrow">A tiny win, right now</span><h2>You already know your first word.</h2><p>Listen once. Say it back. Then reveal what it means.</p></div><div class="discovery-word"><button class="listen-pill" type="button" data-speak="ありがとう" data-voice="std-f">▶ <span lang="ja">ありがとう</span><small>arigatō</small></button><details><summary>What did I just say?</summary><p><strong>Thank you.</strong> A small word that goes a long way. With someone you do not know, use the polite ありがとうございます.</p><a href="lessons.html#level-8">Make your first hello →</a></details></div></section>
+
+  <!-- ================= STATS ================= -->
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat">
+        <span class="stat__num">92<small>kana</small></span>
+        <span class="stat__label">Hiragana and katakana characters — the two basic syllabaries, shared by standard Japanese and Kansai-ben</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">56<small>kanji</small></span>
+        <span class="stat__label">Characters with readings, example words, sentences and audio</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">68<small>phrases</small></span>
+        <span class="stat__label">Everyday phrases grouped by real situation, standard line first</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">100<small>levels</small></span>
+        <span class="stat__label">From first sounds and N5 to N1, with writing and speaking at every level</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= STEPS ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">The route</p>
+        <h2>Small steps.<br>Real possibilities.</h2>
+        <p>The lessons are the spine: 100 levels that take you from first sounds to N1. Kana, phrases and kanji are the supporting habits you build alongside them. Standard Japanese is the base; Kansai-ben is the colour on top.</p>
+      </div>
+
+      <div class="steps">
+        <a class="step" href="course.html#lesson-1" data-reveal>
+          <span class="step__top">
+            <span class="step__kanji" aria-hidden="true" data-reading="ichi">一</span>
+            <span class="step__num">Step 01 · the spine</span>
+          </span>
+          <h3>Follow the 100 levels</h3>
+          <p>From first sounds to N1, one pattern at a time. Every level has a can-do goal, three examples, a drill and a small curiosity note.</p>
+          <span class="step__go">Start learning →</span>
+        </a>
+        <a class="step" href="kana.html" data-reveal>
+          <span class="step__top">
+            <span class="step__kanji" aria-hidden="true" data-reading="ni">二</span>
+            <span class="step__num">Step 02 · 2–3 weeks</span>
+          </span>
+          <h3>Learn the two kana alphabets</h3>
+          <p>Hiragana first, katakana second. Forty-six shapes each, shared by standard Japanese and Kansai-ben.</p>
+          <span class="step__go">Open the charts →</span>
+        </a>
+        <a class="step" href="phrases.html" data-reveal>
+          <span class="step__top">
+            <span class="step__kanji" aria-hidden="true" data-reading="san">三</span>
+            <span class="step__num">Step 03 · by situation</span>
+          </span>
+          <h3>Build a phrase kit</h3>
+          <p>Arrivals, hotels, restaurants, trains, pharmacies, emergencies. Sixty-eight phrases cover the moments when you need words now.</p>
+          <span class="step__go">Browse phrases →</span>
+        </a>
+        <a class="step" href="kanji.html" data-reveal>
+          <span class="step__top">
+            <span class="step__kanji" aria-hidden="true" data-reading="yon">四</span>
+            <span class="step__num">Step 04 · daily</span>
+          </span>
+          <h3>Read the signs around you</h3>
+          <p>Numbers, days, people, directions, travel and everyday actions. Fifty-six characters with readings, words and example sentences.</p>
+          <span class="step__go">Open the kanji →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KANA BAND ================= -->
+  <section class="band">
+    <div class="wrap band__grid">
+      <div data-reveal>
+        <p class="eyebrow eyebrow--light">Step one, properly</p>
+        <h2>Two alphabets.<br>Forty-six sounds.</h2>
+        <p>Japanese is built from mora — even, timed beats. Standard Japanese and Kansai-ben use exactly the same kana; only the words and the melody change. Learn the characters and you can read every basic sound in both, even before you understand the words. Tap any character here to hear it.</p>
+        <a class="btn btn--light" href="kana.html">Explore both charts
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="kana-teaser" data-reveal aria-label="Sample hiragana with audio">
+        <button type="button" data-speak="あ" data-voice="std-f"><span class="jp">あ</span><span class="r">a</span></button>
+        <button type="button" data-speak="い" data-voice="std-f"><span class="jp">い</span><span class="r">i</span></button>
+        <button type="button" data-speak="う" data-voice="std-f"><span class="jp">う</span><span class="r">u</span></button>
+        <button type="button" data-speak="え" data-voice="std-f"><span class="jp">え</span><span class="r">e</span></button>
+        <button type="button" data-speak="お" data-voice="std-f"><span class="jp">お</span><span class="r">o</span></button>
+        <button type="button" data-speak="か" data-voice="std-f"><span class="jp">か</span><span class="r">ka</span></button>
+        <button type="button" data-speak="き" data-voice="std-f"><span class="jp">き</span><span class="r">ki</span></button>
+        <button type="button" data-speak="く" data-voice="std-f"><span class="jp">く</span><span class="r">ku</span></button>
+        <button type="button" data-speak="け" data-voice="std-f"><span class="jp">け</span><span class="r">ke</span></button>
+        <button type="button" data-speak="こ" data-voice="std-f"><span class="jp">こ</span><span class="r">ko</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PHRASES ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="split-head">
+        <div class="section__head" data-reveal>
+          <p class="eyebrow">A phrase kit</p>
+          <h2>Useful before you are fluent.</h2>
+          <p>Three of the standard sentences that do the most work for a beginner. Press play, copy the words, and use them today — the Kansai option sits underneath each one, with its own audio.</p>
+        </div>
+        <a class="link-arrow" href="phrases.html">All 68 phrases <span>→</span></a>
+      </div>
+
+      <div class="phrase-grid">
+        <article class="phrase-card" data-reveal>
+          <span class="phrase-card__cat">Essentials</span>
+          <button class="speak" type="button" data-speak="すみません。" aria-label="Hear the standard form" data-voice="std-f">
+            <svg class="speak__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+            <span class="speak__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          </button>
+          <p class="phrase-card__jp" lang="ja">すみません。</p>
+          <p class="phrase-card__romaji">sumimasen.</p>
+          <p class="phrase-card__en">Excuse me / sorry</p>
+          <p class="phrase-card__kansai"><span class="phrase-card__kansai-tag">Kansai</span><span class="phrase-card__kansai-jp" lang="ja">すんません</span><span class="phrase-card__kansai-romaji">sunmasen</span><button class="speak speak--tiny" type="button" data-speak="すんません" aria-label="Hear the Kansai option" data-voice="kansai-m"><svg class="speak__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg></button></p>
+          <p class="phrase-card__note"><strong>Kansai note:</strong> The Osaka contraction is the most useful dialect word on the site. Use it to call a server, stop a stranger, or apologise for bumping an elbow.</p>
+        </article>
+
+        <article class="phrase-card" data-reveal>
+          <span class="phrase-card__cat">Shopping</span>
+          <button class="speak" type="button" data-speak="いくらですか。" aria-label="Hear the standard form" data-voice="std-f">
+            <svg class="speak__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+            <span class="speak__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          </button>
+          <p class="phrase-card__jp" lang="ja">いくらですか。</p>
+          <p class="phrase-card__romaji">ikura desu ka</p>
+          <p class="phrase-card__en">How much is it?</p>
+          <p class="phrase-card__kansai"><span class="phrase-card__kansai-tag">Kansai</span><span class="phrase-card__kansai-jp" lang="ja">なんぼですか</span><span class="phrase-card__kansai-romaji">nanbo desu ka</span><button class="speak speak--tiny" type="button" data-speak="なんぼですか" aria-label="Hear the Kansai option" data-voice="kansai-m"><svg class="speak__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg></button></p>
+          <p class="phrase-card__note"><strong>Kansai note:</strong> なんぼ is the Kansai “how much” and one of the words people listen for. Casual: なんぼ？</p>
+        </article>
+
+        <article class="phrase-card" data-reveal>
+          <span class="phrase-card__cat">Food &amp; drink</span>
+          <button class="speak" type="button" data-speak="おかいけいおねがいします。" aria-label="Hear the standard form" data-voice="std-f">
+            <svg class="speak__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+            <span class="speak__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          </button>
+          <p class="phrase-card__jp" lang="ja">おかいけいおねがいします。</p>
+          <p class="phrase-card__romaji">okaikei onegaishimasu.</p>
+          <p class="phrase-card__en">The bill, please</p>
+          <p class="phrase-card__kansai"><span class="phrase-card__kansai-tag">Kansai</span><span class="phrase-card__kansai-jp" lang="ja">おかいけい、たのんます</span><span class="phrase-card__kansai-romaji">okaikei, tanommasu</span><button class="speak speak--tiny" type="button" data-speak="おかいけい、たのんます" aria-label="Hear the Kansai option" data-voice="kansai-m"><svg class="speak__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg></button></p>
+          <p class="phrase-card__note"><strong>Kansai note:</strong> At many places you pay at the till by the door; ごちそうさん as you leave is always welcome.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LESSONS ================= -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="split-head">
+        <div class="section__head" data-reveal>
+          <p class="eyebrow">The lessons · 100 levels</p>
+          <h2>From あ to N1,<br>one level at a time.</h2>
+          <p>Ten units, ten levels each. The early units build the sounds and the N5 core; the middle units get you through daily life; the last units add nuance, opinion, keigo and the long conversation. Writing and speaking tasks appear at every level.</p>
+        </div>
+        <a class="link-arrow" href="course.html">Open the course <span>→</span></a>
+      </div>
+
+      <div class="unit-grid" data-reveal>
+        <a class="unit-card" href="lessons.html#level-1" style="--unit-colour:#7f9bb5"><span class="unit-card__num">01</span><span class="unit-card__jlpt">Pre-N5 · 1–10</span><h3>Sounds and first words</h3><p lang="ja">音と はじめての ことば</p><span class="unit-card__meta">10 levels</span></a>
+        <a class="unit-card" href="lessons.html#level-11" style="--unit-colour:#7fa77a"><span class="unit-card__num">02</span><span class="unit-card__jlpt">N5 · 11–20</span><h3>The N5 core</h3><p lang="ja">N5の きほん</p><span class="unit-card__meta">10 levels</span></a>
+        <a class="unit-card" href="lessons.html#level-21" style="--unit-colour:#c9a650"><span class="unit-card__num">03</span><span class="unit-card__jlpt">N5 · 21–30</span><h3>Daily life</h3><p lang="ja">まいにちの せいかつ</p><span class="unit-card__meta">10 levels</span></a>
+        <a class="unit-card" href="lessons.html#level-31" style="--unit-colour:#c08a5e"><span class="unit-card__num">04</span><span class="unit-card__jlpt">N5 → N4 · 31–40</span><h3>The bridge to N4</h3><p lang="ja">N4への はし</p><span class="unit-card__meta">10 levels</span></a>
+        <a class="unit-card" href="lessons.html#level-41" style="--unit-colour:#c4624d"><span class="unit-card__num">05</span><span class="unit-card__jlpt">N4 · 41–50</span><h3>Practical N4</h3><p lang="ja">つかえる N4</p><span class="unit-card__meta">10 levels</span></a>
+        <a class="unit-card" href="lessons.html#level-51" style="--unit-colour:#8d76ad"><span class="unit-card__num">06</span><span class="unit-card__jlpt">N3 · 51–60</span><h3>N3 and your own voice</h3><p lang="ja">N3と じぶんの ことば</p><span class="unit-card__meta">10 levels · output</span></a>
+        <a class="unit-card" href="lessons.html#level-61" style="--unit-colour:#5f9e9a"><span class="unit-card__num">07</span><span class="unit-card__jlpt">N3 · 61–70</span><h3>Nuance and opinion</h3><p lang="ja">ニュアンスと いけん</p><span class="unit-card__meta">10 levels · output</span></a>
+        <a class="unit-card" href="lessons.html#level-71" style="--unit-colour:#b87087"><span class="unit-card__num">08</span><span class="unit-card__jlpt">N2 · 71–80</span><h3>The working language</h3><p lang="ja">N2の にほんご</p><span class="unit-card__meta">10 levels · output</span></a>
+        <a class="unit-card" href="lessons.html#level-81" style="--unit-colour:#8f7d5a"><span class="unit-card__num">09</span><span class="unit-card__jlpt">N2 · 81–90</span><h3>Range and speed</h3><p lang="ja">N2の ひろがり</p><span class="unit-card__meta">10 levels · output</span></a>
+        <a class="unit-card" href="lessons.html#level-91" style="--unit-colour:#3f5f8a"><span class="unit-card__num">10</span><span class="unit-card__jlpt">N1 · 91–100</span><h3>The long conversation</h3><p lang="ja">N1の ながい かいわ</p><span class="unit-card__meta">10 levels · output</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KANJI ================= -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="split-head">
+        <div class="section__head" data-reveal>
+          <p class="eyebrow">Step four · 漢字</p>
+          <h2>Fifty-six characters,<br>with sentences.</h2>
+          <p>Numbers, days, people, directions, travel and everyday actions. The first 32 cards give readings and words; 24 more put each character inside a real sentence with audio — enough to recognise the signs, menus and forms around you.</p>
+        </div>
+        <a class="link-arrow" href="kanji.html">Open the kanji page <span>→</span></a>
+      </div>
+
+      <div class="kanji-teaser" data-reveal>
+        <a class="kanji-tile" href="kanji.html">
+          <span class="kanji-tile__char" lang="ja">一</span>
+          <span class="kanji-tile__reading" lang="ja">いち</span>
+          <span class="kanji-tile__meaning">one</span>
+        </a>
+        <a class="kanji-tile" href="kanji.html">
+          <span class="kanji-tile__char" lang="ja">日</span>
+          <span class="kanji-tile__reading" lang="ja">ひ</span>
+          <span class="kanji-tile__meaning">day</span>
+        </a>
+        <a class="kanji-tile" href="kanji.html">
+          <span class="kanji-tile__char" lang="ja">人</span>
+          <span class="kanji-tile__reading" lang="ja">ひと</span>
+          <span class="kanji-tile__meaning">person</span>
+        </a>
+        <a class="kanji-tile" href="kanji.html">
+          <span class="kanji-tile__char" lang="ja">上</span>
+          <span class="kanji-tile__reading" lang="ja">うえ</span>
+          <span class="kanji-tile__meaning">up</span>
+        </a>
+        <a class="kanji-tile" href="kanji.html">
+          <span class="kanji-tile__char" lang="ja">見</span>
+          <span class="kanji-tile__reading" lang="ja">みる</span>
+          <span class="kanji-tile__meaning">see</span>
+        </a>
+        <a class="kanji-tile" href="kanji.html">
+          <span class="kanji-tile__char" lang="ja">円</span>
+          <span class="kanji-tile__reading" lang="ja">えん</span>
+          <span class="kanji-tile__meaning">yen</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DIALECT ================= -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="dx-home" data-reveal>
+        <div>
+          <p class="eyebrow eyebrow--light">The dialect atlas</p>
+          <h2>One country.<br>Nine ways to say it.</h2>
+          <p>Standard Japanese gets you understood. The local word gets you a smile. Open the map, pick one of the 47 prefectures, and explore a local phrase — with the standard Japanese right beside it.</p>
+          <a class="btn btn--light" href="dialects.html">Open the dialect map
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="dx-home__words" aria-hidden="true">
+          <span class="dx-home__word"><b lang="ja">なまら</b><span>Hokkaido · very</span></span>
+          <span class="dx-home__word"><b lang="ja">やっとかめ</b><span>Chubu · long time no see</span></span>
+          <span class="dx-home__word"><b lang="ja">おおきに</b><span>Kansai · thank you</span></span>
+          <span class="dx-home__word"><b lang="ja">ぶち</b><span>Chugoku · very</span></span>
+          <span class="dx-home__word"><b lang="ja">ばり</b><span>Kyushu · very</span></span>
+          <span class="dx-home__word"><b lang="ja">めんそーれ</b><span>Okinawa · welcome</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Before you begin</p>
+        <h2>Honest answers.</h2>
+        <p>No “fluent in 30 days”, and no pretending Kansai-ben is the only Japanese. Just a clear idea of what this site can and cannot do for you.</p>
+      </div>
+
+      <div class="faq" data-reveal>
+        <details>
+          <summary>Do I need to learn kanji before I can speak?</summary>
+          <p>No. Speaking and reading are separate skills, and you can hold a simple conversation entirely in kana. This site teaches kana and spoken patterns first, then adds 56 basic kanji once the sounds are familiar — the last 24 inside full example sentences. Learn them with words, not as a separate mountain.</p>
+        </details>
+        <details>
+          <summary>Which kind of Japanese do you teach?</summary>
+          <p>Standard Japanese is the main line; Osaka-leaning Kansai-ben is the option underneath it. Every phrase leads with the standard form and adds a Kansai version below, and every dialogue is standard first with the Kansai version in a fold-out. That way you can use です／ます in a formal situation and switch to dialect when the room is relaxed. Kansai-ben is a family, not one accent — Kyoto and Kobe have their own flavours, and locals mix dialect with standard Japanese all the time.</p>
+        </details>
+        <details>
+          <summary>What about Kyoto, Kobe, Nagoya or Hiroshima?</summary>
+          <p>Kansai-ben is a family, not one accent: Kyoto and Kobe have their own local varieties; Nagoya and Hiroshima sit outside Kansai. The <a href="dialects.html">dialect map</a> covers all nine regions, with local phrases and standard equivalents, so you can explore differences in wording. The optional synthesized readings do not reproduce native regional accents.</p>
+        </details>
+        <details>
+          <summary>How long until I can have a conversation?</summary>
+          <p>For a short transactional conversation — ordering, asking directions, introducing yourself — most learners need a few weeks of regular practice. For a comfortable everyday conversation, think in months, not days. Ten focused minutes a day is a realistic start.</p>
+        </details>
+        <details>
+          <summary>Is the audio a real human voice?</summary>
+          <p>The play buttons use bundled Japanese neural voices, not the robotic voice your browser happens to have installed: a clear standard voice for the main lines, and standard Japanese voices reading the Kansai and regional words. They are neural approximations, not live human recordings, and a neural voice cannot reproduce a true Osaka accent. Use them to check the words and rhythm, then copy the melody from Kansai speakers, radio or TV. Nothing is uploaded and no account is needed.</p>
+        </details>
+        <details>
+          <summary>Is this a replacement for a teacher or textbook?</summary>
+          <p>It is a full structured course, but not a replacement for a person. The 100 levels take you from the five vowels to N1 grammar, with writing and speaking tasks at every level, and every line has audio. What no site can give you is someone reacting to your mistakes in real time. Use the levels to arrive at class with better questions; a teacher or a patient native speaker is still the fastest way to fix pronunciation.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <div class="wrap">
+    <section class="cta-panel" data-reveal>
+      <div>
+        <p class="eyebrow eyebrow--light">Ready when you are</p>
+        <h2>Start with level one.</h2>
+        <p>Five vowels, a handful of greetings, and one small win. Then level two. The course runs to N1, but you only ever have to do the next ten minutes. No sign-up, no streak to protect — just come back when you can.</p>
+      </div>
+      <a class="btn btn--light" href="course.html#lesson-1">Start learning
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </section>
+  </div>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="site-foot__grid">
+      <div>
+        <a class="brand foot-brand" href="index.html">
+          <span class="brand__seal" aria-hidden="true">言</span>
+          <span class="brand__name">Kotoba<span class="brand__sub">Standard + Kansai Japanese</span></span>
+        </a>
+        <p>A free 100-level Japanese course for curious learners: standard Japanese first, Osaka Kansai-ben underneath, and the culture that keeps you curious.</p>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="course.html">550-lesson course</a></li>
+          <li><a href="kana.html">Kana charts &amp; quiz</a></li>
+          <li><a href="kanji.html">Kanji with sentences</a></li>
+          <li><a href="phrases.html">Situation phrasebook</a></li>
+          <li><a href="dialects.html">Dialect map</a></li>
+          <li><a href="culture.html">History &amp; proverbs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Good to know</h3>
+        <ul>
+          <li>Standard + Osaka-leaning Kansai</li>
+          <li>100 levels, level 1 to N1</li>
+          <li>Writing &amp; speaking at every level</li>
+          <li>Progress is saved on this device only</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-foot__note">
+      <span>© <span class="js-year">2026</span> Kotoba · A free Japanese course. No accounts, no tracking.</span>
+      <span>おおきに — thanks for learning.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

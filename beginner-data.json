@@ -1,0 +1,1416 @@
+[
+  {
+    "id": 1,
+    "skill": "discover",
+    "title": "Your first three readable words",
+    "goal": "Connect five vowel sounds to three words you can recognise.",
+    "scene": "A blue sign, a house on a map, and an arrow pointing up.",
+    "words": [
+      {
+        "jp": "あお",
+        "reading": "a-o",
+        "en": "blue",
+        "visual": "●"
+      },
+      {
+        "jp": "いえ",
+        "reading": "i-e",
+        "en": "house",
+        "visual": "⌂"
+      },
+      {
+        "jp": "うえ",
+        "reading": "u-e",
+        "en": "above",
+        "visual": "↑"
+      }
+    ],
+    "notice": "あ・い・う・え・お are the five vowel kana. あお has two sound beats: a-o. Let each vowel stay steady.",
+    "questions": [
+      {
+        "prompt": "Which word labels the blue colour?",
+        "options": [
+          "あお",
+          "いえ",
+          "うえ"
+        ],
+        "answer": 0,
+        "why": [
+          "Yes: あお means blue.",
+          "いえ means house. Look for a-o.",
+          "うえ means above. Look for a-o."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which word has the sounds i-e?",
+        "options": [
+          "うえ",
+          "いえ",
+          "あお"
+        ],
+        "answer": 1,
+        "why": [
+          "うえ is u-e. Start with い for i-e.",
+          "いえ is i-e: house.",
+          "あお is a-o. Start with い for i-e."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "お",
+        "え",
+        "あ"
+      ],
+      "target": "あお"
+    },
+    "use": "A friend points to a blue notebook. Type あお or a-o, or say it aloud and note the two sounds.",
+    "model": "あお",
+    "checks": [
+      "I connected the word to blue.",
+      "I kept a and o as two beats."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 2,
+    "skill": "listen",
+    "title": "Hear a house, hear an arrow",
+    "goal": "Tell i-e and u-e apart by listening.",
+    "scene": "A map has a house symbol and an upward arrow.",
+    "words": [
+      {
+        "jp": "いえ",
+        "reading": "i-e",
+        "en": "house",
+        "visual": "⌂"
+      },
+      {
+        "jp": "うえ",
+        "reading": "u-e",
+        "en": "above",
+        "visual": "↑"
+      }
+    ],
+    "notice": "Both words end in え. The first vowel changes the meaning: いえ is house; うえ is above.",
+    "questions": [
+      {
+        "prompt": "Listen: which meaning fits?",
+        "options": [
+          "House",
+          "Above",
+          "Blue"
+        ],
+        "answer": 0,
+        "why": [
+          "いえ means house.",
+          "うえ means above; this model begins with i.",
+          "あお means blue; this model ends with e."
+        ],
+        "audio": "いえ"
+      },
+      {
+        "prompt": "Listen: which meaning fits this time?",
+        "options": [
+          "House",
+          "Blue",
+          "Above"
+        ],
+        "answer": 2,
+        "why": [
+          "House is いえ; hear the first u here.",
+          "Blue is あお; this model is u-e.",
+          "うえ means above."
+        ],
+        "audio": "うえ"
+      }
+    ],
+    "build": {
+      "pieces": [
+        "え",
+        "い",
+        "う"
+      ],
+      "target": "うえ"
+    },
+    "use": "You hear u-e beside an arrow. Say or type the word, then name what helped you hear it.",
+    "model": "うえ",
+    "checks": [
+      "I identified above rather than house.",
+      "I noticed the first vowel changed."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 3,
+    "skill": "read",
+    "title": "Read a tiny map",
+    "goal": "Read いえ and うえ without needing kanji.",
+    "scene": "The house icon has the label いえ. An arrow above it has the label うえ.",
+    "words": [
+      {
+        "jp": "いえ",
+        "reading": "i-e",
+        "en": "house",
+        "visual": "⌂"
+      },
+      {
+        "jp": "うえ",
+        "reading": "u-e",
+        "en": "above",
+        "visual": "↑"
+      }
+    ],
+    "notice": "You can read these labels with vowel kana alone. Kanji are not required for this task.",
+    "questions": [
+      {
+        "prompt": "The label いえ belongs beside which symbol?",
+        "options": [
+          "↑ Arrow above",
+          "⌂ House",
+          "● Blue colour"
+        ],
+        "answer": 1,
+        "why": [
+          "The upward label is うえ.",
+          "いえ labels the house.",
+          "Blue is あお."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which kana starts the label meaning above?",
+        "options": [
+          "い",
+          "あ",
+          "う"
+        ],
+        "answer": 2,
+        "why": [
+          "い starts いえ, house.",
+          "あ starts あお, blue.",
+          "う starts うえ, above."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "え",
+        "う",
+        "い"
+      ],
+      "target": "いえ"
+    },
+    "use": "Make a two-label mini map: house / above. Use kana, romaji, or describe your aloud reading.",
+    "model": "いえ / うえ",
+    "checks": [
+      "I matched both labels to their meaning.",
+      "I checked the first vowel in each word."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 4,
+    "skill": "write",
+    "title": "Make your first word card",
+    "goal": "Write one meaningful two-kana word and check it.",
+    "scene": "Create a little card for a blue object or a house.",
+    "words": [
+      {
+        "jp": "あお",
+        "reading": "a-o",
+        "en": "blue",
+        "visual": "●"
+      },
+      {
+        "jp": "いえ",
+        "reading": "i-e",
+        "en": "house",
+        "visual": "⌂"
+      }
+    ],
+    "notice": "Choose one word. Try writing or typing before comparing. If you have no Japanese keyboard, romaji is welcome; handwriting can happen on paper.",
+    "questions": [
+      {
+        "prompt": "You want a card saying house. Which model fits?",
+        "options": [
+          "あお",
+          "うえ",
+          "いえ"
+        ],
+        "answer": 2,
+        "why": [
+          "あお says blue.",
+          "うえ says above.",
+          "いえ says house."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which order spells blue?",
+        "options": [
+          "おあ",
+          "あお",
+          "あえ"
+        ],
+        "answer": 1,
+        "why": [
+          "The model is a-o, not o-a.",
+          "あ then お spells あお.",
+          "Blue ends in お, not え."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "え",
+        "お",
+        "あ"
+      ],
+      "target": "あお"
+    },
+    "use": "Write one small word card on paper or type it here. State which meaning you chose and one thing you checked.",
+    "model": "あお — blue / いえ — house",
+    "checks": [
+      "I tried writing before comparing.",
+      "I checked the kana order against the model."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 5,
+    "skill": "speak",
+    "title": "Say something you can point to",
+    "goal": "Say a two-beat word with a meaning in mind.",
+    "scene": "Point to a house picture or imagine something blue.",
+    "words": [
+      {
+        "jp": "あお",
+        "reading": "a-o",
+        "en": "blue",
+        "visual": "●"
+      },
+      {
+        "jp": "いえ",
+        "reading": "i-e",
+        "en": "house",
+        "visual": "⌂"
+      }
+    ],
+    "notice": "Start with a word you want to say. Two beats is the aim here; a timer or readable transcript cannot check pronunciation.",
+    "questions": [
+      {
+        "prompt": "Which reading belongs to あお?",
+        "options": [
+          "i-e",
+          "u-e",
+          "a-o"
+        ],
+        "answer": 2,
+        "why": [
+          "i-e is いえ.",
+          "u-e is うえ.",
+          "あお is a-o."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "How many sound beats are in いえ?",
+        "options": [
+          "One",
+          "Two",
+          "Four"
+        ],
+        "answer": 1,
+        "why": [
+          "Keep i and e distinct.",
+          "i-e has two beats.",
+          "There are two beats: i-e."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "え",
+        "い",
+        "あ"
+      ],
+      "target": "いえ"
+    },
+    "use": "Say あお or いえ while pointing to its meaning. Write a short note about which sounds you tried.",
+    "model": "あお / いえ",
+    "checks": [
+      "I made an aloud attempt.",
+      "I kept the two vowels distinct when comparing with the model."
+    ],
+    "minutes": 6
+  },
+  {
+    "id": 6,
+    "skill": "discover",
+    "title": "One extra beat changes the word",
+    "goal": "Notice the held vowel in おばあさん.",
+    "scene": "Two family labels look similar, but one has an extra あ.",
+    "words": [
+      {
+        "jp": "おばさん",
+        "reading": "o-ba-sa-n",
+        "en": "aunt",
+        "visual": "人"
+      },
+      {
+        "jp": "おばあさん",
+        "reading": "o-ba-a-sa-n",
+        "en": "grandmother",
+        "visual": "人"
+      }
+    ],
+    "notice": "おばさん has four mora beats: お・ば・さ・ん. おばあさん has five: お・ば・あ・さ・ん. The extra あ is part of the word.",
+    "questions": [
+      {
+        "prompt": "Which word means grandmother?",
+        "options": [
+          "おばさん",
+          "おばあさん",
+          "きって"
+        ],
+        "answer": 1,
+        "why": [
+          "おばさん means aunt. Check for the extra あ.",
+          "The extra あ makes おばあさん: grandmother.",
+          "きって means stamp."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which has five mora beats?",
+        "options": [
+          "おばあさん",
+          "おばさん",
+          "あお"
+        ],
+        "answer": 0,
+        "why": [
+          "お・ば・あ・さ・ん: five.",
+          "お・ば・さ・ん has four.",
+          "あ・お has two."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "お",
+        "ば",
+        "あ",
+        "さ",
+        "ん"
+      ],
+      "target": "おばあさん"
+    },
+    "use": "Label a fictional family photo grandmother. Type kana or romaji, or say the five beats and describe your check.",
+    "model": "おばあさん",
+    "checks": [
+      "I chose grandmother rather than aunt.",
+      "I kept the extra あ beat."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 7,
+    "skill": "listen",
+    "title": "Hear the extra vowel",
+    "goal": "Listen for the difference between aunt and grandmother.",
+    "scene": "You hear a family member mentioned in an audio label.",
+    "words": [
+      {
+        "jp": "おばさん",
+        "reading": "o-ba-sa-n",
+        "en": "aunt",
+        "visual": "人"
+      },
+      {
+        "jp": "おばあさん",
+        "reading": "o-ba-a-sa-n",
+        "en": "grandmother",
+        "visual": "人"
+      }
+    ],
+    "notice": "Listen to the whole word. Replay the models to compare the shorter and longer vowel.",
+    "questions": [
+      {
+        "prompt": "Listen to this label. Who is named?",
+        "options": [
+          "Grandmother",
+          "Aunt",
+          "Teacher"
+        ],
+        "answer": 0,
+        "why": [
+          "おばあさん is grandmother.",
+          "Aunt is the shorter おばさん.",
+          "Teacher is a different word."
+        ],
+        "audio": "おばあさん"
+      },
+      {
+        "prompt": "Listen to the second label. Who is named?",
+        "options": [
+          "Teacher",
+          "Grandmother",
+          "Aunt"
+        ],
+        "answer": 2,
+        "why": [
+          "This is the family word おばさん.",
+          "Grandmother would include another あ beat.",
+          "おばさん is aunt."
+        ],
+        "audio": "おばさん"
+      }
+    ],
+    "build": {
+      "pieces": [
+        "お",
+        "ば",
+        "さ",
+        "ん",
+        "あ"
+      ],
+      "target": "おばさん"
+    },
+    "use": "Listen again to the two family labels, then say or write the shorter one from memory.",
+    "model": "おばさん",
+    "checks": [
+      "I selected the shorter family label.",
+      "I compared it with the longer model after trying."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 8,
+    "skill": "read",
+    "title": "Spot the small っ",
+    "goal": "Notice where a short consonant hold belongs in a word.",
+    "scene": "A post-office label says きって: postage stamp.",
+    "words": [
+      {
+        "jp": "きって",
+        "reading": "ki · hold · te",
+        "en": "postage stamp",
+        "visual": "〒"
+      }
+    ],
+    "notice": "The small っ occupies a mora beat. In きって it marks a hold before t; it is not a separately spoken tsu. Large つ and small っ are different.",
+    "questions": [
+      {
+        "prompt": "Which word has a small っ?",
+        "options": [
+          "きて",
+          "きつて",
+          "きって"
+        ],
+        "answer": 2,
+        "why": [
+          "きて has no small っ.",
+          "This has a full-size つ.",
+          "きって has small っ before て."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "How should the small っ work in きって?",
+        "options": [
+          "Say a full tsu",
+          "Hold before t",
+          "Delete it"
+        ],
+        "answer": 1,
+        "why": [
+          "A full tsu would be the large つ.",
+          "Hold the consonant for a beat before releasing te.",
+          "The hold is part of the word."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "て",
+        "っ",
+        "き",
+        "つ"
+      ],
+      "target": "きって"
+    },
+    "use": "Make a stamp label and mark its beats: ki / hold / te. Kana or a beat description is fine.",
+    "model": "き・っ・て",
+    "checks": [
+      "I distinguished small っ from large つ.",
+      "I placed the hold before て."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 9,
+    "skill": "write",
+    "title": "Write the difference you can hear",
+    "goal": "Write or copy two forms carefully and explain one difference.",
+    "scene": "A small sound difference deserves a visible place on your word card.",
+    "words": [
+      {
+        "jp": "おばさん",
+        "reading": "o-ba-sa-n",
+        "en": "aunt",
+        "visual": "人"
+      },
+      {
+        "jp": "おばあさん",
+        "reading": "o-ba-a-sa-n",
+        "en": "grandmother",
+        "visual": "人"
+      },
+      {
+        "jp": "きって",
+        "reading": "ki · hold · te",
+        "en": "postage stamp",
+        "visual": "〒"
+      }
+    ],
+    "notice": "Trying once and checking a specific detail is more useful here than filling a page with rushed copies.",
+    "questions": [
+      {
+        "prompt": "Which spelling means grandmother?",
+        "options": [
+          "おばさん",
+          "おばあさん",
+          "おばあさ"
+        ],
+        "answer": 1,
+        "why": [
+          "The shorter form means aunt.",
+          "Keep the extra あ and final ん.",
+          "The final ん is missing."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which character needs to be small in きって?",
+        "options": [
+          "き",
+          "て",
+          "っ"
+        ],
+        "answer": 2,
+        "why": [
+          "き stays full size.",
+          "て stays full size.",
+          "っ is the small hold marker."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "お",
+        "ば",
+        "あ",
+        "さ",
+        "ん"
+      ],
+      "target": "おばあさん"
+    },
+    "use": "Write おばさん / おばあさん or きって on paper or here. Explain the one detail you corrected.",
+    "model": "おばさん / おばあさん / きって",
+    "checks": [
+      "I made a first attempt before comparing.",
+      "I checked vowel length or small っ specifically."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 10,
+    "skill": "speak",
+    "title": "Give the hold its own beat",
+    "goal": "Say きって with a consonant hold rather than a full tsu.",
+    "scene": "Imagine asking a post-office worker about a stamp; practise the item name first.",
+    "words": [
+      {
+        "jp": "きって",
+        "reading": "ki · hold · te",
+        "en": "postage stamp",
+        "visual": "〒"
+      }
+    ],
+    "notice": "Clap three mora beats: ki / hold / te. The middle beat prepares the t; avoid adding a full tsu vowel.",
+    "questions": [
+      {
+        "prompt": "Which beat plan fits きって?",
+        "options": [
+          "ki-te",
+          "ki-tsu-te",
+          "ki-hold-te"
+        ],
+        "answer": 2,
+        "why": [
+          "That leaves out the hold.",
+          "That adds a full tsu vowel.",
+          "The hold gets its own mora beat."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which name has the held a vowel?",
+        "options": [
+          "おばあさん",
+          "おばさん",
+          "きって"
+        ],
+        "answer": 0,
+        "why": [
+          "おばあさん contains the extra あ.",
+          "おばさん has the shorter vowel.",
+          "きって practises a consonant hold."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "き",
+        "て",
+        "っ",
+        "つ"
+      ],
+      "target": "きって"
+    },
+    "use": "Say きって once, compare with the audio, and try it again. Note whether you held before t or added a vowel.",
+    "model": "きって",
+    "checks": [
+      "I tried the word aloud before comparison.",
+      "I noticed the consonant hold rather than just checking the spelling."
+    ],
+    "minutes": 6
+  },
+  {
+    "id": 11,
+    "skill": "discover",
+    "title": "A menu word you already know",
+    "goal": "Read すし by connecting kana to a familiar food.",
+    "scene": "You spot a short food label at a restaurant.",
+    "words": [
+      {
+        "jp": "かお",
+        "reading": "ka-o",
+        "en": "face",
+        "visual": "顔"
+      },
+      {
+        "jp": "すし",
+        "reading": "su-shi",
+        "en": "sushi",
+        "visual": "食"
+      }
+    ],
+    "notice": "か starts ka; さ starts sa. Two familiar words make the rows useful: かお is face and すし is sushi.",
+    "questions": [
+      {
+        "prompt": "Which label means sushi?",
+        "options": [
+          "かお",
+          "すし",
+          "いえ"
+        ],
+        "answer": 1,
+        "why": [
+          "かお is face.",
+          "すし is sushi.",
+          "いえ is house."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which kana starts かお?",
+        "options": [
+          "こ",
+          "さ",
+          "か"
+        ],
+        "answer": 2,
+        "why": [
+          "こ is ko; かお starts ka.",
+          "さ is sa; かお starts ka.",
+          "か is ka."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "し",
+        "す",
+        "か"
+      ],
+      "target": "すし"
+    },
+    "use": "Imagine a menu label for sushi. Read or write it, then name the two sounds.",
+    "model": "すし",
+    "checks": [
+      "I connected the label to sushi.",
+      "I read su-shi in the right order."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 12,
+    "skill": "listen",
+    "title": "Hear su-shi and ka-o",
+    "goal": "Match a short spoken word to its meaning.",
+    "scene": "A friend points to a food picture, then a face picture.",
+    "words": [
+      {
+        "jp": "かお",
+        "reading": "ka-o",
+        "en": "face",
+        "visual": "顔"
+      },
+      {
+        "jp": "すし",
+        "reading": "su-shi",
+        "en": "sushi",
+        "visual": "食"
+      }
+    ],
+    "notice": "し is commonly romanised shi in learner materials. Listen for the vowel and consonant together.",
+    "questions": [
+      {
+        "prompt": "Listen. Which picture fits?",
+        "options": [
+          "A face",
+          "A house",
+          "Sushi"
+        ],
+        "answer": 2,
+        "why": [
+          "Face would be かお.",
+          "House would be いえ.",
+          "すし names sushi."
+        ],
+        "audio": "すし"
+      },
+      {
+        "prompt": "Listen again. Which picture now?",
+        "options": [
+          "A face",
+          "Sushi",
+          "An arrow"
+        ],
+        "answer": 0,
+        "why": [
+          "かお means face.",
+          "Sushi is すし.",
+          "Above is うえ."
+        ],
+        "audio": "かお"
+      }
+    ],
+    "build": {
+      "pieces": [
+        "お",
+        "す",
+        "か"
+      ],
+      "target": "かお"
+    },
+    "use": "Say or type the word you heard for face. Compare only after your attempt.",
+    "model": "かお",
+    "checks": [
+      "I matched ka-o to face.",
+      "I tried recall before replaying."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 13,
+    "skill": "read",
+    "title": "Read a word in three beats",
+    "goal": "Decode せかい from a sequence of familiar kana.",
+    "scene": "A poster has the word せかい: world.",
+    "words": [
+      {
+        "jp": "かお",
+        "reading": "ka-o",
+        "en": "face",
+        "visual": "顔"
+      },
+      {
+        "jp": "すし",
+        "reading": "su-shi",
+        "en": "sushi",
+        "visual": "食"
+      },
+      {
+        "jp": "せかい",
+        "reading": "se-ka-i",
+        "en": "world",
+        "visual": "◎"
+      }
+    ],
+    "notice": "せ・か・い has three mora beats. Read one kana at a time, then connect the sounds into the word.",
+    "questions": [
+      {
+        "prompt": "What is the reading of せかい?",
+        "options": [
+          "sa-ka-i",
+          "se-ka-i",
+          "se-ki-a"
+        ],
+        "answer": 1,
+        "why": [
+          "The first kana is せ, se.",
+          "せ・か・い reads se-ka-i.",
+          "Follow せ, then か, then い."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which word means face?",
+        "options": [
+          "せかい",
+          "すし",
+          "かお"
+        ],
+        "answer": 2,
+        "why": [
+          "せかい means world.",
+          "すし means sushi.",
+          "かお means face."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "い",
+        "せ",
+        "か",
+        "さ"
+      ],
+      "target": "せかい"
+    },
+    "use": "Add world to a tiny personal word list. Write its kana or romaji and its meaning.",
+    "model": "せかい — se-ka-i — world",
+    "checks": [
+      "I read all three kana in order.",
+      "I connected the sound to world."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 14,
+    "skill": "write",
+    "title": "Write two useful labels",
+    "goal": "Choose food or face and make a clear kana label.",
+    "scene": "You are making two picture cards you can recognise tomorrow.",
+    "words": [
+      {
+        "jp": "かお",
+        "reading": "ka-o",
+        "en": "face",
+        "visual": "顔"
+      },
+      {
+        "jp": "すし",
+        "reading": "su-shi",
+        "en": "sushi",
+        "visual": "食"
+      }
+    ],
+    "notice": "Try one label, compare, then make a small correction. This is writing practice; typing can help recall but does not assess handwriting.",
+    "questions": [
+      {
+        "prompt": "Which order writes sushi?",
+        "options": [
+          "しす",
+          "すし",
+          "すせ"
+        ],
+        "answer": 1,
+        "why": [
+          "That reverses the sounds.",
+          "す then し writes sushi.",
+          "The second sound should be し."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which spelling labels a face?",
+        "options": [
+          "かお",
+          "かう",
+          "こお"
+        ],
+        "answer": 0,
+        "why": [
+          "かお is face.",
+          "The second vowel should be お.",
+          "The first kana should be か."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "お",
+        "か",
+        "す"
+      ],
+      "target": "かお"
+    },
+    "use": "Write すし and かお on paper or here. Explain one detail you checked against the models.",
+    "model": "すし / かお",
+    "checks": [
+      "I tried writing both words.",
+      "I checked the order and a character shape or sound."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 15,
+    "skill": "speak",
+    "title": "Say a word you would choose",
+    "goal": "Say すし or せかい with its meaning in mind.",
+    "scene": "Choose the food you recognise or the word for the world you want to explore.",
+    "words": [
+      {
+        "jp": "すし",
+        "reading": "su-shi",
+        "en": "sushi",
+        "visual": "食"
+      },
+      {
+        "jp": "せかい",
+        "reading": "se-ka-i",
+        "en": "world",
+        "visual": "◎"
+      }
+    ],
+    "notice": "You do not need a full sentence to practise a useful word. Say it, compare with the model, and name one next step.",
+    "questions": [
+      {
+        "prompt": "Which sounds make すし?",
+        "options": [
+          "su-shi",
+          "se-ka-i",
+          "shi-su"
+        ],
+        "answer": 0,
+        "why": [
+          "すし is su-shi.",
+          "That reading belongs to せかい.",
+          "That reverses the order."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "How many mora beats does せかい have?",
+        "options": [
+          "Two",
+          "Three",
+          "Five"
+        ],
+        "answer": 1,
+        "why": [
+          "Count せ・か・い.",
+          "せ・か・い: three.",
+          "Each of these three kana has one beat."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "か",
+        "せ",
+        "い",
+        "す"
+      ],
+      "target": "せかい"
+    },
+    "use": "Choose sushi or world. Say it aloud, then write the word or a brief note about your attempt.",
+    "model": "すし / せかい",
+    "checks": [
+      "I spoke before comparing.",
+      "I checked the sound sequence rather than aiming for speed."
+    ],
+    "minutes": 6
+  },
+  {
+    "id": 16,
+    "skill": "discover",
+    "title": "Read a cat and an octopus",
+    "goal": "Use the first kana to distinguish two words ending in こ.",
+    "scene": "A cat photo and an octopus menu picture both have short labels.",
+    "words": [
+      {
+        "jp": "ねこ",
+        "reading": "ne-ko",
+        "en": "cat",
+        "visual": "猫"
+      },
+      {
+        "jp": "たこ",
+        "reading": "ta-ko",
+        "en": "octopus",
+        "visual": "食"
+      }
+    ],
+    "notice": "ねこ and たこ both end in こ. Look closely at the first kana: ね is ne; た is ta.",
+    "questions": [
+      {
+        "prompt": "Which label belongs to the cat?",
+        "options": [
+          "たこ",
+          "ねこ",
+          "なつ"
+        ],
+        "answer": 1,
+        "why": [
+          "たこ is octopus.",
+          "ねこ means cat.",
+          "なつ means summer."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which label belongs to the octopus?",
+        "options": [
+          "ねこ",
+          "いえ",
+          "たこ"
+        ],
+        "answer": 2,
+        "why": [
+          "ねこ is cat.",
+          "いえ is house.",
+          "たこ means octopus."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "こ",
+        "ね",
+        "た"
+      ],
+      "target": "ねこ"
+    },
+    "use": "Label a cat photo in a pretend message. Type kana, use romaji, or say the label and note its sounds.",
+    "model": "ねこ",
+    "checks": [
+      "I chose cat rather than octopus.",
+      "I checked the first kana."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 17,
+    "skill": "listen",
+    "title": "Hear ne-ko and ta-ko",
+    "goal": "Hear which word is named when the ending stays the same.",
+    "scene": "You listen to two picture labels with your screen partly covered.",
+    "words": [
+      {
+        "jp": "ねこ",
+        "reading": "ne-ko",
+        "en": "cat",
+        "visual": "猫"
+      },
+      {
+        "jp": "たこ",
+        "reading": "ta-ko",
+        "en": "octopus",
+        "visual": "食"
+      }
+    ],
+    "notice": "Listen for ne versus ta. The shared ko ending is not enough to identify the word.",
+    "questions": [
+      {
+        "prompt": "Listen: which picture is named?",
+        "options": [
+          "Octopus",
+          "Cat",
+          "Summer"
+        ],
+        "answer": 1,
+        "why": [
+          "Octopus begins ta.",
+          "ねこ names the cat.",
+          "Summer is なつ."
+        ],
+        "audio": "ねこ"
+      },
+      {
+        "prompt": "Which picture is named now?",
+        "options": [
+          "Octopus",
+          "Cat",
+          "House"
+        ],
+        "answer": 0,
+        "why": [
+          "たこ names octopus.",
+          "Cat begins ne.",
+          "House is いえ."
+        ],
+        "audio": "たこ"
+      }
+    ],
+    "build": {
+      "pieces": [
+        "こ",
+        "ね",
+        "た"
+      ],
+      "target": "たこ"
+    },
+    "use": "Listen once more, then say the word for octopus from memory and note the first sound.",
+    "model": "たこ",
+    "checks": [
+      "I identified ta rather than ne.",
+      "I tried the word before replaying."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 18,
+    "skill": "read",
+    "title": "Find summer on a word card",
+    "goal": "Read なつ and distinguish つ from ち.",
+    "scene": "A seasonal card shows a sun and the label なつ.",
+    "words": [
+      {
+        "jp": "ねこ",
+        "reading": "ne-ko",
+        "en": "cat",
+        "visual": "猫"
+      },
+      {
+        "jp": "たこ",
+        "reading": "ta-ko",
+        "en": "octopus",
+        "visual": "食"
+      },
+      {
+        "jp": "なつ",
+        "reading": "na-tsu",
+        "en": "summer",
+        "visual": "☀"
+      }
+    ],
+    "notice": "なつ is na-tsu. The kana つ is tsu; ち is chi. This task introduces the sound contrast, without requiring a whole unfamiliar sentence.",
+    "questions": [
+      {
+        "prompt": "Which word says summer?",
+        "options": [
+          "ねこ",
+          "たこ",
+          "なつ"
+        ],
+        "answer": 2,
+        "why": [
+          "ねこ means cat.",
+          "たこ means octopus.",
+          "なつ means summer."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which kana has the reading tsu?",
+        "options": [
+          "ち",
+          "つ",
+          "て"
+        ],
+        "answer": 1,
+        "why": [
+          "ち is chi.",
+          "つ is tsu.",
+          "て is te."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "つ",
+        "な",
+        "ち"
+      ],
+      "target": "なつ"
+    },
+    "use": "Make a summer word card: kana or romaji plus meaning. Compare つ with ち before finishing.",
+    "model": "なつ — na-tsu — summer",
+    "checks": [
+      "I connected なつ to summer.",
+      "I distinguished つ from ち."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 19,
+    "skill": "write",
+    "title": "Write labels you can tell apart",
+    "goal": "Write ねこ and たこ and check the first character.",
+    "scene": "Make two picture labels that will still make sense when mixed up.",
+    "words": [
+      {
+        "jp": "ねこ",
+        "reading": "ne-ko",
+        "en": "cat",
+        "visual": "猫"
+      },
+      {
+        "jp": "たこ",
+        "reading": "ta-ko",
+        "en": "octopus",
+        "visual": "食"
+      }
+    ],
+    "notice": "Choose one character detail to inspect. A correct typed answer shows recall, not verified pen strokes.",
+    "questions": [
+      {
+        "prompt": "Which word starts with ね?",
+        "options": [
+          "たこ",
+          "なつ",
+          "ねこ"
+        ],
+        "answer": 2,
+        "why": [
+          "たこ starts with た.",
+          "なつ starts with な.",
+          "ねこ starts with ね."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which word should go under an octopus picture?",
+        "options": [
+          "たこ",
+          "ねこ",
+          "なつ"
+        ],
+        "answer": 0,
+        "why": [
+          "たこ is octopus.",
+          "ねこ labels a cat.",
+          "なつ labels summer."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "こ",
+        "た",
+        "ね"
+      ],
+      "target": "たこ"
+    },
+    "use": "Write both labels from memory, compare with the models, and describe one check or revision.",
+    "model": "ねこ / たこ",
+    "checks": [
+      "I made two writing attempts.",
+      "I checked which first kana matched each picture."
+    ],
+    "minutes": 5
+  },
+  {
+    "id": 20,
+    "skill": "speak",
+    "title": "A tiny picture tour in your own voice",
+    "goal": "Name two pictures aloud and notice what you can recall.",
+    "scene": "Show a friend a cat, something blue, or a sushi picture. Choose two labels.",
+    "words": [
+      {
+        "jp": "ねこ",
+        "reading": "ne-ko",
+        "en": "cat",
+        "visual": "猫"
+      },
+      {
+        "jp": "たこ",
+        "reading": "ta-ko",
+        "en": "octopus",
+        "visual": "食"
+      },
+      {
+        "jp": "あお",
+        "reading": "a-o",
+        "en": "blue",
+        "visual": "●"
+      },
+      {
+        "jp": "すし",
+        "reading": "su-shi",
+        "en": "sushi",
+        "visual": "食"
+      }
+    ],
+    "notice": "You have met several meaningful words. Choose two that you want to keep; pause and recall before listening again.",
+    "questions": [
+      {
+        "prompt": "Which reading labels a cat?",
+        "options": [
+          "ta-ko",
+          "ne-ko",
+          "na-tsu"
+        ],
+        "answer": 1,
+        "why": [
+          "ta-ko labels octopus.",
+          "ne-ko labels cat.",
+          "na-tsu labels summer."
+        ],
+        "audio": ""
+      },
+      {
+        "prompt": "Which word would label a blue colour?",
+        "options": [
+          "あお",
+          "ねこ",
+          "すし"
+        ],
+        "answer": 0,
+        "why": [
+          "あお means blue.",
+          "ねこ means cat.",
+          "すし means sushi."
+        ],
+        "audio": ""
+      }
+    ],
+    "build": {
+      "pieces": [
+        "こ",
+        "ね",
+        "た"
+      ],
+      "target": "ねこ"
+    },
+    "use": "Name any two pictures aloud, then write the words or explain which sounds you checked.",
+    "model": "ねこ / あお / すし / たこ",
+    "checks": [
+      "I named two chosen pictures aloud.",
+      "I compared one specific sound with a model after trying."
+    ],
+    "minutes": 6
+  }
+]

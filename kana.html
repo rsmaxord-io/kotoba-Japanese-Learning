@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kana charts &amp; quiz — Kotoba</title>
+<meta name="description" content="Every hiragana and katakana character with romaji and audio, plus a ten-question quiz. The same kana are used for standard Japanese and Kansai-ben — learn to read them from the first sound.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23c0412c'/%3E%3Ctext x='16' y='24' font-size='20' text-anchor='middle' fill='%23fff8f2' font-family='serif'%3E%E3%81%82%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=Shippori+Mincho:wght@500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261106">
+<script src="audio/manifest.js?v=20261106" defer></script>
+<script src="script.js?v=20261106-single-1" defer></script>
+<link rel="stylesheet" href="adventure.css?v=20261106">
+<script src="adventure.js?v=20261106" defer></script>
+<link rel="stylesheet" href="modern.css?v=1">
+<link rel="stylesheet" href="lookup.css?v=1"><script src="lookup.js?v=2" defer></script><script src="audio-player.js?v=2"></script></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__seal" aria-hidden="true">言</span>
+      <span class="brand__name">Kotoba<span class="brand__sub">Standard + Kansai Japanese</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="course.html">Lessons</a>
+      <a href="kana.html" aria-current="page">Kana</a>
+      <a href="kanji.html">Kanji</a>
+      <a href="phrases.html">Phrases</a>
+      <a href="dialects.html">Dialect</a>
+      <a href="culture.html">Culture</a>
+      <a class="btn btn--small nav__cta" href="course.html#lesson-1">Start learning</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Start here</a><span>/</span><span>Kana</span>
+      </nav>
+      <div class="page-hero__grid">
+        <div>
+          <p class="eyebrow">Step one · かな</p>
+          <h1>Two alphabets.<br>Forty-six sounds.</h1>
+          <p>Standard Japanese and Kansai-ben use exactly the same kana — the characters do not change, only the words and the melody. Hiragana handles grammar and native words; katakana handles loanwords and emphasis. Both are phonetic: one character, one sound, every time. Together that is ninety-two characters for forty-six core sounds. Tap any character to hear it. When you are ready, switch to the quiz.</p>
+        </div>
+        <div class="page-hero__jp" aria-hidden="true">あ ア</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap kana-layout">
+      <div>
+        <div class="seg kana-view-tabs" role="tablist" aria-label="Chart or quiz">
+          <button type="button" role="tab" aria-selected="true" aria-controls="chart-view" data-view="chart">Chart</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="quiz-view" data-view="quiz">Quiz</button>
+        </div>
+
+        <div id="chart-view" role="tabpanel">
+          <div class="kana-panel">
+            <div class="kana-toolbar">
+              <div class="seg" role="tablist" aria-label="Writing system">
+                <button type="button" role="tab" aria-selected="true" data-script="hiragana">ひらがな Hiragana</button>
+                <button type="button" role="tab" aria-selected="false" data-script="katakana">カタカナ Katakana</button>
+              </div>
+              <button class="toggle-romaji" type="button" id="romaji-toggle" aria-pressed="true">Hide romaji</button>
+            </div>
+
+            <div class="kana-detail" id="kana-detail" aria-live="polite">
+              <p class="kana-detail__hint">Tap any kana to hear it and see how it is written.</p>
+            </div>
+
+            <div class="kana-chart" id="kana-chart">
+              <noscript>
+                <p>The interactive chart needs JavaScript. Enable it, or use the chart in any beginner textbook — the 46 basic characters are the same.</p>
+              </noscript>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="quiz-card" id="quiz-view" role="tabpanel">
+          <div class="quiz-head">
+            <h3>Kana quiz</h3>
+            <div class="quiz-meta">
+              <span>Score <b id="quiz-score-live">0</b></span>
+              <span id="quiz-progress">0 / 10</span>
+            </div>
+          </div>
+
+          <div class="quiz-body" id="quiz-body">
+            <p class="quiz-prompt" id="quiz-prompt" lang="ja">あ</p>
+            <p class="quiz-question">Which sound is this?</p>
+            <div class="quiz-options" id="quiz-options"></div>
+            <p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p>
+            <p class="quiz-note">Ten questions from the basic set of the selected script. The answer moves on automatically.</p>
+          </div>
+
+          <div class="quiz-summary" id="quiz-summary" hidden>
+            <p>Round complete</p>
+            <p class="quiz-summary__score"><span id="quiz-final-score">0</span> / 10</p>
+            <p id="quiz-message"></p>
+            <div class="quiz-actions">
+              <button class="btn btn--light" type="button" id="quiz-restart">Play another round</button>
+              <a class="btn" href="#chart-view" id="quiz-review" style="border-color:rgba(247,243,234,.35);background:transparent">Review the chart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="kana-side">
+        <div class="side-card side-card--accent">
+          <h3>Start with five</h3>
+          <p>You do not need all 46 today. Learn one row — あ い う え お — say each one aloud, then take the quiz. That first win matters more than a perfect plan.</p>
+        </div>
+
+        <div class="side-card">
+          <h3>How to learn kana</h3>
+          <ul>
+            <li>Write each character by hand, saying it out loud.</li>
+            <li>Test recall, not recognition. Cover the romaji.</li>
+            <li>Learn a row a day, revise the row before it.</li>
+            <li>Read real words as soon as you can: すし, カフェ.</li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>Hiragana or katakana?</h3>
+          <p><strong>Hiragana</strong> is the rounded script for grammar and everyday Japanese words. <strong>Katakana</strong> is the angular script for foreign words — コーヒー, パン, your own name — plus sound effects and emphasis.</p>
+          <p style="margin-top:0.6rem">Learn hiragana first. Katakana will arrive much faster once the sounds are familiar.</p>
+        </div>
+
+        <div class="side-card">
+          <h3>Standard and Kansai, same kana</h3>
+          <p>Dialect words are written in the ordinary kana you are learning here: <strong lang="ja">まいど</strong>, <strong lang="ja">おおきに</strong>, <strong lang="ja">あかん</strong>, <strong lang="ja">なんぼ</strong>. No extra alphabet, no special font.</p>
+          <p style="margin-top:0.6rem">What changes is the sound of the sentence — the pitch melody and the endings. Learn the characters here, then borrow the tune from Kansai speakers.</p>
+        </div>
+
+        <div class="side-card">
+          <h3>Three small warnings</h3>
+          <ul>
+            <li>を is written “wo” but pronounced like “o”.</li>
+            <li>ん is a full beat of its own — almost like a soft “n” hum.</li>
+            <li>Long vowels change meaning: おばさん (aunt) vs おばあさん (grandmother).</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="site-foot__grid">
+      <div>
+        <a class="brand foot-brand" href="index.html">
+          <span class="brand__seal" aria-hidden="true">言</span>
+          <span class="brand__name">Kotoba<span class="brand__sub">Standard + Kansai Japanese</span></span>
+        </a>
+        <p>A free 550-lesson Japanese course for curious learners: standard Japanese first, Osaka Kansai-ben underneath, and the culture that keeps you curious.</p>
+      </div>
+      <div>
+        <h3>Learn</h3>
+        <ul>
+          <li><a href="course.html">550-lesson course</a></li>
+          <li><a href="kana.html">Kana charts &amp; quiz</a></li>
+          <li><a href="kanji.html">Kanji with sentences</a></li>
+          <li><a href="phrases.html">Situation phrasebook</a></li>
+          <li><a href="dialects.html">Dialect map</a></li>
+          <li><a href="culture.html">History &amp; proverbs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Good to know</h3>
+        <ul>
+          <li>Standard + Osaka-leaning Kansai</li>
+          <li>100 levels, level 1 to N1</li>
+          <li>Writing &amp; speaking at every level</li>
+          <li>Progress is saved on this device only</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-foot__note">
+      <span>© <span class="js-year">2026</span> Kotoba · A free Japanese course. No accounts, no tracking.</span>
+      <span>おおきに — thanks for learning.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

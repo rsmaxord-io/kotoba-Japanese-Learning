@@ -1,0 +1,3470 @@
+{
+  "phrases": [
+    {
+      "ja": "おはようございます",
+      "en": "Good morning",
+      "reading": "ohayō gozaimasu",
+      "audioText": "おはようございます",
+      "topic": "Connections",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p1"
+    },
+    {
+      "ja": "こんにちは",
+      "en": "Hello; good afternoon",
+      "reading": "konnichiwa",
+      "audioText": "こんにちは",
+      "topic": "Connections",
+      "note": "A standard daytime greeting. For entering a shop, a nod or greeting may be enough; staff usually welcome you first.",
+      "id": "p2"
+    },
+    {
+      "ja": "こんばんは",
+      "en": "Good evening",
+      "reading": "konbanwa",
+      "audioText": "こんばんは",
+      "topic": "Connections",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p3"
+    },
+    {
+      "ja": "はじめまして。よろしくおねがいします。",
+      "en": "Nice to meet you.",
+      "reading": "hajimemashite. yoroshiku onegaishimasu.",
+      "audioText": "はじめまして。よろしくおねがいします。",
+      "topic": "Connections",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p4"
+    },
+    {
+      "ja": "よろしくおねがいします。",
+      "en": "I look forward to getting to know you / working with you.",
+      "reading": "yoroshiku onegaishimasu.",
+      "audioText": "よろしくおねがいします。",
+      "topic": "Connections",
+      "note": "Used after an introduction or when beginning something together. Meaning depends on the relationship and task.",
+      "id": "p5"
+    },
+    {
+      "ja": "ありがとうございます。",
+      "en": "Thank you",
+      "reading": "arigatō gozaimasu.",
+      "audioText": "ありがとうございます。",
+      "topic": "Connections",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p6"
+    },
+    {
+      "ja": "じゃあね。",
+      "en": "See you.",
+      "reading": "じゃあね。",
+      "audioText": "じゃあね。",
+      "topic": "Connections",
+      "note": "Casual: use with friends, not in a formal farewell.",
+      "id": "p7"
+    },
+    {
+      "ja": "すみません。",
+      "en": "Excuse me / sorry",
+      "reading": "sumimasen.",
+      "audioText": "すみません。",
+      "topic": "Conversation",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p8"
+    },
+    {
+      "ja": "おねがいします。",
+      "en": "Please",
+      "reading": "onegaishimasu.",
+      "audioText": "おねがいします。",
+      "topic": "Conversation",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p9"
+    },
+    {
+      "ja": "はい。",
+      "en": "Yes.",
+      "reading": "はい。",
+      "audioText": "はい。",
+      "topic": "Conversation",
+      "note": "An acknowledgement or an affirmative response; context matters.",
+      "id": "p10"
+    },
+    {
+      "ja": "わかりません。",
+      "en": "I don't understand",
+      "reading": "wakarimasen.",
+      "audioText": "わかりません。",
+      "topic": "Conversation",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p11"
+    },
+    {
+      "ja": "にほんごがはなせません。",
+      "en": "I can't speak Japanese",
+      "reading": "nihongo ga hanasemasen.",
+      "audioText": "にほんごがはなせません。",
+      "topic": "Conversation",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p12"
+    },
+    {
+      "ja": "えいご、はなせますか",
+      "en": "Can you speak English?",
+      "reading": "eigo, hanasemasu ka",
+      "audioText": "えいご、はなせますか",
+      "topic": "Conversation",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p13"
+    },
+    {
+      "ja": "トイレはどこですか。",
+      "en": "Where is the toilet?",
+      "reading": "toire wa doko desu ka",
+      "audioText": "トイレはどこですか。",
+      "topic": "Conversation",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p14"
+    },
+    {
+      "ja": "これをください。",
+      "en": "This one, please",
+      "reading": "kore o kudasai.",
+      "audioText": "これをください。",
+      "topic": "Food",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p15"
+    },
+    {
+      "ja": "おすすめはなんですか。",
+      "en": "What do you recommend?",
+      "reading": "osusume wa nan desu ka",
+      "audioText": "おすすめはなんですか。",
+      "topic": "Food",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p16"
+    },
+    {
+      "ja": "おみずをください。",
+      "en": "Water, please",
+      "reading": "omizu o kudasai.",
+      "audioText": "おみずをください。",
+      "topic": "Food",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p17"
+    },
+    {
+      "ja": "おいしいです。",
+      "en": "It's delicious",
+      "reading": "oishii desu.",
+      "audioText": "おいしいです。",
+      "topic": "Food",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p18"
+    },
+    {
+      "ja": "いただきます。",
+      "en": "Said before eating.",
+      "reading": "いただきます。",
+      "audioText": "いただきます。",
+      "topic": "Food",
+      "note": "An expression of gratitude before a meal.",
+      "id": "p19"
+    },
+    {
+      "ja": "おかいけいおねがいします。",
+      "en": "The bill, please",
+      "reading": "okaikei onegaishimasu.",
+      "audioText": "おかいけいおねがいします。",
+      "topic": "Food",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p20"
+    },
+    {
+      "ja": "すみません、えきはどこですか。",
+      "en": "Excuse me, where's the station?",
+      "reading": "sumimasen, eki wa doko desu ka",
+      "audioText": "すみません、えきはどこですか。",
+      "topic": "Travel",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p21"
+    },
+    {
+      "ja": "なんばまでおねがいします。",
+      "en": "To Namba, please (taxi)",
+      "reading": "nanba made onegaishimasu.",
+      "audioText": "なんばまでおねがいします。",
+      "topic": "Travel",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p22"
+    },
+    {
+      "ja": "きっぷはどこで売っていますか。",
+      "en": "Where do they sell tickets?",
+      "reading": "kippu wa doko de utte imasu ka",
+      "audioText": "きっぷはどこでうっていますか。",
+      "topic": "Travel",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p23"
+    },
+    {
+      "ja": "ここでとめてください。",
+      "en": "Please stop here (taxi)",
+      "reading": "koko de tomete kudasai.",
+      "audioText": "ここでとめてください。",
+      "topic": "Travel",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p24"
+    },
+    {
+      "ja": "のりかえはどこですか。",
+      "en": "Where do I change trains?",
+      "reading": "norikae wa doko desu ka",
+      "audioText": "のりかえはどこですか。",
+      "topic": "Travel",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p25"
+    },
+    {
+      "ja": "いくらですか。",
+      "en": "How much is it?",
+      "reading": "ikura desu ka",
+      "audioText": "いくらですか。",
+      "topic": "Shopping",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p26"
+    },
+    {
+      "ja": "見せてもらってもいいですか。",
+      "en": "Could I have a look?",
+      "reading": "misete moratte mo ii desu ka",
+      "audioText": "みせてもらってもいいですか。",
+      "topic": "Shopping",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p27"
+    },
+    {
+      "ja": "カードはつかえますか",
+      "en": "Can I use a card?",
+      "reading": "kādo wa tsukaemasu ka",
+      "audioText": "カードはつかえますか",
+      "topic": "Shopping",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p28"
+    },
+    {
+      "ja": "ふくろはいりません。",
+      "en": "No bag needed",
+      "reading": "fukuro wa irimasen.",
+      "audioText": "ふくろはいりません。",
+      "topic": "Shopping",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p29"
+    },
+    {
+      "ja": "たすけてください",
+      "en": "Help me, please",
+      "reading": "tasukete kudasai",
+      "audioText": "たすけてください",
+      "topic": "Help",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p30"
+    },
+    {
+      "ja": "きゅうきゅうしゃをよんでください。",
+      "en": "Please call an ambulance",
+      "reading": "kyūkyūsha o yonde kudasai",
+      "audioText": "きゅうきゅうしゃをよんでください。",
+      "topic": "Help",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p31"
+    },
+    {
+      "ja": "びょういんはどこですか。",
+      "en": "Where's the hospital?",
+      "reading": "byōin wa doko desu ka",
+      "audioText": "びょういんはどこですか。",
+      "topic": "Help",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p32"
+    },
+    {
+      "ja": "パスポート、なくしました",
+      "en": "I've lost my passport",
+      "reading": "pasupōto, nakushimashita",
+      "audioText": "パスポート、なくしました",
+      "topic": "Help",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p33"
+    },
+    {
+      "ja": "おなまえはなんですか",
+      "en": "What's your name?",
+      "reading": "onamae wa nan desu ka",
+      "audioText": "おなまえはなんですか",
+      "topic": "Connections",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p34"
+    },
+    {
+      "ja": "どこから来ましたか。",
+      "en": "Where are you from?",
+      "reading": "doko kara kimashita ka",
+      "audioText": "どこからきましたか。",
+      "topic": "Connections",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p35"
+    },
+    {
+      "ja": "にほんごがじょうずですね。",
+      "en": "Your Japanese is good!",
+      "reading": "nihongo ga jōzu desu ne.",
+      "audioText": "にほんごがじょうずですね。",
+      "topic": "Connections",
+      "note": "A standard Japanese expression for everyday use.",
+      "id": "p36"
+    },
+    {
+      "topic": "Food",
+      "ja": "お水をください。",
+      "reading": "おみずをください。",
+      "audioText": "おみずをください。",
+      "en": "Water, please.",
+      "note": "A polite request to staff.",
+      "id": "p37"
+    },
+    {
+      "topic": "Food",
+      "ja": "お茶をください。",
+      "reading": "おちゃをください。",
+      "audioText": "おちゃをください。",
+      "en": "Tea, please.",
+      "note": "A polite request to staff.",
+      "id": "p38"
+    },
+    {
+      "topic": "Food",
+      "ja": "メニューを見せてください。",
+      "reading": "めにゅーをみせてください。",
+      "audioText": "めにゅーをみせてください。",
+      "en": "Could I see the menu?",
+      "note": "Ask before ordering.",
+      "id": "p39"
+    },
+    {
+      "topic": "Food",
+      "ja": "おすすめは何ですか。",
+      "reading": "おすすめはなんですか。",
+      "audioText": "おすすめはなんですか。",
+      "en": "What do you recommend?",
+      "note": "A polite question to restaurant staff.",
+      "id": "p40"
+    },
+    {
+      "topic": "Food",
+      "ja": "これを一つお願いします。",
+      "reading": "これをひとつおねがいします。",
+      "audioText": "これをひとつおねがいします。",
+      "en": "One of these, please.",
+      "note": "Point to the item you want.",
+      "id": "p41"
+    },
+    {
+      "topic": "Food",
+      "ja": "持ち帰りでお願いします。",
+      "reading": "もちかえりでおねがいします。",
+      "audioText": "もちかえりでおねがいします。",
+      "en": "To go, please.",
+      "note": "Use when ordering takeaway.",
+      "id": "p42"
+    },
+    {
+      "topic": "Food",
+      "ja": "ここで食べます。",
+      "reading": "ここでたべます。",
+      "audioText": "ここでたべます。",
+      "en": "I'll eat here.",
+      "note": "Use when asked about eating in.",
+      "id": "p43"
+    },
+    {
+      "topic": "Food",
+      "ja": "辛くしないでください。",
+      "reading": "からくしないでください。",
+      "audioText": "からくしないでください。",
+      "en": "Please don't make it spicy.",
+      "note": "Ask whether the dish can be adjusted.",
+      "id": "p44"
+    },
+    {
+      "topic": "Food",
+      "ja": "卵は入っていますか。",
+      "reading": "たまごははいっていますか。",
+      "audioText": "たまごははいっていますか。",
+      "en": "Does this contain egg?",
+      "note": "Ingredient question; confirm allergies explicitly.",
+      "id": "p45"
+    },
+    {
+      "topic": "Food",
+      "ja": "卵アレルギーがあります。",
+      "reading": "たまごあれるぎーがあります。",
+      "audioText": "たまごあれるぎーがあります。",
+      "en": "I have an egg allergy.",
+      "note": "Tell staff before ordering; do not rely on a single phrase alone.",
+      "id": "p46"
+    },
+    {
+      "topic": "Food",
+      "ja": "肉を食べません。",
+      "reading": "にくをたべません。",
+      "audioText": "にくをたべません。",
+      "en": "I don't eat meat.",
+      "note": "State your dietary preference.",
+      "id": "p47"
+    },
+    {
+      "topic": "Food",
+      "ja": "別々に払えますか。",
+      "reading": "べつべつにはらえますか。",
+      "audioText": "べつべつにはらえますか。",
+      "en": "Can we pay separately?",
+      "note": "Ask before paying; policies vary.",
+      "id": "p48"
+    },
+    {
+      "topic": "Food",
+      "ja": "予約しています。",
+      "reading": "よやくしています。",
+      "audioText": "よやくしています。",
+      "en": "I have a reservation.",
+      "note": "Give your name next.",
+      "id": "p49"
+    },
+    {
+      "topic": "Food",
+      "ja": "二人です。",
+      "reading": "ふたりです。",
+      "audioText": "ふたりです。",
+      "en": "There are two of us.",
+      "note": "Use when a host asks your party size.",
+      "id": "p50"
+    },
+    {
+      "topic": "Food",
+      "ja": "もう少し考えます。",
+      "reading": "もうすこしかんがえます。",
+      "audioText": "もうすこしかんがえます。",
+      "en": "I'll think a little longer.",
+      "note": "When you need more time to order.",
+      "id": "p51"
+    },
+    {
+      "topic": "Travel",
+      "ja": "駅はどこですか。",
+      "reading": "えきはどこですか。",
+      "audioText": "えきはどこですか。",
+      "en": "Where is the station?",
+      "note": "A polite direction question.",
+      "id": "p52"
+    },
+    {
+      "topic": "Travel",
+      "ja": "この電車は京都に行きますか。",
+      "reading": "このでんしゃはきょうとにいきますか。",
+      "audioText": "このでんしゃはきょうとにいきますか。",
+      "en": "Does this train go to Kyoto?",
+      "note": "Confirm the destination before boarding.",
+      "id": "p53"
+    },
+    {
+      "topic": "Travel",
+      "ja": "何番線ですか。",
+      "reading": "なんばんせんですか。",
+      "audioText": "なんばんせんですか。",
+      "en": "Which platform is it?",
+      "note": "Use after naming your destination or train.",
+      "id": "p54"
+    },
+    {
+      "topic": "Travel",
+      "ja": "ここで乗り換えますか。",
+      "reading": "ここでのりかえますか。",
+      "audioText": "ここでのりかえますか。",
+      "en": "Do I transfer here?",
+      "note": "Confirm a transfer point.",
+      "id": "p55"
+    },
+    {
+      "topic": "Travel",
+      "ja": "次の駅で降ります。",
+      "reading": "つぎのえきでおります。",
+      "audioText": "つぎのえきでおります。",
+      "en": "I'm getting off at the next station.",
+      "note": "Useful when making your way to a door.",
+      "id": "p56"
+    },
+    {
+      "topic": "Travel",
+      "ja": "切符をなくしました。",
+      "reading": "きっぷをなくしました。",
+      "audioText": "きっぷをなくしました。",
+      "en": "I've lost my ticket.",
+      "note": "Tell station staff.",
+      "id": "p57"
+    },
+    {
+      "topic": "Travel",
+      "ja": "終電は何時ですか。",
+      "reading": "しゅうでんはなんじですか。",
+      "audioText": "しゅうでんはなんじですか。",
+      "en": "What time is the last train?",
+      "note": "Specify your destination too.",
+      "id": "p58"
+    },
+    {
+      "topic": "Travel",
+      "ja": "歩いて行けますか。",
+      "reading": "あるいていけますか。",
+      "audioText": "あるいていけますか。",
+      "en": "Can I get there on foot?",
+      "note": "Ask about walking distance.",
+      "id": "p59"
+    },
+    {
+      "topic": "Travel",
+      "ja": "ここに行きたいです。",
+      "reading": "ここにいきたいです。",
+      "audioText": "ここにいきたいです。",
+      "en": "I'd like to go here.",
+      "note": "Show an address or map.",
+      "id": "p60"
+    },
+    {
+      "topic": "Travel",
+      "ja": "ここで降ろしてください。",
+      "reading": "ここでおろしてください。",
+      "audioText": "ここでおろしてください。",
+      "en": "Please let me off here.",
+      "note": "Use with a taxi driver where stopping is allowed.",
+      "id": "p61"
+    },
+    {
+      "topic": "Travel",
+      "ja": "往復でお願いします。",
+      "reading": "おうふくでおねがいします。",
+      "audioText": "おうふくでおねがいします。",
+      "en": "A round trip, please.",
+      "note": "Use when purchasing a return ticket.",
+      "id": "p62"
+    },
+    {
+      "topic": "Travel",
+      "ja": "片道でお願いします。",
+      "reading": "かたみちでおねがいします。",
+      "audioText": "かたみちでおねがいします。",
+      "en": "One way, please.",
+      "note": "Use when purchasing a single ticket.",
+      "id": "p63"
+    },
+    {
+      "topic": "Travel",
+      "ja": "バス停はどこですか。",
+      "reading": "ばすていはどこですか。",
+      "audioText": "ばすていはどこですか。",
+      "en": "Where is the bus stop?",
+      "note": "Name the bus if you know it.",
+      "id": "p64"
+    },
+    {
+      "topic": "Travel",
+      "ja": "あと何分ですか。",
+      "reading": "あとなんぷんですか。",
+      "audioText": "あとなんぷんですか。",
+      "en": "How many minutes are left?",
+      "note": "The situation supplies the destination or event.",
+      "id": "p65"
+    },
+    {
+      "topic": "Travel",
+      "ja": "地図で教えてください。",
+      "reading": "ちずでおしえてください。",
+      "audioText": "ちずでおしえてください。",
+      "en": "Please show me on the map.",
+      "note": "Useful when spoken directions are difficult.",
+      "id": "p66"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "これを見せてください。",
+      "reading": "これをみせてください。",
+      "audioText": "これをみせてください。",
+      "en": "Could you show me this?",
+      "note": "For an item behind a counter.",
+      "id": "p67"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "試着してもいいですか。",
+      "reading": "しちゃくしてもいいですか。",
+      "audioText": "しちゃくしてもいいですか。",
+      "en": "May I try it on?",
+      "note": "Ask before entering a fitting room.",
+      "id": "p68"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "もう少し大きいサイズはありますか。",
+      "reading": "もうすこしおおきいさいずはありますか。",
+      "audioText": "もうすこしおおきいさいずはありますか。",
+      "en": "Do you have a slightly larger size?",
+      "note": "For clothing or shoes.",
+      "id": "p69"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "別の色はありますか。",
+      "reading": "べつのいろはありますか。",
+      "audioText": "べつのいろはありますか。",
+      "en": "Do you have another color?",
+      "note": "For a different version of an item.",
+      "id": "p70"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "これにします。",
+      "reading": "これにします。",
+      "audioText": "これにします。",
+      "en": "I'll take this one.",
+      "note": "After making your selection.",
+      "id": "p71"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "袋は要りません。",
+      "reading": "ふくろはいりません。",
+      "audioText": "ふくろはいりません。",
+      "en": "I don't need a bag.",
+      "note": "A clear, polite checkout response.",
+      "id": "p72"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "レシートをください。",
+      "reading": "れしーとをください。",
+      "audioText": "れしーとをください。",
+      "en": "Please give me the receipt.",
+      "note": "Use at checkout.",
+      "id": "p73"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "現金で払います。",
+      "reading": "げんきんではらいます。",
+      "audioText": "げんきんではらいます。",
+      "en": "I'll pay in cash.",
+      "note": "Use at checkout.",
+      "id": "p74"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "カードで払えますか。",
+      "reading": "かーどではらえますか。",
+      "audioText": "かーどではらえますか。",
+      "en": "Can I pay by card?",
+      "note": "Check accepted payment methods.",
+      "id": "p75"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "返品できますか。",
+      "reading": "へんぴんできますか。",
+      "audioText": "へんぴんできますか。",
+      "en": "Can I return it?",
+      "note": "Return policies vary; check conditions.",
+      "id": "p76"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "少し考えます。",
+      "reading": "すこしかんがえます。",
+      "audioText": "すこしかんがえます。",
+      "en": "I'll think about it.",
+      "note": "A gentle way to pause a purchase.",
+      "id": "p77"
+    },
+    {
+      "topic": "Shopping",
+      "ja": "営業時間は何時までですか。",
+      "reading": "えいぎょうじかんはなんじまでですか。",
+      "audioText": "えいぎょうじかんはなんじまでですか。",
+      "en": "What time do you close?",
+      "note": "Ask a business about its closing time.",
+      "id": "p78"
+    },
+    {
+      "topic": "Stay",
+      "ja": "チェックインをお願いします。",
+      "reading": "ちぇっくいんをおねがいします。",
+      "audioText": "ちぇっくいんをおねがいします。",
+      "en": "I'd like to check in.",
+      "note": "Use at hotel reception.",
+      "id": "p79"
+    },
+    {
+      "topic": "Stay",
+      "ja": "荷物を預かってもらえますか。",
+      "reading": "にもつをあずかってもらえますか。",
+      "audioText": "にもつをあずかってもらえますか。",
+      "en": "Could you keep my luggage?",
+      "note": "Ask hotel or storage staff.",
+      "id": "p80"
+    },
+    {
+      "topic": "Stay",
+      "ja": "部屋の鍵をなくしました。",
+      "reading": "へやのかぎをなくしました。",
+      "audioText": "へやのかぎをなくしました。",
+      "en": "I've lost my room key.",
+      "note": "Tell reception; identification may be needed.",
+      "id": "p81"
+    },
+    {
+      "topic": "Stay",
+      "ja": "お湯が出ません。",
+      "reading": "おゆがでません。",
+      "audioText": "おゆがでません。",
+      "en": "There's no hot water.",
+      "note": "Explain a problem with the room.",
+      "id": "p82"
+    },
+    {
+      "topic": "Stay",
+      "ja": "Wi-Fiのパスワードは何ですか。",
+      "reading": "わいふぁいのぱすわーどはなんですか。",
+      "audioText": "わいふぁいのぱすわーどはなんですか。",
+      "en": "What's the Wi-Fi password?",
+      "note": "Ask where internet access is provided.",
+      "id": "p83"
+    },
+    {
+      "topic": "Stay",
+      "ja": "もう一泊できますか。",
+      "reading": "もういっぱくできますか。",
+      "audioText": "もういっぱくできますか。",
+      "en": "Can I stay one more night?",
+      "note": "Ask about availability and price.",
+      "id": "p84"
+    },
+    {
+      "topic": "Stay",
+      "ja": "静かな部屋はありますか。",
+      "reading": "しずかなへやはありますか。",
+      "audioText": "しずかなへやはありますか。",
+      "en": "Do you have a quiet room?",
+      "note": "A room preference, subject to availability.",
+      "id": "p85"
+    },
+    {
+      "topic": "Stay",
+      "ja": "タオルをもう一枚ください。",
+      "reading": "たおるをもういちまいください。",
+      "audioText": "たおるをもういちまいください。",
+      "en": "One more towel, please.",
+      "note": "Use at reception or with housekeeping.",
+      "id": "p86"
+    },
+    {
+      "topic": "Stay",
+      "ja": "チェックアウトは何時ですか。",
+      "reading": "ちぇっくあうとはなんじですか。",
+      "audioText": "ちぇっくあうとはなんじですか。",
+      "en": "What time is checkout?",
+      "note": "Confirm the hotel's policy.",
+      "id": "p87"
+    },
+    {
+      "topic": "Stay",
+      "ja": "近くにコンビニはありますか。",
+      "reading": "ちかくにこんびにはありますか。",
+      "audioText": "ちかくにこんびにはありますか。",
+      "en": "Is there a convenience store nearby?",
+      "note": "A polite local question.",
+      "id": "p88"
+    },
+    {
+      "topic": "Connections",
+      "ja": "日本語を勉強しています。",
+      "reading": "にほんごをべんきょうしています。",
+      "audioText": "にほんごをべんきょうしています。",
+      "en": "I'm studying Japanese.",
+      "note": "A useful conversation opener.",
+      "id": "p89"
+    },
+    {
+      "topic": "Connections",
+      "ja": "ゆっくり話してもらえますか。",
+      "reading": "ゆっくりはなしてもらえますか。",
+      "audioText": "ゆっくりはなしてもらえますか。",
+      "en": "Could you speak slowly?",
+      "note": "A polite request for support.",
+      "id": "p90"
+    },
+    {
+      "topic": "Connections",
+      "ja": "もう一度言ってもらえますか。",
+      "reading": "もういちどいってもらえますか。",
+      "audioText": "もういちどいってもらえますか。",
+      "en": "Could you say that again?",
+      "note": "Ask for a repeat.",
+      "id": "p91"
+    },
+    {
+      "topic": "Connections",
+      "ja": "どういう意味ですか。",
+      "reading": "どういういみですか。",
+      "audioText": "どういういみですか。",
+      "en": "What does that mean?",
+      "note": "Ask about a word or expression.",
+      "id": "p92"
+    },
+    {
+      "topic": "Connections",
+      "ja": "日本語で何と言いますか。",
+      "reading": "にほんごでなんといいますか。",
+      "audioText": "にほんごでなんといいますか。",
+      "en": "What do you call it in Japanese?",
+      "note": "Point to or describe the object.",
+      "id": "p93"
+    },
+    {
+      "topic": "Connections",
+      "ja": "書いてもらえますか。",
+      "reading": "かいてもらえますか。",
+      "audioText": "かいてもらえますか。",
+      "en": "Could you write it down?",
+      "note": "Helpful for names and addresses.",
+      "id": "p94"
+    },
+    {
+      "topic": "Connections",
+      "ja": "発音を教えてください。",
+      "reading": "はつおんをおしえてください。",
+      "audioText": "はつおんをおしえてください。",
+      "en": "Please teach me the pronunciation.",
+      "note": "Ask about a particular word.",
+      "id": "p95"
+    },
+    {
+      "topic": "Connections",
+      "ja": "写真を撮ってもいいですか。",
+      "reading": "しゃしんをとってもいいですか。",
+      "audioText": "しゃしんをとってもいいですか。",
+      "en": "May I take a photo?",
+      "note": "Ask the person or venue before taking a photo.",
+      "id": "p96"
+    },
+    {
+      "topic": "Connections",
+      "ja": "一緒に行きませんか。",
+      "reading": "いっしょにいきませんか。",
+      "audioText": "いっしょにいきませんか。",
+      "en": "Would you like to go together?",
+      "note": "A polite invitation.",
+      "id": "p97"
+    },
+    {
+      "topic": "Connections",
+      "ja": "また会えるといいですね。",
+      "reading": "またあえるといいですね。",
+      "audioText": "またあえるといいですね。",
+      "en": "I hope we can meet again.",
+      "note": "A warm way to end an encounter.",
+      "id": "p98"
+    },
+    {
+      "topic": "Connections",
+      "ja": "楽しかったです。",
+      "reading": "たのしかったです。",
+      "audioText": "たのしかったです。",
+      "en": "I had a good time.",
+      "note": "After an event or outing.",
+      "id": "p99"
+    },
+    {
+      "topic": "Connections",
+      "ja": "誘ってくれてありがとうございます。",
+      "reading": "さそってくれてありがとうございます。",
+      "audioText": "さそってくれてありがとうございます。",
+      "en": "Thank you for inviting me.",
+      "note": "Thank someone for including you.",
+      "id": "p100"
+    },
+    {
+      "topic": "Connections",
+      "ja": "今日は予定があります。",
+      "reading": "きょうはよていがあります。",
+      "audioText": "きょうはよていがあります。",
+      "en": "I have plans today.",
+      "note": "Explain why you cannot join.",
+      "id": "p101"
+    },
+    {
+      "topic": "Connections",
+      "ja": "また今度お願いします。",
+      "reading": "またこんどおねがいします。",
+      "audioText": "またこんどおねがいします。",
+      "en": "Maybe another time, please.",
+      "note": "A polite response when declining an offer.",
+      "id": "p102"
+    },
+    {
+      "topic": "Connections",
+      "ja": "無理しないでください。",
+      "reading": "むりしないでください。",
+      "audioText": "むりしないでください。",
+      "en": "Please don't push yourself.",
+      "note": "A caring response to someone under strain.",
+      "id": "p103"
+    },
+    {
+      "topic": "Daily life",
+      "ja": "明日は何時に会いますか。",
+      "reading": "あしたはなんじにあいますか。",
+      "audioText": "あしたはなんじにあいますか。",
+      "en": "What time shall we meet tomorrow?",
+      "note": "Confirm the time with the other person.",
+      "id": "p104"
+    },
+    {
+      "topic": "Daily life",
+      "ja": "少し遅れます。",
+      "reading": "すこしおくれます。",
+      "audioText": "すこしおくれます。",
+      "en": "I'll be a little late.",
+      "note": "Let someone know as soon as possible.",
+      "id": "p105"
+    },
+    {
+      "topic": "Daily life",
+      "ja": "今向かっています。",
+      "reading": "いまむかっています。",
+      "audioText": "いまむかっています。",
+      "en": "I'm on my way now.",
+      "note": "A brief update by message.",
+      "id": "p106"
+    },
+    {
+      "topic": "Daily life",
+      "ja": "着いたら連絡します。",
+      "reading": "ついたられんらくします。",
+      "audioText": "ついたられんらくします。",
+      "en": "I'll contact you when I arrive.",
+      "note": "Use when arranging a meeting.",
+      "id": "p107"
+    },
+    {
+      "topic": "Daily life",
+      "ja": "ここで待っています。",
+      "reading": "ここでまっています。",
+      "audioText": "ここでまっています。",
+      "en": "I'll wait here.",
+      "note": "State where you will stay.",
+      "id": "p108"
+    },
+    {
+      "topic": "Daily life",
+      "ja": "充電してもいいですか。",
+      "reading": "じゅうでんしてもいいですか。",
+      "audioText": "じゅうでんしてもいいですか。",
+      "en": "May I charge my device?",
+      "note": "Ask permission before using an outlet.",
+      "id": "p109"
+    },
+    {
+      "topic": "Daily life",
+      "ja": "傘を借りてもいいですか。",
+      "reading": "かさをかりてもいいですか。",
+      "audioText": "かさをかりてもいいですか。",
+      "en": "May I borrow an umbrella?",
+      "note": "Use when borrowing from someone.",
+      "id": "p110"
+    },
+    {
+      "topic": "Daily life",
+      "ja": "手伝いましょうか。",
+      "reading": "てつだいましょうか。",
+      "audioText": "てつだいましょうか。",
+      "en": "Shall I help?",
+      "note": "Offer assistance without assuming it is needed.",
+      "id": "p111"
+    },
+    {
+      "topic": "Daily life",
+      "ja": "手伝ってもらえますか。",
+      "reading": "てつだってもらえますか。",
+      "audioText": "てつだってもらえますか。",
+      "en": "Could you help me?",
+      "note": "A polite request for help.",
+      "id": "p112"
+    },
+    {
+      "topic": "Daily life",
+      "ja": "少し休みたいです。",
+      "reading": "すこしやすみたいです。",
+      "audioText": "すこしやすみたいです。",
+      "en": "I'd like to rest for a bit.",
+      "note": "State what you need.",
+      "id": "p113"
+    },
+    {
+      "topic": "Help",
+      "ja": "道に迷いました。",
+      "reading": "みちにまよいました。",
+      "audioText": "みちにまよいました。",
+      "en": "I'm lost.",
+      "note": "Ask staff or someone nearby for directions.",
+      "id": "p114"
+    },
+    {
+      "topic": "Help",
+      "ja": "財布を落としました。",
+      "reading": "さいふをおとしました。",
+      "audioText": "さいふをおとしました。",
+      "en": "I've lost my wallet.",
+      "note": "Explain at a lost-property desk or police box.",
+      "id": "p115"
+    },
+    {
+      "topic": "Help",
+      "ja": "携帯電話をなくしました。",
+      "reading": "けいたいでんわをなくしました。",
+      "audioText": "けいたいでんわをなくしました。",
+      "en": "I've lost my mobile phone.",
+      "note": "Ask about lost-property procedures.",
+      "id": "p116"
+    },
+    {
+      "topic": "Help",
+      "ja": "具合が悪いです。",
+      "reading": "ぐあいがわるいです。",
+      "audioText": "ぐあいがわるいです。",
+      "en": "I feel unwell.",
+      "note": "Tell someone you need assistance.",
+      "id": "p117"
+    },
+    {
+      "topic": "Help",
+      "ja": "病院はどこですか。",
+      "reading": "びょういんはどこですか。",
+      "audioText": "びょういんはどこですか。",
+      "en": "Where is the hospital?",
+      "note": "Ask someone nearby or staff.",
+      "id": "p118"
+    },
+    {
+      "topic": "Help",
+      "ja": "救急車を呼んでください。",
+      "reading": "きゅうきゅうしゃをよんでください。",
+      "audioText": "きゅうきゅうしゃをよんでください。",
+      "en": "Please call an ambulance.",
+      "note": "For an emergency.",
+      "id": "p119"
+    },
+    {
+      "topic": "Help",
+      "ja": "警察を呼んでください。",
+      "reading": "けいさつをよんでください。",
+      "audioText": "けいさつをよんでください。",
+      "en": "Please call the police.",
+      "note": "When police assistance is urgently needed.",
+      "id": "p120"
+    },
+    {
+      "topic": "Help",
+      "ja": "日本語があまり分かりません。",
+      "reading": "にほんごがあまりわかりません。",
+      "audioText": "にほんごがあまりわかりません。",
+      "en": "I don't understand much Japanese.",
+      "note": "Ask for communication support.",
+      "id": "p121"
+    },
+    {
+      "topic": "Help",
+      "ja": "通訳をお願いできますか。",
+      "reading": "つうやくをおねがいできますか。",
+      "audioText": "つうやくをおねがいできますか。",
+      "en": "Could I have an interpreter?",
+      "note": "Ask whether interpretation is available.",
+      "id": "p122"
+    },
+    {
+      "topic": "Help",
+      "ja": "連絡先を教えてください。",
+      "reading": "れんらくさきをおしえてください。",
+      "audioText": "れんらくさきをおしえてください。",
+      "en": "Please tell me whom to contact.",
+      "note": "Use when arranging follow-up.",
+      "id": "p123"
+    },
+    {
+      "id": "p124",
+      "ja": "さようなら。",
+      "en": "Goodbye.",
+      "note": "Often used for a more definite parting; friends commonly choose またね or じゃあね.",
+      "topic": "Connections",
+      "reading": "さようなら。",
+      "audioText": "さようなら。"
+    },
+    {
+      "id": "p125",
+      "ja": "いいえ。",
+      "en": "No.",
+      "note": "A negative answer. In some social exchanges it can also decline thanks or praise.",
+      "topic": "Conversation",
+      "reading": "いいえ。",
+      "audioText": "いいえ。"
+    },
+    {
+      "id": "p126",
+      "ja": "ごちそうさまでした。",
+      "en": "Said after a meal.",
+      "note": "An expression of appreciation after eating.",
+      "topic": "Food",
+      "reading": "ごちそうさまでした。",
+      "audioText": "ごちそうさまでした。"
+    }
+  ],
+  "kanji": [
+    {
+      "id": "k1",
+      "char": "一",
+      "meaning": "one",
+      "word": "一つ",
+      "reading": "ひとつ",
+      "en": "one thing",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k2",
+      "char": "二",
+      "meaning": "two",
+      "word": "二つ",
+      "reading": "ふたつ",
+      "en": "two things",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k3",
+      "char": "三",
+      "meaning": "three",
+      "word": "三つ",
+      "reading": "みっつ",
+      "en": "three things",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k4",
+      "char": "四",
+      "meaning": "four",
+      "word": "四つ",
+      "reading": "よっつ",
+      "en": "four things",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k5",
+      "char": "五",
+      "meaning": "five",
+      "word": "五つ",
+      "reading": "いつつ",
+      "en": "five things",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k6",
+      "char": "六",
+      "meaning": "six",
+      "word": "六つ",
+      "reading": "むっつ",
+      "en": "six things",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k7",
+      "char": "七",
+      "meaning": "seven",
+      "word": "七つ",
+      "reading": "ななつ",
+      "en": "seven things",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k8",
+      "char": "八",
+      "meaning": "eight",
+      "word": "八つ",
+      "reading": "やっつ",
+      "en": "eight things",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k9",
+      "char": "九",
+      "meaning": "nine",
+      "word": "九つ",
+      "reading": "ここのつ",
+      "en": "nine things",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k10",
+      "char": "十",
+      "meaning": "ten",
+      "word": "十日",
+      "reading": "とおか",
+      "en": "the tenth day; ten days",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k11",
+      "char": "百",
+      "meaning": "hundred",
+      "word": "百円",
+      "reading": "ひゃくえん",
+      "en": "one hundred yen",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k12",
+      "char": "千",
+      "meaning": "thousand",
+      "word": "千円",
+      "reading": "せんえん",
+      "en": "one thousand yen",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k13",
+      "char": "万",
+      "meaning": "ten thousand",
+      "word": "一万円",
+      "reading": "いちまんえん",
+      "en": "ten thousand yen",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k14",
+      "char": "円",
+      "meaning": "yen; circle",
+      "word": "円",
+      "reading": "えん",
+      "en": "yen",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k15",
+      "char": "年",
+      "meaning": "year",
+      "word": "今年",
+      "reading": "ことし",
+      "en": "this year",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k16",
+      "char": "月",
+      "meaning": "moon; month",
+      "word": "月曜日",
+      "reading": "げつようび",
+      "en": "Monday",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k17",
+      "char": "日",
+      "meaning": "sun; day",
+      "word": "日曜日",
+      "reading": "にちようび",
+      "en": "Sunday",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k18",
+      "char": "時",
+      "meaning": "time; hour",
+      "word": "時間",
+      "reading": "じかん",
+      "en": "time",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k19",
+      "char": "分",
+      "meaning": "part; minute",
+      "word": "五分",
+      "reading": "ごふん",
+      "en": "five minutes",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k20",
+      "char": "半",
+      "meaning": "half",
+      "word": "半分",
+      "reading": "はんぶん",
+      "en": "half",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k21",
+      "char": "今",
+      "meaning": "now",
+      "word": "今",
+      "reading": "いま",
+      "en": "now",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k22",
+      "char": "毎",
+      "meaning": "every",
+      "word": "毎日",
+      "reading": "まいにち",
+      "en": "every day",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k23",
+      "char": "週",
+      "meaning": "week",
+      "word": "来週",
+      "reading": "らいしゅう",
+      "en": "next week",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k24",
+      "char": "午",
+      "meaning": "noon",
+      "word": "午後",
+      "reading": "ごご",
+      "en": "afternoon",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k25",
+      "char": "前",
+      "meaning": "before; front",
+      "word": "午前",
+      "reading": "ごぜん",
+      "en": "morning; a.m.",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k26",
+      "char": "後",
+      "meaning": "after; behind",
+      "word": "後ろ",
+      "reading": "うしろ",
+      "en": "behind",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k27",
+      "char": "朝",
+      "meaning": "morning",
+      "word": "朝",
+      "reading": "あさ",
+      "en": "morning",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k28",
+      "char": "昼",
+      "meaning": "daytime",
+      "word": "昼ご飯",
+      "reading": "ひるごはん",
+      "en": "lunch",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k29",
+      "char": "夜",
+      "meaning": "night",
+      "word": "夜",
+      "reading": "よる",
+      "en": "night",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k30",
+      "char": "間",
+      "meaning": "interval",
+      "word": "間",
+      "reading": "あいだ",
+      "en": "between; interval",
+      "topic": "Numbers & time"
+    },
+    {
+      "id": "k31",
+      "char": "人",
+      "meaning": "person",
+      "word": "人",
+      "reading": "ひと",
+      "en": "person",
+      "topic": "People & places"
+    },
+    {
+      "id": "k32",
+      "char": "子",
+      "meaning": "child",
+      "word": "子供",
+      "reading": "こども",
+      "en": "child",
+      "topic": "People & places"
+    },
+    {
+      "id": "k33",
+      "char": "女",
+      "meaning": "woman",
+      "word": "女性",
+      "reading": "じょせい",
+      "en": "woman",
+      "topic": "People & places"
+    },
+    {
+      "id": "k34",
+      "char": "男",
+      "meaning": "man",
+      "word": "男性",
+      "reading": "だんせい",
+      "en": "man",
+      "topic": "People & places"
+    },
+    {
+      "id": "k35",
+      "char": "父",
+      "meaning": "father",
+      "word": "父",
+      "reading": "ちち",
+      "en": "my father",
+      "topic": "People & places"
+    },
+    {
+      "id": "k36",
+      "char": "母",
+      "meaning": "mother",
+      "word": "母",
+      "reading": "はは",
+      "en": "my mother",
+      "topic": "People & places"
+    },
+    {
+      "id": "k37",
+      "char": "友",
+      "meaning": "friend",
+      "word": "友達",
+      "reading": "ともだち",
+      "en": "friend",
+      "topic": "People & places"
+    },
+    {
+      "id": "k38",
+      "char": "先",
+      "meaning": "ahead; previous",
+      "word": "先生",
+      "reading": "せんせい",
+      "en": "teacher",
+      "topic": "People & places"
+    },
+    {
+      "id": "k39",
+      "char": "生",
+      "meaning": "life; birth",
+      "word": "学生",
+      "reading": "がくせい",
+      "en": "student",
+      "topic": "People & places"
+    },
+    {
+      "id": "k40",
+      "char": "学",
+      "meaning": "study",
+      "word": "学校",
+      "reading": "がっこう",
+      "en": "school",
+      "topic": "People & places"
+    },
+    {
+      "id": "k41",
+      "char": "校",
+      "meaning": "school",
+      "word": "小学校",
+      "reading": "しょうがっこう",
+      "en": "elementary school",
+      "topic": "People & places"
+    },
+    {
+      "id": "k42",
+      "char": "本",
+      "meaning": "book; origin",
+      "word": "本",
+      "reading": "ほん",
+      "en": "book",
+      "topic": "People & places"
+    },
+    {
+      "id": "k43",
+      "char": "名",
+      "meaning": "name",
+      "word": "名前",
+      "reading": "なまえ",
+      "en": "name",
+      "topic": "People & places"
+    },
+    {
+      "id": "k44",
+      "char": "私",
+      "meaning": "I; private",
+      "word": "私",
+      "reading": "わたし",
+      "en": "I",
+      "topic": "People & places"
+    },
+    {
+      "id": "k45",
+      "char": "家",
+      "meaning": "house; family",
+      "word": "家",
+      "reading": "いえ",
+      "en": "house",
+      "topic": "People & places"
+    },
+    {
+      "id": "k46",
+      "char": "店",
+      "meaning": "shop",
+      "word": "店",
+      "reading": "みせ",
+      "en": "shop",
+      "topic": "People & places"
+    },
+    {
+      "id": "k47",
+      "char": "駅",
+      "meaning": "station",
+      "word": "駅",
+      "reading": "えき",
+      "en": "station",
+      "topic": "People & places"
+    },
+    {
+      "id": "k48",
+      "char": "国",
+      "meaning": "country",
+      "word": "国",
+      "reading": "くに",
+      "en": "country",
+      "topic": "People & places"
+    },
+    {
+      "id": "k49",
+      "char": "町",
+      "meaning": "town",
+      "word": "町",
+      "reading": "まち",
+      "en": "town",
+      "topic": "People & places"
+    },
+    {
+      "id": "k50",
+      "char": "村",
+      "meaning": "village",
+      "word": "村",
+      "reading": "むら",
+      "en": "village",
+      "topic": "People & places"
+    },
+    {
+      "id": "k51",
+      "char": "市",
+      "meaning": "city",
+      "word": "市役所",
+      "reading": "しやくしょ",
+      "en": "city hall",
+      "topic": "People & places"
+    },
+    {
+      "id": "k52",
+      "char": "道",
+      "meaning": "road; way",
+      "word": "道",
+      "reading": "みち",
+      "en": "road",
+      "topic": "People & places"
+    },
+    {
+      "id": "k53",
+      "char": "車",
+      "meaning": "vehicle",
+      "word": "車",
+      "reading": "くるま",
+      "en": "car",
+      "topic": "People & places"
+    },
+    {
+      "id": "k54",
+      "char": "電",
+      "meaning": "electricity",
+      "word": "電車",
+      "reading": "でんしゃ",
+      "en": "train",
+      "topic": "People & places"
+    },
+    {
+      "id": "k55",
+      "char": "社",
+      "meaning": "company; shrine",
+      "word": "会社",
+      "reading": "かいしゃ",
+      "en": "company",
+      "topic": "People & places"
+    },
+    {
+      "id": "k56",
+      "char": "会",
+      "meaning": "meet",
+      "word": "会う",
+      "reading": "あう",
+      "en": "to meet",
+      "topic": "People & places"
+    },
+    {
+      "id": "k57",
+      "char": "室",
+      "meaning": "room",
+      "word": "教室",
+      "reading": "きょうしつ",
+      "en": "classroom",
+      "topic": "People & places"
+    },
+    {
+      "id": "k58",
+      "char": "門",
+      "meaning": "gate",
+      "word": "門",
+      "reading": "もん",
+      "en": "gate",
+      "topic": "People & places"
+    },
+    {
+      "id": "k59",
+      "char": "入",
+      "meaning": "enter",
+      "word": "入口",
+      "reading": "いりぐち",
+      "en": "entrance",
+      "topic": "People & places"
+    },
+    {
+      "id": "k60",
+      "char": "出",
+      "meaning": "exit",
+      "word": "出口",
+      "reading": "でぐち",
+      "en": "exit",
+      "topic": "People & places"
+    },
+    {
+      "id": "k61",
+      "char": "山",
+      "meaning": "mountain",
+      "word": "山",
+      "reading": "やま",
+      "en": "mountain",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k62",
+      "char": "川",
+      "meaning": "river",
+      "word": "川",
+      "reading": "かわ",
+      "en": "river",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k63",
+      "char": "水",
+      "meaning": "water",
+      "word": "水",
+      "reading": "みず",
+      "en": "water",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k64",
+      "char": "火",
+      "meaning": "fire",
+      "word": "火",
+      "reading": "ひ",
+      "en": "fire",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k65",
+      "char": "木",
+      "meaning": "tree",
+      "word": "木",
+      "reading": "き",
+      "en": "tree",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k66",
+      "char": "金",
+      "meaning": "gold; money",
+      "word": "お金",
+      "reading": "おかね",
+      "en": "money",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k67",
+      "char": "土",
+      "meaning": "soil",
+      "word": "土",
+      "reading": "つち",
+      "en": "soil",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k68",
+      "char": "雨",
+      "meaning": "rain",
+      "word": "雨",
+      "reading": "あめ",
+      "en": "rain",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k69",
+      "char": "雪",
+      "meaning": "snow",
+      "word": "雪",
+      "reading": "ゆき",
+      "en": "snow",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k70",
+      "char": "天",
+      "meaning": "sky; heaven",
+      "word": "天気",
+      "reading": "てんき",
+      "en": "weather",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k71",
+      "char": "気",
+      "meaning": "spirit; mood",
+      "word": "元気",
+      "reading": "げんき",
+      "en": "well; energetic",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k72",
+      "char": "花",
+      "meaning": "flower",
+      "word": "花",
+      "reading": "はな",
+      "en": "flower",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k73",
+      "char": "空",
+      "meaning": "sky; empty",
+      "word": "空",
+      "reading": "そら",
+      "en": "sky",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k74",
+      "char": "海",
+      "meaning": "sea",
+      "word": "海",
+      "reading": "うみ",
+      "en": "sea",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k75",
+      "char": "田",
+      "meaning": "rice field",
+      "word": "田んぼ",
+      "reading": "たんぼ",
+      "en": "rice field",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k76",
+      "char": "上",
+      "meaning": "above",
+      "word": "上",
+      "reading": "うえ",
+      "en": "above",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k77",
+      "char": "下",
+      "meaning": "below",
+      "word": "下",
+      "reading": "した",
+      "en": "below",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k78",
+      "char": "中",
+      "meaning": "inside",
+      "word": "中",
+      "reading": "なか",
+      "en": "inside",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k79",
+      "char": "外",
+      "meaning": "outside",
+      "word": "外",
+      "reading": "そと",
+      "en": "outside",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k80",
+      "char": "右",
+      "meaning": "right",
+      "word": "右",
+      "reading": "みぎ",
+      "en": "right",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k81",
+      "char": "左",
+      "meaning": "left",
+      "word": "左",
+      "reading": "ひだり",
+      "en": "left",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k82",
+      "char": "東",
+      "meaning": "east",
+      "word": "東",
+      "reading": "ひがし",
+      "en": "east",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k83",
+      "char": "西",
+      "meaning": "west",
+      "word": "西",
+      "reading": "にし",
+      "en": "west",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k84",
+      "char": "南",
+      "meaning": "south",
+      "word": "南",
+      "reading": "みなみ",
+      "en": "south",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k85",
+      "char": "北",
+      "meaning": "north",
+      "word": "北",
+      "reading": "きた",
+      "en": "north",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k86",
+      "char": "大",
+      "meaning": "big",
+      "word": "大きい",
+      "reading": "おおきい",
+      "en": "big",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k87",
+      "char": "小",
+      "meaning": "small",
+      "word": "小さい",
+      "reading": "ちいさい",
+      "en": "small",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k88",
+      "char": "長",
+      "meaning": "long",
+      "word": "長い",
+      "reading": "ながい",
+      "en": "long",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k89",
+      "char": "高",
+      "meaning": "high; expensive",
+      "word": "高い",
+      "reading": "たかい",
+      "en": "high; expensive",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k90",
+      "char": "安",
+      "meaning": "cheap; peaceful",
+      "word": "安い",
+      "reading": "やすい",
+      "en": "inexpensive",
+      "topic": "Nature & position"
+    },
+    {
+      "id": "k91",
+      "char": "食",
+      "meaning": "eat",
+      "word": "食べる",
+      "reading": "たべる",
+      "en": "to eat",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k92",
+      "char": "飲",
+      "meaning": "drink",
+      "word": "飲む",
+      "reading": "のむ",
+      "en": "to drink",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k93",
+      "char": "見",
+      "meaning": "see",
+      "word": "見る",
+      "reading": "みる",
+      "en": "to see",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k94",
+      "char": "聞",
+      "meaning": "hear; ask",
+      "word": "聞く",
+      "reading": "きく",
+      "en": "to listen; to ask",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k95",
+      "char": "読",
+      "meaning": "read",
+      "word": "読む",
+      "reading": "よむ",
+      "en": "to read",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k96",
+      "char": "書",
+      "meaning": "write",
+      "word": "書く",
+      "reading": "かく",
+      "en": "to write",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k97",
+      "char": "話",
+      "meaning": "talk",
+      "word": "話す",
+      "reading": "はなす",
+      "en": "to speak",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k98",
+      "char": "言",
+      "meaning": "say",
+      "word": "言う",
+      "reading": "いう",
+      "en": "to say",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k99",
+      "char": "行",
+      "meaning": "go",
+      "word": "行く",
+      "reading": "いく",
+      "en": "to go",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k100",
+      "char": "来",
+      "meaning": "come",
+      "word": "来る",
+      "reading": "くる",
+      "en": "to come",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k101",
+      "char": "帰",
+      "meaning": "return",
+      "word": "帰る",
+      "reading": "かえる",
+      "en": "to return",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k102",
+      "char": "買",
+      "meaning": "buy",
+      "word": "買う",
+      "reading": "かう",
+      "en": "to buy",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k103",
+      "char": "売",
+      "meaning": "sell",
+      "word": "売る",
+      "reading": "うる",
+      "en": "to sell",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k104",
+      "char": "休",
+      "meaning": "rest",
+      "word": "休む",
+      "reading": "やすむ",
+      "en": "to rest",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k105",
+      "char": "待",
+      "meaning": "wait",
+      "word": "待つ",
+      "reading": "まつ",
+      "en": "to wait",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k106",
+      "char": "立",
+      "meaning": "stand",
+      "word": "立つ",
+      "reading": "たつ",
+      "en": "to stand",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k107",
+      "char": "歩",
+      "meaning": "walk",
+      "word": "歩く",
+      "reading": "あるく",
+      "en": "to walk",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k108",
+      "char": "走",
+      "meaning": "run",
+      "word": "走る",
+      "reading": "はしる",
+      "en": "to run",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k109",
+      "char": "使",
+      "meaning": "use",
+      "word": "使う",
+      "reading": "つかう",
+      "en": "to use",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k110",
+      "char": "作",
+      "meaning": "make",
+      "word": "作る",
+      "reading": "つくる",
+      "en": "to make",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k111",
+      "char": "思",
+      "meaning": "think",
+      "word": "思う",
+      "reading": "おもう",
+      "en": "to think",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k112",
+      "char": "知",
+      "meaning": "know",
+      "word": "知る",
+      "reading": "しる",
+      "en": "to find out; to know",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k113",
+      "char": "教",
+      "meaning": "teach",
+      "word": "教える",
+      "reading": "おしえる",
+      "en": "to teach",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k114",
+      "char": "勉",
+      "meaning": "diligence",
+      "word": "勉強",
+      "reading": "べんきょう",
+      "en": "study",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k115",
+      "char": "強",
+      "meaning": "strong",
+      "word": "強い",
+      "reading": "つよい",
+      "en": "strong",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k116",
+      "char": "新",
+      "meaning": "new",
+      "word": "新しい",
+      "reading": "あたらしい",
+      "en": "new",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k117",
+      "char": "古",
+      "meaning": "old",
+      "word": "古い",
+      "reading": "ふるい",
+      "en": "old",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k118",
+      "char": "白",
+      "meaning": "white",
+      "word": "白い",
+      "reading": "しろい",
+      "en": "white",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k119",
+      "char": "赤",
+      "meaning": "red",
+      "word": "赤い",
+      "reading": "あかい",
+      "en": "red",
+      "topic": "Everyday actions"
+    },
+    {
+      "id": "k120",
+      "char": "青",
+      "meaning": "blue",
+      "word": "青い",
+      "reading": "あおい",
+      "en": "blue",
+      "topic": "Everyday actions"
+    }
+  ],
+  "kana": [
+    {
+      "char": "あ",
+      "romaji": "a",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "い",
+      "romaji": "i",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "う",
+      "romaji": "u",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "え",
+      "romaji": "e",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "お",
+      "romaji": "o",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "か",
+      "romaji": "ka",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "き",
+      "romaji": "ki",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "く",
+      "romaji": "ku",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "け",
+      "romaji": "ke",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "こ",
+      "romaji": "ko",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "さ",
+      "romaji": "sa",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "し",
+      "romaji": "shi",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "す",
+      "romaji": "su",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "せ",
+      "romaji": "se",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "そ",
+      "romaji": "so",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "た",
+      "romaji": "ta",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ち",
+      "romaji": "chi",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "つ",
+      "romaji": "tsu",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "て",
+      "romaji": "te",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "と",
+      "romaji": "to",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "な",
+      "romaji": "na",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "に",
+      "romaji": "ni",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ぬ",
+      "romaji": "nu",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ね",
+      "romaji": "ne",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "の",
+      "romaji": "no",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "は",
+      "romaji": "ha",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ひ",
+      "romaji": "hi",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ふ",
+      "romaji": "fu",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "へ",
+      "romaji": "he",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ほ",
+      "romaji": "ho",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ま",
+      "romaji": "ma",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "み",
+      "romaji": "mi",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "む",
+      "romaji": "mu",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "め",
+      "romaji": "me",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "も",
+      "romaji": "mo",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "や",
+      "romaji": "ya",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ゆ",
+      "romaji": "yu",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "よ",
+      "romaji": "yo",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ら",
+      "romaji": "ra",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "り",
+      "romaji": "ri",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "る",
+      "romaji": "ru",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "れ",
+      "romaji": "re",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ろ",
+      "romaji": "ro",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "わ",
+      "romaji": "wa",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "を",
+      "romaji": "wo",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ん",
+      "romaji": "n",
+      "script": "hiragana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "が",
+      "romaji": "ga",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぎ",
+      "romaji": "gi",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぐ",
+      "romaji": "gu",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "げ",
+      "romaji": "ge",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ご",
+      "romaji": "go",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ざ",
+      "romaji": "za",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "じ",
+      "romaji": "ji",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ず",
+      "romaji": "zu",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぜ",
+      "romaji": "ze",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぞ",
+      "romaji": "zo",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "だ",
+      "romaji": "da",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぢ",
+      "romaji": "ji",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "づ",
+      "romaji": "zu",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "で",
+      "romaji": "de",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ど",
+      "romaji": "do",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ば",
+      "romaji": "ba",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "び",
+      "romaji": "bi",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぶ",
+      "romaji": "bu",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "べ",
+      "romaji": "be",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぼ",
+      "romaji": "bo",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぱ",
+      "romaji": "pa",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぴ",
+      "romaji": "pi",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぷ",
+      "romaji": "pu",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぺ",
+      "romaji": "pe",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ぽ",
+      "romaji": "po",
+      "script": "hiragana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "きゃ",
+      "romaji": "kya",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "きゅ",
+      "romaji": "kyu",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "きょ",
+      "romaji": "kyo",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "しゃ",
+      "romaji": "sha",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "しゅ",
+      "romaji": "shu",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "しょ",
+      "romaji": "sho",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ちゃ",
+      "romaji": "cha",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ちゅ",
+      "romaji": "chu",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ちょ",
+      "romaji": "cho",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "にゃ",
+      "romaji": "nya",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "にゅ",
+      "romaji": "nyu",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "にょ",
+      "romaji": "nyo",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ひゃ",
+      "romaji": "hya",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ひゅ",
+      "romaji": "hyu",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ひょ",
+      "romaji": "hyo",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "みゃ",
+      "romaji": "mya",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "みゅ",
+      "romaji": "myu",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "みょ",
+      "romaji": "myo",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "りゃ",
+      "romaji": "rya",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "りゅ",
+      "romaji": "ryu",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "りょ",
+      "romaji": "ryo",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ぎゃ",
+      "romaji": "gya",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ぎゅ",
+      "romaji": "gyu",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ぎょ",
+      "romaji": "gyo",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "じゃ",
+      "romaji": "ja",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "じゅ",
+      "romaji": "ju",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "じょ",
+      "romaji": "jo",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "びゃ",
+      "romaji": "bya",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "びゅ",
+      "romaji": "byu",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "びょ",
+      "romaji": "byo",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ぴゃ",
+      "romaji": "pya",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ぴゅ",
+      "romaji": "pyu",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ぴょ",
+      "romaji": "pyo",
+      "script": "hiragana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ア",
+      "romaji": "a",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "イ",
+      "romaji": "i",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ウ",
+      "romaji": "u",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "エ",
+      "romaji": "e",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "オ",
+      "romaji": "o",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "カ",
+      "romaji": "ka",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "キ",
+      "romaji": "ki",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ク",
+      "romaji": "ku",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ケ",
+      "romaji": "ke",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "コ",
+      "romaji": "ko",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "サ",
+      "romaji": "sa",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "シ",
+      "romaji": "shi",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ス",
+      "romaji": "su",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "セ",
+      "romaji": "se",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ソ",
+      "romaji": "so",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "タ",
+      "romaji": "ta",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "チ",
+      "romaji": "chi",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ツ",
+      "romaji": "tsu",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "テ",
+      "romaji": "te",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ト",
+      "romaji": "to",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ナ",
+      "romaji": "na",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ニ",
+      "romaji": "ni",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ヌ",
+      "romaji": "nu",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ネ",
+      "romaji": "ne",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ノ",
+      "romaji": "no",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ハ",
+      "romaji": "ha",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ヒ",
+      "romaji": "hi",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "フ",
+      "romaji": "fu",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ヘ",
+      "romaji": "he",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ホ",
+      "romaji": "ho",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "マ",
+      "romaji": "ma",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ミ",
+      "romaji": "mi",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ム",
+      "romaji": "mu",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "メ",
+      "romaji": "me",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "モ",
+      "romaji": "mo",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ヤ",
+      "romaji": "ya",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ユ",
+      "romaji": "yu",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ヨ",
+      "romaji": "yo",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ラ",
+      "romaji": "ra",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "リ",
+      "romaji": "ri",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ル",
+      "romaji": "ru",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "レ",
+      "romaji": "re",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ロ",
+      "romaji": "ro",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ワ",
+      "romaji": "wa",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ヲ",
+      "romaji": "wo",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ン",
+      "romaji": "n",
+      "script": "katakana",
+      "group": "Basic sounds"
+    },
+    {
+      "char": "ガ",
+      "romaji": "ga",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ギ",
+      "romaji": "gi",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "グ",
+      "romaji": "gu",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ゲ",
+      "romaji": "ge",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ゴ",
+      "romaji": "go",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ザ",
+      "romaji": "za",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ジ",
+      "romaji": "ji",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ズ",
+      "romaji": "zu",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ゼ",
+      "romaji": "ze",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ゾ",
+      "romaji": "zo",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ダ",
+      "romaji": "da",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ヂ",
+      "romaji": "ji",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ヅ",
+      "romaji": "zu",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "デ",
+      "romaji": "de",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ド",
+      "romaji": "do",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "バ",
+      "romaji": "ba",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ビ",
+      "romaji": "bi",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ブ",
+      "romaji": "bu",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ベ",
+      "romaji": "be",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ボ",
+      "romaji": "bo",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "パ",
+      "romaji": "pa",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ピ",
+      "romaji": "pi",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "プ",
+      "romaji": "pu",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ペ",
+      "romaji": "pe",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "ポ",
+      "romaji": "po",
+      "script": "katakana",
+      "group": "Voiced sounds"
+    },
+    {
+      "char": "キャ",
+      "romaji": "kya",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "キュ",
+      "romaji": "kyu",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "キョ",
+      "romaji": "kyo",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "シャ",
+      "romaji": "sha",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "シュ",
+      "romaji": "shu",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ショ",
+      "romaji": "sho",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "チャ",
+      "romaji": "cha",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "チュ",
+      "romaji": "chu",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "チョ",
+      "romaji": "cho",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ニャ",
+      "romaji": "nya",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ニュ",
+      "romaji": "nyu",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ニョ",
+      "romaji": "nyo",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ヒャ",
+      "romaji": "hya",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ヒュ",
+      "romaji": "hyu",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ヒョ",
+      "romaji": "hyo",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ミャ",
+      "romaji": "mya",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ミュ",
+      "romaji": "myu",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ミョ",
+      "romaji": "myo",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "リャ",
+      "romaji": "rya",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "リュ",
+      "romaji": "ryu",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "リョ",
+      "romaji": "ryo",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ギャ",
+      "romaji": "gya",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ギュ",
+      "romaji": "gyu",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ギョ",
+      "romaji": "gyo",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ジャ",
+      "romaji": "ja",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ジュ",
+      "romaji": "ju",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ジョ",
+      "romaji": "jo",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ビャ",
+      "romaji": "bya",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ビュ",
+      "romaji": "byu",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ビョ",
+      "romaji": "byo",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ピャ",
+      "romaji": "pya",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ピュ",
+      "romaji": "pyu",
+      "script": "katakana",
+      "group": "Combined sounds"
+    },
+    {
+      "char": "ピョ",
+      "romaji": "pyo",
+      "script": "katakana",
+      "group": "Combined sounds"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "revision": "2026-11-06",
+  "unitsAudited": 110,
+  "lessonsCoveredByStructuralAudit": 550,
+  "listeningQuestionsRewritten": 110,
+  "foundationReadingQuestionsRewritten": 10,
+  "writingModelsReplaced": 40,
+  "writingRubricsMadeSpecific": 40,
+  "nativeReviewCompleted": false,
+  "learnerPilotCompleted": false,
+  "browserVisualQACompleted": false,
+  "remaining": [
+    "Independent Japanese review of all edited text and audio",
+    "Native regional listening review of exact source clips and learner spelling",
+    "Human mobile, keyboard and screen-reader task testing",
+    "Delayed-recall pilot with real learners",
+    "Broader variation and coverage review for N3\u2013N1; band labels remain provisional"
+  ],
+  "externalStreamsRespondingToHeaderCheck": 8,
+  "regionalClipsAudited": 72,
+  "regionalBundledFilesPresent": 64,
+  "nativeIndependentSignoffCount": 0,
+  "realLearnerObservationsCollected": 0,
+  "grammarNotesCorrected": 7
+}
