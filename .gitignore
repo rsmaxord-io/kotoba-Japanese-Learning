@@ -17,7 +17,3 @@ _qa-*.html
 audio 2/
 dist/
 claude-upload/
-
-# Internal development documents
-*.md
-GITHUB-PAGES-SUPPORT.txt
