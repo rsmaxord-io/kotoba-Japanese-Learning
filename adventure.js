@@ -3,7 +3,7 @@
 var $=function(s,r){return (r||document).querySelector(s);};
 function read(key,fallback){try{var v=localStorage.getItem(key);return v===null?fallback:JSON.parse(v);}catch(e){return fallback;}}
 function save(key,value){try{localStorage.setItem(key,JSON.stringify(value));}catch(e){}}
-var settings=read('kotoba-listening-v1',{rate:1,dialects:false});
+var rawSettings=read('kotoba-listening-v1',{});var settings={rate:rawSettings&&rawSettings.rate===0.85?0.85:1,dialects:!!(rawSettings&&rawSettings.dialects===true)};
 window.KOTOBA_LISTENING=settings;
 function notice(message){var old=$('.adventure-toast');if(old)old.remove();var el=document.createElement('div');el.className='adventure-toast';el.setAttribute('role','status');el.textContent=message;document.body.appendChild(el);setTimeout(function(){el.remove();},6500);}
 window.kotobaNotice=notice;
@@ -17,10 +17,10 @@ document.querySelectorAll('[data-dialect-toggle]').forEach(function(el){el.check
 document.querySelectorAll('[data-voice^="kansai-"],[data-voice^="dialect-"]').forEach(function(el){el.classList.add('dialect-unverified');el.title='Synthetic dialect reading · regional intonation not verified';var label=el.getAttribute('aria-label');if(label&&!label.includes('Synthetic reading'))el.setAttribute('aria-label','Synthetic reading, regional intonation unverified: '+label);});
 }
 document.addEventListener('kotoba:lesson',decorate);
-document.addEventListener('change',function(e){if(e.target.matches('[data-listening-rate]'))settings.rate=Number(e.target.value);else if(e.target.matches('[data-dialect-toggle]'))settings.dialects=e.target.checked;else return;save('kotoba-listening-v1',settings);decorate();document.dispatchEvent(new CustomEvent('kotoba:audio-settings'));});
+document.addEventListener('change',function(e){if(e.target.matches('[data-listening-rate]'))settings.rate=Number(e.target.value)===0.85?0.85:1;else if(e.target.matches('[data-dialect-toggle]'))settings.dialects=e.target.checked;else return;save('kotoba-listening-v1',settings);decorate();document.dispatchEvent(new CustomEvent('kotoba:audio-settings'));});
 document.addEventListener('kotoba:celebrate',function(e){var n=e.detail.n;notice(n%10===0?'Unit complete. Ten more discoveries in your passport. Take a breath and enjoy the progress.':'Level '+n+' complete. One more thing you can do in Japanese. Nice work showing up.');});
-var state=read('kotoba-course-v2',{levels:{}}),levels=state.levels||{};
-var done=Object.keys(levels).filter(function(n){return Number(n)>=1&&Number(n)<=100;}).length,next=1;
+var state=read('kotoba-course-v2',{levels:{}}),levels=state&&state.levels&&typeof state.levels==='object'&&!Array.isArray(state.levels)?state.levels:{};
+var done=Object.keys(levels).filter(function(n){return Number(n)>=1&&Number(n)<=100&&!!levels[n];}).length,next=1;
 while(levels[next]&&next<=100)next++;
 document.querySelectorAll('[data-resume]').forEach(function(el){el.href='lessons.html#level-'+Math.min(next,100);if(done)el.textContent=next>100?'Revisit my discoveries ↗':'Continue my adventure ↗';});
 var progress=$('[data-home-progress]');if(progress&&done){progress.hidden=false;progress.textContent=done+' discoveries in your passport. '+(next>100?'You have reached level 100. Keep the conversation going.':'Next stop: level '+next+'.');}
