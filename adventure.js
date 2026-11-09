@@ -1,8 +1,8 @@
 (function(){
 'use strict';
 var $=function(s,r){return (r||document).querySelector(s);};
-function read(key,fallback){try{var v=localStorage.getItem(key);return v===null?fallback:JSON.parse(v);}catch(e){return fallback;}}
-function save(key,value){try{localStorage.setItem(key,JSON.stringify(value));}catch(e){}}
+function read(key,fallback){try{var v=localStorage.getItem(window.KotobaSandbox ? window.KotobaSandbox.key(key) : key);return v===null?fallback:JSON.parse(v);}catch(e){return fallback;}}
+function save(key,value){try{localStorage.setItem(window.KotobaSandbox ? window.KotobaSandbox.key(key) : key,JSON.stringify(value));}catch(e){}}
 var rawSettings=read('kotoba-listening-v1',{});var settings={rate:rawSettings&&rawSettings.rate===0.85?0.85:1,dialects:!!(rawSettings&&rawSettings.dialects===true)};
 window.KOTOBA_LISTENING=settings;
 function notice(message){var old=$('.adventure-toast');if(old)old.remove();var el=document.createElement('div');el.className='adventure-toast';el.setAttribute('role','status');el.textContent=message;document.body.appendChild(el);setTimeout(function(){el.remove();},6500);}

@@ -1,6 +1,13 @@
 (()=>{'use strict';const lessons=window.KOTOBA_BEGINNER;const C=window.KOTOBA_COURSE;for(const b of lessons){const l=C.lessons[b.id-1];l.title=b.title;l.objective=b.goal;l.minutes=b.minutes;}
 function data(id){return lessons.find(x=>x.id===id);}
-function state(d){if(!d.beginner||d.beginner.version!==1)d.beginner={version:1,answers:{},passed:{},pieces:[],buildChecked:false,buildOK:false,model:false};return d.beginner;}
+function state(d){
+ if(!d.beginner||typeof d.beginner!=='object'||Array.isArray(d.beginner)||d.beginner.version!==1)d.beginner={version:1,answers:{},passed:{},pieces:[],buildChecked:false,buildOK:false,model:false};
+ const s=d.beginner;
+ for(const k of ['answers','passed'])if(!s[k]||typeof s[k]!=='object'||Array.isArray(s[k]))s[k]={};
+ s.pieces=Array.isArray(s.pieces)?[...new Set(s.pieces.filter(i=>Number.isInteger(i)&&i>=0))]:[];
+ for(const k of ['buildChecked','buildOK','model'])s[k]=s[k]===true;
+ return s;
+}
 const norm=s=>String(s||'').normalize('NFKC').replace(/[\s・。、.,/-]/g,'').toLowerCase();
 function validBuild(b,indices){return Array.isArray(indices)&&indices.every(i=>Number.isInteger(i)&&i>=0&&i<b.build.pieces.length)&&new Set(indices).size===indices.length&&indices.map(i=>b.build.pieces[i]).join('')===b.build.target;}
 function ready(stage,d,id){const b=data(id),s=state(d);if(!b)return false;if(stage<=1)return true;if(stage===2)return b.questions.every((_,i)=>s.passed[i]===true);if(stage===3)return b.skill==='write'?!!d.beginnerAttempt?.trim():b.skill==='speak'?!!d.beginnerAttempt?.trim()&&(d.checks?.beginnerSpoken||[]).includes(0):s.buildOK&&validBuild(b,s.pieces);return !!d.beginnerUse?.trim()&&(d.checks?.beginnerUse||[]).length===b.checks.length;}

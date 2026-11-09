@@ -82,6 +82,44 @@
   var DAY = 86400000;
   var INTERVALS = [1, 3, 7, 21];
 
+  var volatileRecords = Object.create(null), failedRecords = Object.create(null);
+  function storageKey(key) { return window.KotobaSandbox ? window.KotobaSandbox.key(key) : key; }
+  function readRaw(key) {
+    var scoped = storageKey(key);
+    if (Object.prototype.hasOwnProperty.call(failedRecords, scoped)) return volatileRecords[scoped];
+    try { var raw = window.localStorage.getItem(scoped); if (raw !== null) volatileRecords[scoped] = raw; return raw; }
+    catch (e) { return Object.prototype.hasOwnProperty.call(volatileRecords, scoped) ? volatileRecords[scoped] : null; }
+  }
+  function writeScoped(scoped, value) {
+    volatileRecords[scoped] = value;
+    try { window.localStorage.setItem(scoped, value); delete failedRecords[scoped]; syncMemoryNotice(); return true; }
+    catch (e) { failedRecords[scoped] = true; syncMemoryNotice(); return false; }
+  }
+  function writeRaw(key, value) { return writeScoped(storageKey(key), value); }
+  function syncMemoryNotice() {
+    var pending = Object.keys(failedRecords).length, notice = $('#reference-save-warning');
+    if (pending && !notice && reader) {
+      notice = document.createElement('aside'); notice.id = 'reference-save-warning'; notice.className = 'notice'; notice.setAttribute('role', 'alert');
+      notice.innerHTML = '<p>Browser saving is unavailable. Latest reference drafts and progress remain in this tab only. Keep a backup before leaving.</p><button type="button" class="btn" data-reference-export>Download reference backup</button> <button type="button" class="btn" data-reference-retry>Try saving again</button>';
+      reader.parentNode.insertBefore(notice, reader);
+    }
+    if (!pending && notice) notice.remove();
+    $$('[data-reference-persistence]').forEach(function (el) { el.textContent = failedRecords[storageKey(el.getAttribute('data-reference-persistence'))] ? 'not saved — kept in this tab' : 'saves in this browser'; });
+  }
+  document.addEventListener('click', function (event) {
+    if (event.target.closest('[data-reference-retry]')) {
+      Object.keys(failedRecords).forEach(function (key) { writeScoped(key, volatileRecords[key]); });
+      if (!Object.keys(failedRecords).length && titleEl) { titleEl.tabIndex = -1; titleEl.focus({preventScroll:true}); }
+    }
+    if (event.target.closest('[data-reference-export]')) {
+      readRaw(STORAGE); readRaw(LEGACY);
+      for (var n = 1; n <= 100; n++) ['write','speak'].forEach(function (kind) { readRaw('kotoba-draft-v1-' + n + '-' + kind); readRaw('kotoba-checks-v1-' + n + '-' + kind); });
+      var url = URL.createObjectURL(new Blob([JSON.stringify({version:1,records:volatileRecords},null,2)], {type:'application/json'}));
+      var link = document.createElement('a'); link.href = url; link.download = 'kotoba-reference-backup.json'; link.click(); setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    }
+  });
+  window.addEventListener('beforeunload', function (event) { if (Object.keys(failedRecords).length) { event.preventDefault(); event.returnValue = ''; } });
+
   var state = readState();
   var activeFilter = 'all';
   var current = 1;
@@ -91,17 +129,26 @@
   function readState() {
     var next = { levels: {} };
     try {
-      var raw = window.localStorage.getItem(STORAGE);
+      var raw = readRaw(STORAGE);
       if (raw) {
         var parsed = JSON.parse(raw);
-        if (parsed && parsed.levels) return parsed;
+        if (parsed && parsed.levels && typeof parsed.levels === 'object' && !Array.isArray(parsed.levels)) {
+          Object.keys(parsed.levels).forEach(function (key) {
+            var n = Number(key), entry = parsed.levels[key];
+            if (Number.isInteger(n) && n >= 1 && n <= 100 && entry && typeof entry === 'object' &&
+                Number.isFinite(entry.done) && entry.done >= 0) {
+              next.levels[n] = { done: entry.done, reps: Number.isInteger(entry.reps) && entry.reps >= 0 ? Math.min(entry.reps, INTERVALS.length) : 0 };
+            }
+          });
+          return next;
+        }
       }
-      var old = window.localStorage.getItem(LEGACY);
+      var old = readRaw(LEGACY);
       if (old) {
         var list = JSON.parse(old);
         if (Array.isArray(list)) {
           list.forEach(function (n) {
-            next.levels[n] = { done: Date.now(), reps: 0 };
+            if (Number.isInteger(n) && n >= 1 && n <= 100) next.levels[n] = { done: Date.now(), reps: 0 };
           });
         }
       }
@@ -110,7 +157,7 @@
   }
 
   function saveState() {
-    try { window.localStorage.setItem(STORAGE, JSON.stringify(state)); } catch (e) { /* no-op */ }
+    try { writeRaw(STORAGE, JSON.stringify(state)); } catch (e) { /* no-op */ }
   }
 
   function entryFor(n) { return state.levels[n] || null; }
@@ -426,13 +473,14 @@
 
   function readJSON(key, fallback) {
     try {
-      var raw = window.localStorage.getItem(key);
-      return raw ? JSON.parse(raw) : fallback;
+      var raw = readRaw(key);
+      var parsed = raw ? JSON.parse(raw) : fallback;
+      return Array.isArray(parsed) ? parsed.filter(function (n) { return Number.isInteger(n) && n >= 0 && n < 5; }) : fallback;
     } catch (e) { return fallback; }
   }
 
   function writeJSON(key, value) {
-    try { window.localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* no-op */ }
+    try { writeRaw(key, JSON.stringify(value)); } catch (e) { /* no-op */ }
   }
 
   function criteriaBlock(lesson, kind) {
@@ -467,11 +515,11 @@
   function draftBlock(lesson, kind) {
     var key = 'kotoba-draft-v1-' + lesson.n + '-' + kind;
     var draft = '';
-    try { draft = window.localStorage.getItem(key) || ''; } catch (e) { /* no-op */ }
+    try { draft = readRaw(key) || ''; } catch (e) { /* no-op */ }
     return '<label class="output-card__draft-wrap"><span class="output-card__draft-label">Your answer</span>' +
       '<textarea class="output-card__draft" data-draft="' + lesson.n + '" data-kind="' + kind + '" rows="4" ' +
       'placeholder="' + (kind === 'write' ? 'Write here. Kana or kanji, your choice.' : 'Jot three keywords, then speak from them.') + '">' + esc(draft) + '</textarea>' +
-      '<span class="output-card__draft-meta"><b data-count="' + lesson.n + '-' + kind + '">' + countChars(draft) + '</b> characters · saved on this device</span></label>';
+      '<span class="output-card__draft-meta"><b data-count="' + lesson.n + '-' + kind + '">' + countChars(draft) + '</b> characters · <span data-reference-persistence="' + key + '">' + (failedRecords[storageKey(key)] ? 'not saved — kept in this tab' : 'saves in this browser') + '</span></span></label>';
   }
 
   function timerBlock(lesson) {
@@ -725,6 +773,8 @@
       }
       saveState();
       renderReader();
+      var refreshedComplete = $('[data-complete="' + n + '"]');
+      if (refreshedComplete) refreshedComplete.focus({ preventScroll: true });
       if (isDone(n)) document.dispatchEvent(new CustomEvent('kotoba:celebrate', {detail:{n:n}}));
       return;
     }
@@ -763,7 +813,7 @@
 
   document.addEventListener('keydown', function (event) {
     var tag = (event.target.tagName || '').toLowerCase();
-    if (tag === 'input' || tag === 'textarea' || event.target.isContentEditable) return;
+    if (/^(input|textarea|select|button|a|summary|audio|video)$/.test(tag) || event.target.isContentEditable || event.target.closest('dialog,[role="slider"],[role="tablist"]')) return;
     if (event.key === 'ArrowRight' && current < 100) selectLevel(current + 1, { scroll: false });
     if (event.key === 'ArrowLeft' && current > 1) selectLevel(current - 1, { scroll: false });
   });
@@ -776,7 +826,7 @@
     var draft = event.target.closest('[data-draft]');
     if (!draft) return;
     var key = 'kotoba-draft-v1-' + draft.getAttribute('data-draft') + '-' + draft.getAttribute('data-kind');
-    try { window.localStorage.setItem(key, draft.value); } catch (e) { /* no-op */ }
+    try { writeRaw(key, draft.value); } catch (e) { /* no-op */ }
     var count = $('[data-count="' + draft.getAttribute('data-draft') + '-' + draft.getAttribute('data-kind') + '"]');
     if (count) count.textContent = countChars(draft.value);
   });

@@ -17,7 +17,7 @@ const X={
  sources:[['Japan Foundation: に対して constructions','https://www.kyozai.jpf.go.jp/kyozai/material/BMA00060/ja/render.do'],['Japan Foundation: choosing について and に対して','https://www.jpf.go.jp/j/project/japanese/teach/tsushin/grammar/pdf/nkt60_14_15.pdf']]
 };
 const sentence=n=>n.before+n.marker+n.after;
-function state(d){const x=d.extension351||(d.extension351={version:1,notice:{},round:0,selected:[],complete:[],result:false,model:false});if(!x.notice)x.notice={};if(!Array.isArray(x.selected))x.selected=[];if(!Array.isArray(x.complete))x.complete=[];if(!Number.isInteger(x.round)||x.round<0||x.round>=3)x.round=0;return x;}
+function state(d){if(!d.extension351||typeof d.extension351!=='object'||Array.isArray(d.extension351))d.extension351={version:1,notice:{},round:0,selected:[],complete:[],result:false,model:false};const x=d.extension351;if(!x.notice||typeof x.notice!=='object'||Array.isArray(x.notice))x.notice={};if(!Array.isArray(x.selected))x.selected=[];if(!Array.isArray(x.complete))x.complete=[];if(!Number.isInteger(x.round)||x.round<0||x.round>=3)x.round=0;return x;}
 function equal(a,b){return String(a).normalize('NFKC').replace(/[\s。、，,.!?！？]/g,'')===String(b).normalize('NFKC').replace(/[\s。、，,.!?！？]/g,'');}
 function validate(round,selection){const b=X.build[round];return !!b&&Array.isArray(selection)&&new Set(selection).size===selection.length&&selection.every(i=>Number.isInteger(i)&&i>=0&&i<b.pieces.length)&&equal(selection.map(i=>b.pieces[i]).join(''),b.target);}
 function ready(stage,d){const x=state(d);return stage===2?X.notice.every(n=>x.notice[n.id]===n.answer):stage===3?X.build.every((_,i)=>x.complete.includes(i)):!!d.transfer?.trim()&&(d.checks?.transfer?.length||0)>=2;}

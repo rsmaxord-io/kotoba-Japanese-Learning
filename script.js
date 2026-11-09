@@ -549,6 +549,8 @@
       });
 
       updateQuizMeta();
+      quizPrompt.tabIndex = -1;
+      quizPrompt.focus({ preventScroll: true });
     }
 
     function answer(item, chosen) {
@@ -587,6 +589,7 @@
       if (quizBody) quizBody.hidden = true;
       if (quizSummary) quizSummary.hidden = false;
       if (quizFinal) quizFinal.textContent = String(quiz.score);
+      if (quizSummary) { quizSummary.tabIndex = -1; quizSummary.focus({ preventScroll: true }); }
       if (quizMessage) {
         var ratio = quiz.score / QUIZ_LENGTH;
         quizMessage.textContent = ratio === 1
@@ -623,7 +626,7 @@
       quizReview.addEventListener('click', function (event) {
         event.preventDefault();
         var chartTab = viewTabs.filter(function (tab) { return tab.dataset.view === 'chart'; })[0];
-        if (chartTab) chartTab.click();
+        if (chartTab) { chartTab.click(); chartTab.focus({ preventScroll: true }); }
         if (chartPanel) {
           chartPanel.scrollIntoView({
             behavior: reduceMotion ? 'auto' : 'smooth',
@@ -715,8 +718,9 @@
 
     function readProgress() {
       try {
-        var raw = window.localStorage.getItem(STORAGE_KEY);
-        return raw ? JSON.parse(raw) : [];
+        var raw = window.localStorage.getItem(window.KotobaSandbox ? window.KotobaSandbox.key(STORAGE_KEY) : STORAGE_KEY);
+        var parsed = raw ? JSON.parse(raw) : [];
+        return Array.isArray(parsed) ? parsed.filter(function (id) { return typeof id === 'string'; }) : [];
       } catch (error) {
         return [];
       }
@@ -724,7 +728,7 @@
 
     function writeProgress(list) {
       try {
-        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+        window.localStorage.setItem(window.KotobaSandbox ? window.KotobaSandbox.key(STORAGE_KEY) : STORAGE_KEY, JSON.stringify(list));
       } catch (error) {
         /* storage unavailable — progress lasts for this page view only */
       }
