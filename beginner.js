@@ -10,7 +10,7 @@ function state(d){
 }
 const norm=s=>String(s||'').normalize('NFKC').replace(/[\s・。、.,/-]/g,'').toLowerCase();
 function validBuild(b,indices){return Array.isArray(indices)&&indices.every(i=>Number.isInteger(i)&&i>=0&&i<b.build.pieces.length)&&new Set(indices).size===indices.length&&indices.map(i=>b.build.pieces[i]).join('')===b.build.target;}
-function ready(stage,d,id){const b=data(id),s=state(d);if(!b)return false;if(stage<=1)return true;if(stage===2)return b.questions.every((_,i)=>s.passed[i]===true);if(stage===3)return b.skill==='write'?!!d.beginnerAttempt?.trim():b.skill==='speak'?!!d.beginnerAttempt?.trim()&&(d.checks?.beginnerSpoken||[]).includes(0):s.buildOK&&validBuild(b,s.pieces);return !!d.beginnerUse?.trim()&&(d.checks?.beginnerUse||[]).length===b.checks.length;}
+function ready(stage,d,id){const b=data(id),s=state(d);if(!b)return false;if(stage<=1)return true;if(stage===2)return b.questions.every((_,i)=>s.passed[i]===true);if(stage===3)return b.skill==='write'?!!d.beginnerAttempt?.trim():b.skill==='speak'?!!d.beginnerAttempt?.trim()&&(d.checks?.beginnerSpoken||[]).includes(0):s.buildOK&&validBuild(b,s.pieces);return !!d.beginnerUse?.trim()&&b.checks.every((_,i)=>(d.checks?.beginnerUse||[]).includes(i));}
 function visual(word,fallback){const shapes={
 'あお':'<circle cx="24" cy="24" r="17" fill="currentColor" stroke="none"/>',
 'いえ':'<path d="M5 22 24 6l19 16M10 20v22h28V20M20 42V29h8v13"/>',
