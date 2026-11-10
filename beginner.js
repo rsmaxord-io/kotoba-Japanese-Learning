@@ -1,4 +1,4 @@
-(()=>{'use strict';const lessons=window.KOTOBA_BEGINNER;const C=window.KOTOBA_COURSE;for(const b of lessons){const l=C.lessons[b.id-1];l.title=b.title;l.objective=b.goal;l.minutes=b.minutes;}
+(()=>{'use strict';const lessons=window.KOTOBA_BEGINNER;const C=window.KOTOBA_COURSE;if(!Array.isArray(lessons)||!Array.isArray(C?.lessons)){window.KotobaCourseBoot?.fail();return;}for(const b of lessons){const l=C.lessons[b.id-1];l.title=b.title;l.objective=b.goal;l.minutes=b.minutes;}
 function data(id){return lessons.find(x=>x.id===id);}
 function state(d){
  if(!d.beginner||typeof d.beginner!=='object'||Array.isArray(d.beginner)||d.beginner.version!==1)d.beginner={version:1,answers:{},passed:{},pieces:[],buildChecked:false,buildOK:false,model:false};

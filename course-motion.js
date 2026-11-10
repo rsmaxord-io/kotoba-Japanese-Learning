@@ -4,7 +4,7 @@ const app=document.getElementById('app');if(!app)return;
 const reduce=window.matchMedia?.('(prefers-reduced-motion: reduce)');
 const selector='.course-choice,.lesson-link,.home-section-link';
 const seen=new WeakSet(),watched=new Set(),timers=new Map();
-let suspended=false;
+let suspended=false,introStartedAt=0;
 let intersection=null,introPlayed=false,introHost=null,introTitle=null,introLayer=null,introTimer=null,floatHost=null,floatLayer=null;
 const reduced=()=>reduce?.matches===true;
 function endIntro(){if(introTimer!==null)clearTimeout(introTimer);introTimer=null;introLayer?.remove();introTitle?.classList.remove('course-title-pop');introHost=introTitle=introLayer=null;}
@@ -18,9 +18,9 @@ function floating(){
 }
 function intro(){
  if(introPlayed)return;
- const title=app.querySelector('h1'),host=title?.closest('header,.heading-row');if(!title||!host)return;
+ const title=app.querySelector('.home-heading h1,.course-heading h1,.lesson-header h1'),host=title?.closest('header,.heading-row');if(!title||!host)return;
  introPlayed=true;if(reduced())return;
- introHost=host;introTitle=title;const layer=document.createElement('div');introLayer=layer;
+ introStartedAt=performance.now();introHost=host;introTitle=title;const layer=document.createElement('div');introLayer=layer;
  layer.className='course-intro-fx';layer.setAttribute('aria-hidden','true');layer.inert=true;
  const heading=title.getBoundingClientRect();
  layer.style.setProperty('--intro-x',(heading.left+heading.width/2)+'px');
@@ -29,11 +29,11 @@ function intro(){
  const glyphs=['あ','か','さ','た','な','は','ま','や','ら','わ'];
  for(let i=0;i<36;i++){
   const part=document.createElement('span'),angle=(i+Math.random()*.65)*Math.PI*2/36-Math.PI/2;
-  const distance=Math.min(innerWidth*.7,540)*(.6+Math.random()*.4),x=Math.cos(angle)*distance,y=Math.sin(angle)*distance*.7;
+  const distance=Math.min(innerWidth*.95,650)*(.6+Math.random()*.4),x=Math.cos(angle)*distance,y=Math.sin(angle)*distance*.82;
   part.className='course-intro-particle';part.textContent=glyphs[i%glyphs.length];
-  part.style.setProperty('--particle-x',x.toFixed(1)+'px');part.style.setProperty('--particle-y',(y+65).toFixed(1)+'px');
-  part.style.setProperty('--particle-mid-x',(x*.72).toFixed(1)+'px');part.style.setProperty('--particle-mid-y',(y*.72-35).toFixed(1)+'px');
-  part.style.setProperty('--particle-turn',((Math.random()-.5)*420).toFixed(1)+'deg');part.style.setProperty('--particle-size',(18+Math.random()*20).toFixed(1)+'px');layer.append(part);
+  part.style.setProperty('--particle-x',x.toFixed(1)+'px');part.style.setProperty('--particle-y',(y+90).toFixed(1)+'px');
+  part.style.setProperty('--particle-mid-x',(x*.72).toFixed(1)+'px');part.style.setProperty('--particle-mid-y',(y*.72-55).toFixed(1)+'px');
+  part.style.setProperty('--particle-turn',((Math.random()-.5)*420).toFixed(1)+'deg');part.style.setProperty('--particle-size',(20+Math.random()*24).toFixed(1)+'px');layer.append(part);
  }
  title.classList.add('course-title-pop');document.body.append(layer);
  introTimer=setTimeout(endIntro,1200);
@@ -43,7 +43,8 @@ function settle(card){seen.add(card);intersection?.unobserve(card);watched.delet
 function setupIntersection(){
  if(reduced()||intersection||typeof window.IntersectionObserver!=='function')return;
  intersection=new IntersectionObserver(entries=>{const visible=entries.filter(entry=>entry.isIntersecting),step=80;let order=0;for(const entry of visible){const card=entry.target;intersection?.unobserve(card);watched.delete(card);seen.add(card);if(reduced()||card.contains(document.activeElement))continue;
-  card.style.setProperty('--course-reveal-delay',Math.min(order++*step,480)+'ms');card.classList.add('course-card-reveal');
+  const openingDelay=introLayer?Math.max(0,220-(performance.now()-introStartedAt)):0;
+  card.style.setProperty('--course-reveal-delay',(openingDelay+Math.min(order++*step,400))+'ms');card.classList.add('course-card-reveal');
   timers.set(card,setTimeout(()=>finishCard(card),1100));
  }},{threshold:.08,rootMargin:'0px 0px -8px 0px'});
 }

@@ -8,17 +8,17 @@
  .course-intro-rays{background:repeating-conic-gradient(transparent 0deg 11deg,var(--blue) 12deg 17deg,transparent 18deg 30deg);mask-image:radial-gradient(circle,transparent 1%,#000 14%,transparent 65%);animation:course-sun-rays 850ms cubic-bezier(.16,1,.3,1) both}
  .course-intro-ring{position:absolute;left:var(--intro-x);top:var(--intro-y);width:80px;height:80px;border:3px solid var(--blue);border-radius:50%;box-shadow:0 0 22px var(--tint),inset 0 0 18px var(--tint);animation:course-shockwave 950ms cubic-bezier(.12,.75,.2,1) both}
  .course-intro-particle{position:absolute;left:var(--intro-x);top:var(--intro-y);color:var(--blue);font:700 var(--particle-size)/1 var(--jp);animation:course-kana-burst 1100ms linear both}
- .course-title-pop{transform-origin:50% 50%;animation:course-title-open 900ms linear both}
+ .course-title-pop{transform-origin:50% 50%;animation:course-title-open 900ms cubic-bezier(.2,.8,.25,1) both}
  .course-card-reveal{transform-origin:50% 0;backface-visibility:hidden;animation:course-card-enter 520ms cubic-bezier(.16,1.15,.3,1) var(--course-reveal-delay,0ms) both}
  .course-card-reveal:focus-within{animation:none}
  .course-floating-kana{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none;contain:strict}
  .course-floating-kana span{position:absolute;color:var(--blue);font:700 28px/1 var(--jp);opacity:.045;animation:course-kana-float var(--float-time) ease-in-out var(--float-delay) infinite alternate}
  @keyframes course-title-open{0%{transform:scale(.5)}22%{transform:scale(1.1) translate(2px,-2px)}30%{transform:scale(1.06) translate(-3px,2px)}40%{transform:scale(.96) translate(2px,0)}56%{transform:scale(1.025)}75%{transform:scale(.992)}100%{transform:scale(1)}}
  @keyframes course-light-flash{0%{transform:translate(-50%,-50%) scale(.03);opacity:0}16%{opacity:.88}42%{transform:translate(-50%,-50%) scale(1.08);opacity:.65}100%{transform:translate(-50%,-50%) scale(1.15);opacity:0}}
- @keyframes course-sun-rays{0%{transform:translate(-50%,-50%) scale(.02) rotate(-12deg);opacity:0}18%{opacity:.14}55%{transform:translate(-50%,-50%) scale(1.08) rotate(3deg);opacity:.08}100%{transform:translate(-50%,-50%) scale(1.2) rotate(10deg);opacity:0}}
- @keyframes course-shockwave{0%{transform:translate(-50%,-50%) scale(0);opacity:0}16%{opacity:.65}100%{transform:translate(-50%,-50%) scale(18);opacity:0}}
- @keyframes course-kana-burst{0%{transform:translate(-50%,-50%) scale(.2);opacity:0}12%{opacity:.85}55%{transform:translate(calc(-50% + var(--particle-mid-x)),calc(-50% + var(--particle-mid-y))) rotate(var(--particle-turn)) scale(1.1);opacity:.6}100%{transform:translate(calc(-50% + var(--particle-x)),calc(-50% + var(--particle-y))) rotate(var(--particle-turn)) scale(.7);opacity:0}}
- @keyframes course-card-enter{0%{opacity:0;transform:perspective(800px) translateY(48px) rotateX(-65deg) scale(.94)}72%{opacity:1;transform:perspective(800px) translateY(-4px) rotateX(5deg) scale(1.01)}100%{opacity:1;transform:perspective(800px) translateY(0) rotateX(0) scale(1)}}
+ @keyframes course-sun-rays{0%{transform:translate(-50%,-50%) scale(.02) rotate(-12deg);opacity:0}18%{opacity:.23}55%{transform:translate(-50%,-50%) scale(1.08) rotate(3deg);opacity:.12}100%{transform:translate(-50%,-50%) scale(1.2) rotate(10deg);opacity:0}}
+ @keyframes course-shockwave{0%{transform:translate(-50%,-50%) scale(0);opacity:0}16%{opacity:.85}100%{transform:translate(-50%,-50%) scale(24);opacity:0}}
+ @keyframes course-kana-burst{0%{transform:translate(-50%,-50%) scale(.2);opacity:0}12%{opacity:1}55%{transform:translate(calc(-50% + var(--particle-mid-x)),calc(-50% + var(--particle-mid-y))) rotate(var(--particle-turn)) scale(1.15);opacity:.8}100%{transform:translate(calc(-50% + var(--particle-x)),calc(-50% + var(--particle-y))) rotate(var(--particle-turn)) scale(.7);opacity:0}}
+ @keyframes course-card-enter{0%{opacity:0;transform:perspective(800px) translateY(64px) rotateX(-78deg) scale(.9)}72%{opacity:1;transform:perspective(800px) translateY(-6px) rotateX(7deg) scale(1.01)}100%{opacity:1;transform:perspective(800px) translateY(0) rotateX(0) scale(1)}}
  @keyframes course-kana-float{from{transform:translateY(12px) rotate(calc(-1 * var(--float-turn)))}to{transform:translateY(-18px) rotate(var(--float-turn))}}
 }
 @media (prefers-reduced-motion:no-preference) and (hover:hover) and (pointer:fine){

@@ -1,28 +1,44 @@
 <!doctype html>
 <html lang="en">
-<head><script src="sandbox-navigation.js?v=1"></script>
+<head>
+<script>
+// A custom 404 keeps the missing URL; resolve site assets and recovery links from the site root.
+(()=>{const project='/kotoba-Japanese-Learning/',base=document.createElement('base');base.href=location.pathname.startsWith(project)?project:'/';document.head.append(base);document.addEventListener('DOMContentLoaded',()=>{for(const a of document.querySelectorAll('a[data-site-link]'))a.href=new URL(a.dataset.siteLink,document.baseURI).href;for(const a of document.querySelectorAll('a[href^="#"]'))a.href=location.href.split('#')[0]+a.getAttribute('href');});})();
+</script>
+<script data-site-src="sandbox-navigation.js?v=1"></script>
 <meta charset="utf-8">
+<style>
+/* The error page must still offer navigation if its interaction script cannot run. */
+html:not(.js) .site-head .nav-toggle{display:none}
+html:not(.js) .site-head__inner{flex-wrap:wrap}
+html:not(.js) .site-head .nav{position:static;inset:auto;display:flex;flex-wrap:wrap;flex-direction:row;width:100%;height:auto;max-height:none;visibility:visible;opacity:1;transform:none;pointer-events:auto;padding:12px 0;gap:8px;background:transparent;box-shadow:none}
+html:not(.js) .site-head .nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px}
+</style>
+<noscript><style>
+*{box-sizing:border-box}body{margin:0;background:#f5f6fa;color:#141824;font:16px/1.6 system-ui,sans-serif}.wrap{max-width:1100px;margin:auto;padding:20px}.site-head{background:white}.brand{font-size:24px;font-weight:700}.brand__sub{display:block;font-size:13px}.skip{display:inline-block;padding:12px}a{color:#173daf;overflow-wrap:anywhere}.hero__aside{display:none}h1{font-size:clamp(28px,5vw,48px);line-height:1.2}.hero__actions{display:flex;flex-wrap:wrap;gap:12px}.hero__actions a{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border:1px solid #a8b2c7;border-radius:10px}.hero__actions svg{width:24px;height:24px;margin-left:8px}.hero__points{padding-left:24px}.hero__points a,.site-foot a{display:inline-block;padding:8px}.site-foot{border-top:1px solid #dce0e9}
+</style></noscript>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found — Kotoba</title>
 <meta name="robots" content="noindex">
-<meta name="description" content="This page is not here. Return to the Kotoba 100-level Japanese course, kana charts, phrasebook, dialect map or culture notes.">
+<meta name="description" content="This page is not here. Return to the Kotoba 550-lesson Japanese course, kana charts, phrasebook, dialect map or culture notes.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23c0412c'/%3E%3Ctext x='16' y='24' font-size='20' text-anchor='middle' fill='%23fff8f2' font-family='serif'%3E%E3%81%82%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=Shippori+Mincho:wght@500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261106">
-<script src="audio/manifest.js?v=20261106" defer></script>
-<script src="script.js?v=reference-audit-20261109-e" defer></script>
-<link rel="stylesheet" href="adventure.css?v=20261106">
-<script src="adventure.js?v=settings-merge-20261110" defer></script>
-<link rel="stylesheet" href="modern.css?v=reference-a11y-20261109">
-<script src="audio-player.js?v=2"></script></head>
+<link rel="stylesheet" data-site-href="styles.css?v=20261106">
+<script data-site-src="audio/manifest.js?v=20261106" defer></script>
+<script data-site-src="script.js?v=reference-audit-20261109-e" defer></script>
+<link rel="stylesheet" data-site-href="adventure.css?v=20261106">
+<script data-site-src="adventure.js?v=settings-merge-20261110" defer></script>
+<link rel="stylesheet" data-site-href="modern.css?v=reference-a11y-20261109">
+<script data-site-src="audio-player.js?v=2"></script></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-head">
   <div class="wrap site-head__inner">
-    <a class="brand" href="index.html">
+    <a class="brand" data-site-link="index.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/index.html">
       <span class="brand__seal" aria-hidden="true">言</span>
       <span class="brand__name">Kotoba<span class="brand__sub">Standard + Kansai Japanese</span></span>
     </a>
@@ -30,13 +46,13 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="nav" id="site-nav" aria-label="Main">
-      <a href="course.html">Lessons</a>
-      <a href="kana.html">Kana</a>
-      <a href="kanji.html">Kanji</a>
-      <a href="phrases.html">Phrases</a>
-      <a href="dialects.html">Dialect</a>
-      <a href="culture.html">Culture</a>
-      <a class="btn btn--small nav__cta" href="course.html#lesson-1">Start learning</a>
+      <a data-site-link="course.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/course.html">Lessons</a>
+      <a data-site-link="kana.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/kana.html">Kana</a>
+      <a data-site-link="kanji.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/kanji.html">Kanji</a>
+      <a data-site-link="phrases.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/phrases.html">Phrases</a>
+      <a data-site-link="dialects.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/dialects.html">Dialect</a>
+      <a data-site-link="culture.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/culture.html">Culture</a>
+      <a class="btn btn--small nav__cta" data-site-link="course.html#lesson-1" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/course.html#lesson-1">Start learning</a>
     </nav>
   </div>
 </header>
@@ -47,19 +63,19 @@
       <div class="hero__copy">
         <p class="eyebrow">Error 404 · ページが みつかりません</p>
         <h1>This page is not here.<br><em>Let’s get you back to the course.</em></h1>
-        <p class="hero__dek">The link may be old, or the page may have moved. The 100 levels, kana charts, phrasebook, dialect map and culture notes are all still here — and they are all free.</p>
+        <p class="hero__dek">The link may be old, or the page may have moved. The 550 lessons, kana charts, phrasebook, dialect map and culture notes are all still here — and they are all free.</p>
         <div class="hero__actions">
-          <a class="btn" href="course.html#lesson-1">Start learning
+          <a class="btn" data-site-link="course.html#lesson-1" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/course.html#lesson-1">Start learning
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn--ghost" href="index.html">Back to the front page</a>
+          <a class="btn btn--ghost" data-site-link="index.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/index.html">Back to the front page</a>
         </div>
         <ul class="hero__points">
-          <li><a href="course.html">550-lesson course</a></li>
-          <li><a href="kana.html">Kana charts</a></li>
-          <li><a href="phrases.html">Situation phrases</a></li>
-          <li><a href="dialects.html">Dialect map</a></li>
-          <li><a href="culture.html">Culture notes</a></li>
+          <li><a data-site-link="course.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/course.html">550-lesson course</a></li>
+          <li><a data-site-link="kana.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/kana.html">Kana charts</a></li>
+          <li><a data-site-link="phrases.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/phrases.html">Situation phrases</a></li>
+          <li><a data-site-link="dialects.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/dialects.html">Dialect map</a></li>
+          <li><a data-site-link="culture.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/culture.html">Culture notes</a></li>
         </ul>
       </div>
       <aside class="hero__aside" aria-label="Not found">
@@ -74,10 +90,14 @@
   <div class="wrap">
     <div class="site-foot__note">
       <span>© <span class="js-year">2026</span> Kotoba · A free Japanese course. No accounts, no tracking.</span>
-      <span><a href="index.html">Home</a> · <a href="#main">Back to top</a></span>
+      <span><a data-site-link="index.html" href="https://rsmaxord-io.github.io/kotoba-Japanese-Learning/index.html">Home</a> · <a href="#main">Back to top</a></span>
     </div>
   </div>
 </footer>
 
+<script>
+// Keep relative resources inert until the recovery base is known, including the browser's preload scanner.
+(()=>{for(const link of document.querySelectorAll('link[data-site-href]'))link.href=new URL(link.dataset.siteHref,document.baseURI).href;const scripts=[...document.querySelectorAll('script[data-site-src]')];scripts.sort((a,b)=>{const order=s=>s.dataset.siteSrc.startsWith('sandbox-navigation')?0:s.dataset.siteSrc.startsWith('audio-player')?1:2;return order(a)-order(b);});for(const source of scripts){const script=document.createElement('script');script.async=false;script.src=new URL(source.dataset.siteSrc,document.baseURI).href;document.head.append(script);}})();
+</script>
 </body>
 </html>
