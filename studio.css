@@ -530,3 +530,6 @@
 
 /* Keep long reading guides, meanings and notes playable inside practice panels. */
 .flashcard-drill>p,.drill-guide,.drill-en,.word-note,.match-tile,.match-tile .tile-text{min-width:0;max-width:100%;overflow-wrap:anywhere}
+
+/* Imported titles and URLs stay readable in preview and share dialogs. */
+.studio-shared-preview,.studio-share-summary{min-width:0;max-width:100%;overflow-wrap:anywhere}
