@@ -4,4 +4,16 @@ const ids=new Set([...local.filter(x=>!before.has(x.id)).map(x=>x.id),...remote.
 for(const id of ids){const b=before.get(id),l=here.get(id),r=there.get(id);if(JSON.stringify(l)===JSON.stringify(b)){if(r)out.push(r);continue;}if(!l)continue;if(!r||!b){out.push(l);continue;}const item={};for(const key of new Set([...Object.keys(b),...Object.keys(l),...Object.keys(r)])){if(['__proto__','constructor','prototype'].includes(key))continue;const v=JSON.stringify(l[key])===JSON.stringify(b[key])?r[key]:l[key];if(v!==undefined)item[key]=v;}out.push(item);}
 return out;
 }
-g.StudioCore={categories,norm,safeLink,word,cleanWord,filter,shuffle,board,choose,mergeList};})(typeof window==='undefined'?globalThis:window);
+function notebookSafeToMerge(x){
+ const object=v=>v&&typeof v==='object'&&!Array.isArray(v),id=v=>typeof v==='string'&&/^[A-Za-z0-9_-]{1,120}$/.test(v);
+ const text=(row,key,max,required=false)=>row[key]===undefined?!required:typeof row[key]==='string'&&row[key].length<=max&&(!required||!!row[key].trim());
+ const keys=(row,allowed)=>object(row)&&Object.keys(row).every(k=>allowed.includes(k));
+ if(!keys(x,['version','vocab','grammar','media'])||x.version!==1)return false;
+ const checks={
+  vocab:r=>keys(r,['id','hiragana','romaji','english','category','situation','note'])&&word(r)&&text(r,'hiragana',500,true)&&text(r,'english',1000,true)&&text(r,'romaji',500)&&text(r,'situation',120)&&text(r,'note',1500),
+  grammar:r=>keys(r,['id','title','pattern','explanation','example','audioText'])&&id(r.id)&&text(r,'title',500,true)&&text(r,'pattern',2000,true)&&text(r,'explanation',8000)&&text(r,'example',8000)&&text(r,'audioText',2000),
+  media:r=>keys(r,['id','type','title','note','link'])&&id(r.id)&&['Song','Anime','Movie','Podcast'].includes(r.type)&&text(r,'title',500,true)&&text(r,'note',8000)&&text(r,'link',2048)&&(!r.link||!!safeLink(r.link)&&safeLink(r.link).length<=2048)
+ };
+ return Object.entries(checks).every(([name,check])=>Array.isArray(x[name])&&x[name].every(check)&&new Set(x[name].map(r=>r.id)).size===x[name].length);
+}
+g.StudioCore={categories,norm,safeLink,word,cleanWord,filter,shuffle,board,choose,mergeList,notebookSafeToMerge};})(typeof window==='undefined'?globalThis:window);
