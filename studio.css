@@ -527,3 +527,6 @@
 /* User-authored notebook text must wrap without widening its card or filters. */
 .card-tags .badge,.card-main-en,.grammar-card h3,.media-card h3{min-width:0;max-width:100%;overflow-wrap:anywhere}
 .toolbar-left,.toolbar-right,.toolbar label{min-width:0;max-width:100%}
+
+/* Keep long reading guides, meanings and notes playable inside practice panels. */
+.flashcard-drill>p,.drill-guide,.drill-en,.word-note,.match-tile,.match-tile .tile-text{min-width:0;max-width:100%;overflow-wrap:anywhere}
