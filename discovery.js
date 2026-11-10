@@ -8,8 +8,83 @@ let savedBase=JSON.parse(JSON.stringify(saved));
 try{const course=JSON.parse(localStorage.getItem(KEY.includes('sandbox')?'kotoba-550-sandbox-v1':'kotoba-550-v1')||'{}');if(course.theme)saved.theme=course.theme;}catch(e){}
 document.body.classList.toggle('dark',saved.theme==='dark');
 const storageWarning='Latest changes remain in this tab only; keep a separate copy of your notes before closing.';
-function noteStatus(value){return unsavedChanges?'Not saved — keep a separate copy of this note.':value?'Saved on this device.':'Optional. Your notes stay on this device.';}
-function save(){try{let raw;try{raw=JSON.parse(localStorage.getItem(KEY)||'{}');}catch{raw={};}const remote=cleanSaved(raw);saved=window.KotobaLocalChanges.merge(savedBase,saved,remote,['bookmarks','regions','compared']);savedBase=JSON.parse(JSON.stringify(remote));localStorage.setItem(KEY,JSON.stringify(saved));savedBase=JSON.parse(JSON.stringify(saved));unsavedChanges=false;return true;}catch(e){unsavedChanges=true;status(storageWarning);return false;}}
+let saveFlight=null,dirty=false,navigationVersion=0;
+function noteStatus(value){return unsavedChanges?'Not saved — keep a separate copy of this note.':saveFlight?'Saving…':value?'Saved on this device.':'Optional. Your notes stay on this device.';}
+function refreshSaveIndicators(){
+ const recovery=document.getElementById('discovery-save-recovery');if(recovery)recovery.hidden=!unsavedChanges;
+ for(const field of app.querySelectorAll?.('[data-line-note],#quest-reflection')||[]){
+  const id=field.dataset.lineNote||quest?.id,note=document.getElementById(field.dataset.lineNote?'saved-'+id:'note-status');
+  if(note)note.textContent=noteStatus(saved.notes[id]);
+ }
+ for(const button of app.querySelectorAll?.('[data-bookmark]')||[]){
+  const id=button.dataset.bookmark,kept=saved.bookmarks.includes(id);
+  button.setAttribute('aria-pressed',kept);
+  button.textContent=kept?(!savedBase.bookmarks.includes(id)?unsavedChanges?'♥ Kept in this tab':'♥ Saving…':'♥ Saved'):'♡ Keep this line';
+ }
+}
+function readSaved(){
+ const raw=JSON.parse(localStorage.getItem(KEY)||'{}');
+ if(!raw||typeof raw!=='object'||Array.isArray(raw))throw Error('Invalid discovery progress');
+ return cleanSaved(raw);
+}
+function commitSaved(){
+ const remote=readSaved(),oldBookmarks=saved.bookmarks;
+ saved=window.KotobaLocalChanges.merge(savedBase,saved,remote,['bookmarks','regions','compared']);savedBase=JSON.parse(JSON.stringify(remote));
+ localStorage.setItem(KEY,JSON.stringify(saved));savedBase=JSON.parse(JSON.stringify(saved));dirty=false;
+ refreshDiscoveryView(oldBookmarks);
+}
+let deferredSavedCard=false;
+function refreshDiscoveryView(previousBookmarks,blurred=null){
+ if(savedOnly&&(deferredSavedCard||previousBookmarks&&JSON.stringify(previousBookmarks)!==JSON.stringify(saved.bookmarks))){
+  deferredSavedCard=false;
+  const grid=app.querySelector?.('.culture-library .library-grid'),mode=location.hash.slice(1);
+  if(grid){
+   const template=document.createElement('template');template.innerHTML=cultureLibrary(mode);
+   const next=template.content.querySelector('.library-grid'),id=card=>card.querySelector('[data-bookmark]').dataset.bookmark;
+   const old=new Map([...grid.children].map(card=>[id(card),card])),active=document.activeElement;
+   const wanted=new Set([...next.children].map(id));let focusRemoved=false;
+   for(const [key,card] of old)if(!wanted.has(key)){if(active!==blurred&&active?.matches('[data-line-note]')&&card.contains(active)){deferredSavedCard=true;continue;}focusRemoved||=card.contains(active);if(card.querySelector('[aria-busy="true"]'))stop();card.remove();}
+   let cursor=grid.firstElementChild;
+   for(const card of [...next.children]){const node=old.get(id(card))||card;if(node!==cursor)grid.insertBefore(node,cursor);cursor=node.nextElementSibling;}
+   const collection=grid.closest('.culture-library'),count=collection.querySelector('.collection-count'),newCount=template.content.querySelector('.collection-count').textContent;
+   if(count.textContent!==newCount)count.textContent=newCount;
+   const empty=collection.querySelector(':scope > .feedback-box'),nextEmpty=!deferredSavedCard&&template.content.querySelector('.culture-library > .feedback-box');
+   if(empty&&!nextEmpty)empty.remove();else if(!empty&&nextEmpty)collection.append(nextEmpty);
+   if(focusRemoved&&active!==blurred)collection.querySelector('[data-action="saved-lines"]')?.focus({preventScroll:true});
+  }
+ }
+ for(const field of app.querySelectorAll?.('[data-line-note],#quest-reflection')||[]){
+  const value=saved.notes[field.dataset.lineNote||quest?.id]||'';
+  if((field===blurred||field!==document.activeElement)&&field.value!==value)field.value=value;
+ }
+ const passport=app.querySelector?.('.discovery-title .passport b');
+ if(passport){const text=page==='culture'?Object.keys(saved.done).length+' / '+D.quests.length:saved.regions.length+' / 9';if(passport.textContent!==text)passport.textContent=text;}
+ for(const label of app.querySelectorAll?.('.quest-card .card-link')||[]){
+  const id=label.closest('.quest-card').getAttribute('href').slice(7),text=(saved.done[id]?'✓ Revisit this quest':'Try the quest')+' → ';
+  if(label.firstChild&&label.firstChild.nodeValue!==text)label.firstChild.nodeValue=text;
+ }
+ const compare=app.querySelector?.('[data-action="compare"]');
+ if(compare){const text=saved.compared.includes(D.pairs[pairIndex].id)?'✓ Compared':'I listened to both';if(compare.textContent!==text)compare.textContent=text;}
+}
+function refreshRemoteSaved(){
+ let remote;try{remote=readSaved();}catch{return;}
+ const previousBookmarks=saved.bookmarks;
+ saved=window.KotobaLocalChanges.merge(savedBase,saved,remote,['bookmarks','regions','compared']);savedBase=JSON.parse(JSON.stringify(remote));
+ refreshDiscoveryView(previousBookmarks);refreshSaveIndicators();
+}
+function save(){
+ dirty=true;if(saveFlight)return saveFlight;
+ const finish=()=>{const recovered=unsavedChanges;unsavedChanges=false;refreshSaveIndicators();if(recovered)status('Discovery progress saved on this device.');return true;};
+ const fail=()=>{unsavedChanges=true;refreshSaveIndicators();status(storageWarning);return false;};
+ try{
+  const lock=window.KotobaLearnerLock;if(!lock?.run)return fail();
+  const result=lock.run(KEY,commitSaved);
+  if(!result?.then)return finish();
+  saveFlight=Promise.resolve(result).then(()=>{saveFlight=null;return dirty?save():finish();},()=>{saveFlight=null;return fail();});
+  return saveFlight;
+ }catch{return fail();}
+}
+window.KotobaDiscoverySaving={whenIdle:()=>saveFlight||!unsavedChanges};
 function status(t){document.getElementById('discovery-status').textContent=t+(unsavedChanges&&t!==storageWarning?' '+storageWarning:'');document.querySelectorAll('.sentence-audio-status').forEach(e=>{if(e.closest('.regional-card')?.querySelector('[aria-busy="true"]'))e.textContent=t;});const e=document.getElementById('audio-status');if(e)e.textContent=t;}
 document.addEventListener('kotoba-lookup-open',()=>stop());
 function stop(){document.querySelectorAll('.sentence-audio-status').forEach(e=>e.textContent='');if(player){player.pause();player=null;}document.querySelectorAll('[aria-busy=true]').forEach(b=>b.removeAttribute('aria-busy'));document.querySelectorAll('audio').forEach(a=>a.pause());}
@@ -56,12 +131,40 @@ function archiveName(a){return (archiveNames[a.name]||a.name)+' · '+a.name;}
 function archiveUI(preferred){const list=D.archive.filter(a=>a.lines.length);let idx=list.findIndex(a=>preferred&&a.name.includes(preferred));if(idx<0)idx=0;return `<section class="archive" id="native-archive"><p class="eyebrow">OPEN A WINDOW INTO LOCAL SPEECH</p><h2 style="margin:12px 0">The same task, many voices.</h2><p class="discovery-note">A visitor wants to borrow something. Hear original speakers in NINJAL’s historic staged dialogues. This tape includes multiple localities in sequence. The selector changes the transcript; it does not seek the recording.</p><label for="archive-select" class="status-note">Transcript locality</label><select id="archive-select" class="archive-select">${list.map((a,i)=>`<option value="${i}" ${idx===i?'selected':''}>${esc(archiveName(a))}</option>`).join('')}</select><audio controls preload="none" src="discovery-audio/ninjal-borrowing.mp3?audio=single-balanced-20261106-b" aria-label="NINJAL historic borrowing dialogues, full multi-locality recording"></audio><p class="source-credit">Full recording, original speed and pitch. No sentence timecodes are available in this source; transcript rows do not claim exact sentence playback. Local speech is transcribed in phonetic notation. Use the Japanese translation as a bridge.</p><div id="archive-transcript">${archiveTranscript(list[idx])}</div><p class="source-credit">National Institute for Japanese Language and Linguistics, 『方言談話資料』 volume 9, staged scene 1, cassette 9-1-A (dt01187). <a href="https://mmsrv.ninjal.ac.jp/hogendanwa_siryo/" target="_blank" rel="noopener">Source text and audio</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. WAV converted to MP3; transcripts selected and formatted. Historical recordings represent these speakers, not all present-day speech.</p></section>`;}
 function archiveTranscript(a){return `<details><summary>Read the ${esc(archiveName(a))} transcript · ${a.lines.length} turns</summary><p class="source-credit">Original recording locality: <span lang="ja">${esc(a.header[0])}</span>. This transcript preserves historical forms and source notation.</p><div class="transcript-scroll">${a.lines.map(l=>`<div class="archive-line"><small>Source line ${esc(l.id)} · Speaker ${esc(l.speaker)}</small><p class="jp" lang="ja">${esc(l.local)}</p><p class="source-credit" lang="ja">${esc(l.standard)}</p></div>`).join('')}</div></details>`;}
 function render(){stop();if(page==='culture')culture();else atlas();}
-app.addEventListener('click',e=>{const b=e.target.closest('button,[data-region],[data-scroll]');if(!b)return;if(b.dataset.scroll){e.preventDefault();document.getElementById(b.dataset.scroll)?.scrollIntoView({behavior:'smooth'});return;}if(b.dataset.src!==undefined){play(b.dataset.src,b,b.dataset.kind);return;}if(b.dataset.collectionFilter){collectionFilter=b.dataset.collectionFilter;stop();culture();document.querySelector('[data-collection-filter="'+collectionFilter+'"]')?.focus({preventScroll:true});return;}if(b.dataset.action==='saved-lines'){savedOnly=!savedOnly;stop();culture();document.querySelector('[data-action="saved-lines"]')?.focus({preventScroll:true});return;}if(b.dataset.filter){filter=b.dataset.filter;culture();document.querySelector('[data-filter="'+filter+'"]')?.focus({preventScroll:true});return;}if(b.dataset.choice!==undefined){selected=Number(b.dataset.choice);renderQuest();document.querySelector('.feedback-box')?.focus({preventScroll:true});document.querySelector('.feedback-box')?.scrollIntoView({block:'nearest',behavior:'smooth'});return;}if(b.dataset.bookmark){const id=b.dataset.bookmark;saved.bookmarks=saved.bookmarks.includes(id)?saved.bookmarks.filter(x=>x!==id):[...saved.bookmarks,id];save();b.setAttribute('aria-pressed',saved.bookmarks.includes(id));b.textContent=saved.bookmarks.includes(id)?(unsavedChanges?'♥ Kept in this tab':'♥ Saved'):'♡ Keep this line';return;}if(b.dataset.clipLength){stop();clipLength=b.dataset.clipLength;document.getElementById('regional-sentences').outerHTML=regionalSentences();document.querySelector('[data-clip-length="'+clipLength+'"]')?.focus({preventScroll:true});return;}if(b.dataset.regionalTab){stop();clipLength='all';regionalTab=b.dataset.regionalTab;document.getElementById('regional-sentences').outerHTML=regionalSentences();document.querySelector('[data-regional-tab="'+regionalTab+'"]')?.focus({preventScroll:true});return;}if(b.dataset.region){clipLength='all';region=b.dataset.region;regionalTab=region;if(!saved.regions.includes(region)){saved.regions.push(region);save();}history.replaceState(null,'','#'+region);render();document.querySelector((b.classList.contains('map-pin')?'.map-pin':'button')+'[data-region="'+region+'"]')?.focus({preventScroll:true});return;}if(b.dataset.guess){mysteryAnswer=b.dataset.guess;replaceLab();document.querySelector('[data-guess="'+mysteryAnswer+'"]')?.focus({preventScroll:true});return;}const a=b.dataset.action;if(a==='next'){stop();stage++;selected=null;renderQuest();document.getElementById('quest-title')?.focus({preventScroll:true});window.scrollTo(0,0);}if(a==='finish-quest'){saved.done[quest.id]=new Date().toISOString();save();location.hash='quests';}if(a==='archive'){document.getElementById('native-archive')?.scrollIntoView({behavior:'smooth'});}if(a==='compare'){const p=D.pairs[pairIndex];if(!saved.compared.includes(p.id))saved.compared.push(p.id);save();b.textContent='✓ Compared';}if(a==='next-pair'){pairIndex=(pairIndex+1)%D.pairs.length;mystery=null;mysteryAnswer=null;stop();replaceLab();document.querySelector('[data-action="next-pair"]')?.focus({preventScroll:true});}if(a==='mystery'||a==='new-mystery'){if(mystery===null||a==='new-mystery')mystery=Math.random()<.5?'standard':'local';mysteryAnswer=null;replaceLab();document.querySelector('[data-action="mystery"]')?.focus({preventScroll:true});play(D.pairs[pairIndex][mystery].src,document.querySelector('[data-action="mystery"]'),'mystery recording');}});
+app.addEventListener('click',e=>{const b=e.target.closest('button,[data-region],[data-scroll]');if(!b)return;if(b.dataset.scroll){e.preventDefault();document.getElementById(b.dataset.scroll)?.scrollIntoView({behavior:'smooth'});return;}if(b.dataset.src!==undefined){play(b.dataset.src,b,b.dataset.kind);return;}if(b.dataset.collectionFilter){collectionFilter=b.dataset.collectionFilter;stop();culture();document.querySelector('[data-collection-filter="'+collectionFilter+'"]')?.focus({preventScroll:true});return;}if(b.dataset.action==='saved-lines'){savedOnly=!savedOnly;stop();culture();document.querySelector('[data-action="saved-lines"]')?.focus({preventScroll:true});return;}if(b.dataset.filter){filter=b.dataset.filter;culture();document.querySelector('[data-filter="'+filter+'"]')?.focus({preventScroll:true});return;}if(b.dataset.choice!==undefined){selected=Number(b.dataset.choice);renderQuest();document.querySelector('.feedback-box')?.focus({preventScroll:true});document.querySelector('.feedback-box')?.scrollIntoView({block:'nearest',behavior:'smooth'});return;}if(b.dataset.bookmark){const id=b.dataset.bookmark,previousBookmarks=saved.bookmarks;saved.bookmarks=saved.bookmarks.includes(id)?saved.bookmarks.filter(x=>x!==id):[...saved.bookmarks,id];save();refreshDiscoveryView(previousBookmarks);refreshSaveIndicators();return;}if(b.dataset.clipLength){stop();clipLength=b.dataset.clipLength;document.getElementById('regional-sentences').outerHTML=regionalSentences();document.querySelector('[data-clip-length="'+clipLength+'"]')?.focus({preventScroll:true});return;}if(b.dataset.regionalTab){stop();clipLength='all';regionalTab=b.dataset.regionalTab;document.getElementById('regional-sentences').outerHTML=regionalSentences();document.querySelector('[data-regional-tab="'+regionalTab+'"]')?.focus({preventScroll:true});return;}if(b.dataset.region){clipLength='all';region=b.dataset.region;regionalTab=region;if(!saved.regions.includes(region)){saved.regions.push(region);save();}navigationVersion++;history.replaceState(null,'','#'+region);render();document.querySelector((b.classList.contains('map-pin')?'.map-pin':'button')+'[data-region="'+region+'"]')?.focus({preventScroll:true});return;}if(b.dataset.guess){mysteryAnswer=b.dataset.guess;replaceLab();document.querySelector('[data-guess="'+mysteryAnswer+'"]')?.focus({preventScroll:true});return;}const a=b.dataset.action;if(a==='next'){stop();stage++;selected=null;renderQuest();document.getElementById('quest-title')?.focus({preventScroll:true});window.scrollTo(0,0);}if(a==='finish-quest'){saved.done[quest.id]=new Date().toISOString();save();location.hash='quests';}if(a==='archive'){document.getElementById('native-archive')?.scrollIntoView({behavior:'smooth'});}if(a==='compare'){const p=D.pairs[pairIndex];if(!saved.compared.includes(p.id))saved.compared.push(p.id);save();b.textContent='✓ Compared';}if(a==='next-pair'){pairIndex=(pairIndex+1)%D.pairs.length;mystery=null;mysteryAnswer=null;stop();replaceLab();document.querySelector('[data-action="next-pair"]')?.focus({preventScroll:true});}if(a==='mystery'||a==='new-mystery'){if(mystery===null||a==='new-mystery')mystery=Math.random()<.5?'standard':'local';mysteryAnswer=null;replaceLab();document.querySelector('[data-action="mystery"]')?.focus({preventScroll:true});play(D.pairs[pairIndex][mystery].src,document.querySelector('[data-action="mystery"]'),'mystery recording');}});
 function replaceLab(){const el=document.getElementById('sound-lab');el.outerHTML=soundLab();}
 app.addEventListener('change',e=>{if(e.target.id==='pair-select'){pairIndex=Number(e.target.value);mystery=null;mysteryAnswer=null;stop();replaceLab();document.getElementById('pair-select')?.focus({preventScroll:true});}if(e.target.id==='archive-select'){const a=D.archive.filter(a=>a.lines.length)[Number(e.target.value)];document.getElementById('archive-transcript').innerHTML=archiveTranscript(a);}});
-app.addEventListener('input',e=>{if(e.target.dataset.lineNote){const id=e.target.dataset.lineNote;saved.notes[id]=e.target.value;const ok=save();document.getElementById('saved-'+id).textContent=ok?'Saved on this device.':'Not saved — keep a separate copy of this note.';return;}if(e.target.id==='quest-reflection'&&quest){saved.notes[quest.id]=e.target.value;const ok=save();document.getElementById('note-status').textContent=ok?'Saved on this device.':'Not saved — keep a separate copy of this note.';}});
+app.addEventListener('input',e=>{if(e.target.dataset.lineNote){const id=e.target.dataset.lineNote;saved.notes[id]=e.target.value;save();document.getElementById('saved-'+id).textContent=noteStatus(e.target.value);return;}if(e.target.id==='quest-reflection'&&quest){saved.notes[quest.id]=e.target.value;save();document.getElementById('note-status').textContent=noteStatus(e.target.value);}});
 app.addEventListener('keydown',e=>{const pin=e.target.closest('.map-pin');if(pin&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pin.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
-document.addEventListener('click',e=>{if(e.target.closest('[data-action="theme"]')){saved.theme=saved.theme==='dark'?'light':'dark';document.body.classList.toggle('dark',saved.theme==='dark');save();}});
+document.addEventListener('click',e=>{if(e.target.closest('[data-retry-discovery]')){const button=e.target.closest('[data-retry-discovery]');Promise.resolve(save()).then(ok=>{if(ok&&(document.activeElement===button||document.activeElement===document.body)){const heading=app.querySelector?.('h1');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}});return;}if(e.target.closest('[data-action="theme"]')){saved.theme=saved.theme==='dark'?'light':'dark';document.body.classList.toggle('dark',saved.theme==='dark');save();}});
 document.addEventListener('play',e=>{if(e.target.tagName==='AUDIO'){if(player)player.pause();}},true);
-window.addEventListener('beforeunload',e=>{if(unsavedChanges){e.preventDefault();e.returnValue='';}});window.addEventListener('hashchange',()=>{stop();collectionFilter='All';render();window.scrollTo(0,0);});window.addEventListener('pagehide',stop);render();
+// Internal links wait for discovery saves; section changes supersede older links.
+for(const event of ['hashchange','popstate','pagehide'])window.addEventListener(event,()=>{navigationVersion++;});
+document.addEventListener('click',async e=>{
+ if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+ const link=e.target.closest?.('a[href]');
+ if(!link||link.target&&link.target!=='_self'||link.hasAttribute('download'))return;
+ const intent=++navigationVersion;
+ if(!saveFlight&&!unsavedChanges)return;
+ let url;try{url=new URL(link.href,document.baseURI);}catch{return;}
+ if(!/^https?:$/.test(url.protocol)||url.origin!==location.origin||url.href.split('#')[0]===location.href.split('#')[0])return;
+ e.preventDefault();
+ while(saveFlight){
+  const ok=await saveFlight;
+  if(intent!==navigationVersion)return;
+  if(!ok)break;
+ }
+ if(intent!==navigationVersion)return;
+ if(unsavedChanges){
+  status(storageWarning);
+  if(document.activeElement===link)document.querySelector('[data-retry-discovery]')?.focus();
+  return;
+ }
+ location.assign(url.href);
+},true);
+app.addEventListener('focusout',e=>{if(e.target.dataset.lineNote||e.target.id==='quest-reflection')refreshDiscoveryView(null,e.target);});
+window.addEventListener('storage',e=>{if(e.key===KEY||e.key===null)refreshRemoteSaved();});
+window.addEventListener('pageshow',e=>{if(e.persisted)refreshRemoteSaved();});
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refreshRemoteSaved();});
+window.addEventListener('beforeunload',e=>{if(unsavedChanges||saveFlight){e.preventDefault();e.returnValue='';}});window.addEventListener('hashchange',()=>{stop();collectionFilter='All';render();window.scrollTo(0,0);});window.addEventListener('pagehide',stop);render();
 })();
