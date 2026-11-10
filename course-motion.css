@@ -1,30 +1,36 @@
-/* Decorative motion only. Existing geometry, typography and palette stay in course.css. */
-@media (prefers-reduced-motion: no-preference) {
-  .course-motion-host { position:relative; isolation:isolate; }
-  .course-intro-fx { position:absolute; inset:0; z-index:-1; overflow:hidden; pointer-events:none; contain:layout paint; }
-  .course-intro-glow,.course-intro-rays { position:absolute; left:50%; top:var(--intro-y,50%); width:min(90%,420px); aspect-ratio:1; border-radius:50%; pointer-events:none; }
-  .course-intro-glow { background:radial-gradient(circle,var(--tint) 0%,transparent 70%); animation:course-burst-glow 800ms cubic-bezier(.16,1,.3,1) both; }
-  .course-intro-rays { background:repeating-conic-gradient(transparent 0deg 13deg,var(--blue) 14deg 15deg,transparent 16deg 30deg); mask-image:radial-gradient(circle,transparent 8%,#000 24%,transparent 70%); animation:course-burst-rays 800ms cubic-bezier(.16,1,.3,1) both; }
-  .course-intro-particle { position:absolute; left:50%; top:var(--intro-y,50%); color:var(--blue); font:700 var(--particle-size,18px)/1 var(--jp); pointer-events:none; animation:course-kana-burst 760ms cubic-bezier(.16,1,.3,1) both; }
-  .course-title-pop { transform-origin:50% 50%; animation:course-title-open 720ms cubic-bezier(.16,1,.3,1) both; }
-  .course-card-reveal { animation:course-card-enter 420ms cubic-bezier(.2,.7,.25,1) var(--course-reveal-delay,0ms) both; }
-  .course-card-reveal:focus-within { animation:none; }
-  @keyframes course-title-open { 0%{transform:scale(.76)} 38%{transform:scale(1.035)} 68%{transform:scale(.993)} 100%{transform:scale(1)} }
-  @keyframes course-burst-glow { 0%{transform:translate(-50%,-50%) scale(0);opacity:0} 24%{opacity:.9} 58%{transform:translate(-50%,-50%) scale(1.12);opacity:.48} 100%{transform:translate(-50%,-50%) scale(1.02);opacity:0} }
-  @keyframes course-burst-rays { 0%{transform:translate(-50%,-50%) scale(0) rotate(-9deg);opacity:0} 22%{opacity:.16} 58%{transform:translate(-50%,-50%) scale(1.09) rotate(5deg);opacity:.1} 100%{transform:translate(-50%,-50%) scale(1.02) rotate(9deg);opacity:0} }
-  @keyframes course-kana-burst { 0%{transform:translate(-50%,-50%) scale(.35);opacity:0} 13%{opacity:.65} 100%{transform:translate(calc(-50% + var(--particle-x)),calc(-50% + var(--particle-y))) rotate(var(--particle-turn)) scale(.9);opacity:0} }
-  @keyframes course-card-enter { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+/* Decorative layers never intercept input or alter document geometry. */
+@media (prefers-reduced-motion:no-preference) {
+ .course-motion-host{position:relative;isolation:isolate}
+ .course-intro-fx{position:fixed;inset:0;z-index:100;overflow:hidden;pointer-events:none;contain:strict}
+ .course-intro-fx *,.course-floating-kana *{pointer-events:none}
+ .course-intro-glow,.course-intro-rays{position:absolute;left:50%;top:50%;width:200vmax;height:200vmax;border-radius:50%}
+ .course-intro-glow{background:radial-gradient(circle,var(--surface) 0%,var(--tint) 20%,transparent 64%);animation:course-light-flash 600ms ease-out both}
+ .course-intro-rays{background:repeating-conic-gradient(transparent 0deg 11deg,var(--blue) 12deg 17deg,transparent 18deg 30deg);mask-image:radial-gradient(circle,transparent 1%,#000 14%,transparent 65%);animation:course-sun-rays 850ms cubic-bezier(.16,1,.3,1) both}
+ .course-intro-ring{position:absolute;left:var(--intro-x);top:var(--intro-y);width:80px;height:80px;border:3px solid var(--blue);border-radius:50%;box-shadow:0 0 22px var(--tint),inset 0 0 18px var(--tint);animation:course-shockwave 950ms cubic-bezier(.12,.75,.2,1) both}
+ .course-intro-particle{position:absolute;left:var(--intro-x);top:var(--intro-y);color:var(--blue);font:700 var(--particle-size)/1 var(--jp);animation:course-kana-burst 1100ms linear both}
+ .course-title-pop{transform-origin:50% 50%;animation:course-title-open 900ms linear both}
+ .course-card-reveal{transform-origin:50% 0;backface-visibility:hidden;animation:course-card-enter 520ms cubic-bezier(.16,1.15,.3,1) var(--course-reveal-delay,0ms) both}
+ .course-card-reveal:focus-within{animation:none}
+ .course-floating-kana{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none;contain:strict}
+ .course-floating-kana span{position:absolute;color:var(--blue);font:700 28px/1 var(--jp);opacity:.045;animation:course-kana-float var(--float-time) ease-in-out var(--float-delay) infinite alternate}
+ @keyframes course-title-open{0%{transform:scale(.5)}22%{transform:scale(1.1) translate(2px,-2px)}30%{transform:scale(1.06) translate(-3px,2px)}40%{transform:scale(.96) translate(2px,0)}56%{transform:scale(1.025)}75%{transform:scale(.992)}100%{transform:scale(1)}}
+ @keyframes course-light-flash{0%{transform:translate(-50%,-50%) scale(.03);opacity:0}16%{opacity:.88}42%{transform:translate(-50%,-50%) scale(1.08);opacity:.65}100%{transform:translate(-50%,-50%) scale(1.15);opacity:0}}
+ @keyframes course-sun-rays{0%{transform:translate(-50%,-50%) scale(.02) rotate(-12deg);opacity:0}18%{opacity:.14}55%{transform:translate(-50%,-50%) scale(1.08) rotate(3deg);opacity:.08}100%{transform:translate(-50%,-50%) scale(1.2) rotate(10deg);opacity:0}}
+ @keyframes course-shockwave{0%{transform:translate(-50%,-50%) scale(0);opacity:0}16%{opacity:.65}100%{transform:translate(-50%,-50%) scale(18);opacity:0}}
+ @keyframes course-kana-burst{0%{transform:translate(-50%,-50%) scale(.2);opacity:0}12%{opacity:.85}55%{transform:translate(calc(-50% + var(--particle-mid-x)),calc(-50% + var(--particle-mid-y))) rotate(var(--particle-turn)) scale(1.1);opacity:.6}100%{transform:translate(calc(-50% + var(--particle-x)),calc(-50% + var(--particle-y))) rotate(var(--particle-turn)) scale(.7);opacity:0}}
+ @keyframes course-card-enter{0%{opacity:0;transform:perspective(800px) translateY(48px) rotateX(-65deg) scale(.94)}72%{opacity:1;transform:perspective(800px) translateY(-4px) rotateX(5deg) scale(1.01)}100%{opacity:1;transform:perspective(800px) translateY(0) rotateX(0) scale(1)}}
+ @keyframes course-kana-float{from{transform:translateY(12px) rotate(calc(-1 * var(--float-turn)))}to{transform:translateY(-18px) rotate(var(--float-turn))}}
 }
-@media (prefers-reduced-motion: no-preference) and (hover:hover) and (pointer:fine) {
-  .course-choice,.lesson-link,.home-section-link { transition:transform 160ms ease-out,box-shadow 160ms ease-out; }
-  .course-choice:hover,.lesson-link:hover,.home-section-link:hover { transform:translateY(-3px); box-shadow:var(--shadow); }
+@media (prefers-reduced-motion:no-preference) and (hover:hover) and (pointer:fine){
+ .course-choice,.lesson-link,.home-section-link{transition:transform 160ms ease-out}
+ .course-choice:hover,.lesson-link:hover,.home-section-link:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 }
-@media (hover:none) { .course-choice:hover { transform:none; } }
-@media (prefers-reduced-motion:reduce) {
-  .course-intro-fx { display:none!important; }
-  .course-title-pop,.course-card-reveal { animation:none!important; transform:none!important; opacity:1!important; }
-  .course-choice,.lesson-link,.home-section-link { transition:none!important; }
-  .course-choice:hover,.lesson-link:hover,.home-section-link:hover { transform:none!important; }
+@media (hover:none){.course-choice:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){
+ .course-intro-fx,.course-floating-kana{display:none!important}
+ .course-title-pop,.course-card-reveal{animation:none!important;transform:none!important;opacity:1!important}
+ .course-choice,.lesson-link,.home-section-link{transition:none!important}
+ .course-choice:hover,.lesson-link:hover,.home-section-link:hover{transform:none!important}
 }
 /* Preserve the narrow-header wrapping previously supplied with the removed sound control. */
 @media(max-width:520px) { .top-actions { gap:8px; } }
