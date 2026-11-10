@@ -41,7 +41,7 @@ async function submitLibrary(){
  if(!item.title||!item.link||!C.safeLink(item.link)){error.textContent='Add a title and a complete http or https media link.';return;}
  if(!L){error.textContent='The shared library needs the Kotoba app server.';return;}
  libraryPublishing=true;error.textContent='';button.disabled=true;button.textContent='Adding…';fields.forEach(x=>x.disabled=true);syncLibrarySubmission();
- try{const result=await L.publish(item);mediaScope='library';mediaFilter='all';libraryQuery='';if(document.getElementById('library-form')===form&&editor.dataset.kind==='library')closeEditor();navigationDrafts.delete(draftKey);if(page==='media')media();say(result.created?(result.ownershipStored===false?'Added to the library. Browser saving is unavailable, so removal permission is only in this tab. Keep it open if you want to remove this favorite.':'Added to the library — everyone can discover it here.'):'That favorite is already in the library.');}
+ try{const result=await L.publish(item);mediaScope='library';mediaFilter='all';libraryQuery='';if(document.getElementById('library-form')===form&&editor.dataset.kind==='library')closeEditor();navigationDrafts.delete(draftKey);if(page==='media')media();say(result.ownershipStored===false?'Added to the library. Browser saving is unavailable, so removal permission is only in this tab. Keep it open if you want to remove this favorite.':result.created?'Added to the library — everyone can discover it here.':'That favorite is already in the library.');}
  catch(e){error.textContent=e.message;say(e.message);}
  finally{libraryPublishing=false;button.disabled=false;button.textContent='Add for everyone';fields.forEach(x=>x.disabled=false);syncLibrarySubmission();}
 }
