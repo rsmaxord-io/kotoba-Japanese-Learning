@@ -2,8 +2,10 @@
 'use strict';
 var $=function(s,r){return (r||document).querySelector(s);};
 function read(key,fallback){try{var v=localStorage.getItem(window.KotobaSandbox ? window.KotobaSandbox.key(key) : key);return v===null?fallback:JSON.parse(v);}catch(e){return fallback;}}
-function save(key,value){try{localStorage.setItem(window.KotobaSandbox ? window.KotobaSandbox.key(key) : key,JSON.stringify(value));}catch(e){}}
-var rawSettings=read('kotoba-listening-v1',{});var settings={rate:rawSettings&&rawSettings.rate===0.85?0.85:1,dialects:!!(rawSettings&&rawSettings.dialects===true)};
+function save(key,value){try{localStorage.setItem(window.KotobaSandbox ? window.KotobaSandbox.key(key) : key,JSON.stringify(value));return true;}catch(e){return false;}}
+function cleanSettings(raw){return {rate:raw&&raw.rate===0.85?0.85:1,dialects:!!(raw&&raw.dialects===true)};}
+function readSettings(){var raw;try{raw=localStorage.getItem(window.KotobaSandbox ? window.KotobaSandbox.key('kotoba-listening-v1') : 'kotoba-listening-v1');}catch(e){return null;}try{return cleanSettings(JSON.parse(raw||'null'));}catch(e){return cleanSettings(null);}}
+var settings=readSettings()||cleanSettings(null),dirtySettings={},settingsUnsaved=false;
 window.KOTOBA_LISTENING=settings;
 function notice(message){var old=$('.adventure-toast');if(old)old.remove();var el=document.createElement('div');el.className='adventure-toast';el.setAttribute('role','status');el.textContent=message;document.body.appendChild(el);setTimeout(function(){el.remove();},6500);}
 window.kotobaNotice=notice;
@@ -17,7 +19,7 @@ document.querySelectorAll('[data-dialect-toggle]').forEach(function(el){el.check
 document.querySelectorAll('[data-voice^="kansai-"],[data-voice^="dialect-"]').forEach(function(el){el.classList.add('dialect-unverified');el.title='Synthetic dialect reading · regional intonation not verified';var label=el.getAttribute('aria-label');if(label&&!label.includes('Synthetic reading'))el.setAttribute('aria-label','Synthetic reading, regional intonation unverified: '+label);});
 }
 document.addEventListener('kotoba:lesson',decorate);
-document.addEventListener('change',function(e){if(e.target.matches('[data-listening-rate]'))settings.rate=Number(e.target.value)===0.85?0.85:1;else if(e.target.matches('[data-dialect-toggle]'))settings.dialects=e.target.checked;else return;save('kotoba-listening-v1',settings);decorate();document.dispatchEvent(new CustomEvent('kotoba:audio-settings'));});
+document.addEventListener('change',function(e){var key;if(e.target.matches('[data-listening-rate]')){key='rate';settings.rate=Number(e.target.value)===0.85?0.85:1;}else if(e.target.matches('[data-dialect-toggle]')){key='dialects';settings.dialects=e.target.checked;}else return;dirtySettings[key]=true;var remote=readSettings();if(remote)['rate','dialects'].forEach(function(name){if(!dirtySettings[name])settings[name]=remote[name];});if(remote&&save('kotoba-listening-v1',settings)){dirtySettings={};if(settingsUnsaved)notice('Listening preferences saved in this browser.');settingsUnsaved=false;}else{settingsUnsaved=true;notice('Your listening preferences apply in this tab only. Change a setting again when browser storage is available to save them.');}decorate();document.dispatchEvent(new CustomEvent('kotoba:audio-settings'));});
 document.addEventListener('kotoba:celebrate',function(e){var n=e.detail.n;notice(n%10===0?'Unit complete. Ten more discoveries in your passport. Take a breath and enjoy the progress.':'Level '+n+' complete. One more thing you can do in Japanese. Nice work showing up.');});
 var state=read('kotoba-course-v2',{levels:{}}),levels=state&&state.levels&&typeof state.levels==='object'&&!Array.isArray(state.levels)?state.levels:{};
 var done=Object.keys(levels).filter(function(n){return Number(n)>=1&&Number(n)<=100&&!!levels[n];}).length,next=1;
